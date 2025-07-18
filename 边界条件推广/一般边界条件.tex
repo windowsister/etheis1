@@ -1,0 +1,162 @@
+\documentclass[notitlepage,cs4size,punct,oneside]{ctexrep}
+\usepackage[a4paper,hmargin={2.54cm,2.54cm},vmargin={3.17cm,3.17cm}]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{ctex}
+\usepackage{titlesec}
+\numberwithin{equation}{chapter}
+\usepackage[runin]{abstract}
+\usepackage[pdfborder={0 0 0},colorlinks=true,linkcolor=blue,CJKbookmarks=true]{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\allowdisplaybreaks
+\setlength{\absleftindent}{1.5cm} \setlength{\absrightindent}{1.5cm}
+\setlength{\abstitleskip}{-\parindent}
+\setlength{\absparindent}{0cm}
+\newtheoremstyle{mystyle}{3pt}{3pt}{\kaishu}{0cm}{\heiti}{}{1em}{}
+\theoremstyle{mystyle}
+\newtheorem{definition}{\hspace{2em}定义}[section]
+% 如果没有章, 只有节, 把上面的[chapter]改成[section]
+\newtheorem{theorem}[definition]{\hspace{2em}定理}
+\newtheorem{axiom}[definition]{\hspace{2em}公理}
+\newtheorem{lemma}[definition]{\hspace{2em}引理}
+\newtheorem{proposition}[definition]{\hspace{2em}命题}
+\newtheorem{corollary}[definition]{\hspace{2em}推论}
+\newtheorem{remark}{\hspace{2em}注}[chapter]
+\def\theequation{\arabic{chapter}.\arabic{equation}}
+\def\thedefinition{\arabic{chapter}.\arabic{definition}.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+考虑线性方程
+$$
+\partial _tu+\varLambda \partial _xu=0.
+$$
+边界条件为
+$$
+\left\{ \begin{matrix}
+	x=L:&		u_{r_1}=A_{r_1s}u_s+h_{r_1}\\
+	&		u_{r_2}=A_{r_2s}u_s+B_{r_2}h_{r_1},\\
+\end{matrix}\right. 
+$$
+$$
+\left\{ \begin{matrix}
+	x=0:&		u_{s_1}=A_{s_1r}u_r+h_{s_1}\\
+	&		u_{s_2}=A_{s_2r}u_r+B_{s_2}h_{s_1}.\\
+\end{matrix} \right. 
+$$
+其中
+$$
+\varLambda =\left( \begin{matrix}
+	\lambda _r&		\\
+	&		\lambda _s\\
+\end{matrix} \right) .
+$$
+$\lambda _r <0,\lambda _s >0$,记
+$$
+B=\left( \begin{matrix}
+	I_{r_1}&		&		&		\\
+	B_{r_2}&		0&		&		\\
+	&		&		I_{s_1}&		\\
+	&		&		B_{s_2}&		0\\
+\end{matrix} \right) ,
+$$
+$$
+A=\left( \begin{matrix}
+	&		&		A_{r_1s_1}&		A_{r_1s_2}\\
+	&		&		A_{r_2s_1}&		A_{r_2s_2}\\
+	A_{s_1r_1}&		A_{s_1r_2}&		&		\\
+	A_{s_2r_1}&		A_{s_2r_2}&		&		\\
+\end{matrix} \right) .\,\,
+$$
+则
+$$
+AB=\left( \begin{matrix}
+	&		&		A_{r_1s_1}+A_{r_1s_2}B_{s_2}&		0\\
+	&		&		A_{r_2s_1}+A_{r_2s_2}B_{s_2}&		0\\
+	A_{s_1r_1}+A_{s_1r_2}B_{r_2}&		0&		&		\\
+	A_{s_2r_1}+A_{s_2r_2}B_{r_2}&		0&		&		\\
+\end{matrix} \right) .
+$$
+由$\left( B | AB\right)$满秩等价于
+$$
+\begin{aligned}
+A_{r_2s_1}+A_{r_2s_2}B_{s_2}-B_{r_2}\left( A_{r_1s_1}+A_{r_1s_2}B_{s_2} \right)\\
+A_{s_2r_1}+A_{s_2r_2}B_{s_2}-B_{s_2}\left( A_{s_1r_1}+A_{s_1r_2}B_{r_2} \right)\\
+\end{aligned}
+$$
+满秩。将上面两个矩阵记为$\bar{A}_1,\bar{A}_2$,不妨设$\bar{A}_1$的前$r_2$列线性无关，对应$u$ 的分量记为$u_{s_{r_2}}$,$u_{s_1}$中的其他分量记为$u_{\hat{s} _{r_2}}$类似地定义$u_{r_{s_2}}$，$u_{\hat{r} _{s_2}}$.记
+$$
+\begin{aligned}
+	\tilde{A}_{r_2s}&=A_{r_2s}-B_{r_2}A_{r_1s},\\
+	\tilde{A}_{s_2r}&=A_{s_2r}-B_{s_2}A_{s_1r}.\\
+\end{aligned}
+$$
+则在边界上有
+$$
+\left\{ \begin{array}{l}
+	x=L:\ \ u_{r_2}-B_{r_2}u_{r_1}=\tilde{A}_{r_2s_1}u_{s_1}+\tilde{A}_{r_2s_2}u_{s_2},\\
+	x=0:\ \ u_{s_2}-B_{s_2}u_{s_1}=\tilde{A}_{s_2r_1}u_{r_1}+\tilde{A}_{s_2r_2}u_{r_2}.\\
+\end{array} \right. 
+$$
+
+从而可以写为
+$$
+\left\{ \begin{array}{l}
+	x=L:\ \ u_{r_2}-B_{r_2}u_{r_1}=\bar{A}_1 u_{s_1}+\tilde{A}_{r_2s_2}(u_{s_2} - B_{s_2}u_{s_1}),\\
+	x=0:\ \ u_{s_2}-B_{s_2}u_{s_1}=\bar{A}_2 u_{r_1}+\tilde{A}_{s_2r_2}(u_{r_2} - B_{r_2}u_{r_1}).\\
+\end{array} \right. 
+$$
+即
+$$
+\left\{ \begin{array}{l}
+	x=L:\ \ u_{s_{r_2}} =L_1\left( u_{\hat{s} _{r_2}} ,u_{r_2}-B_{r_2}u_{r_1} ,u_{s_2} - B_{s_2}u_{s_1}  \right)    ,\\
+	x=0:\ \ u_{r_{s_2}} =L_2\left( u_{\hat{r} _{s_2}} ,u_{s_2}-B_{s_2}u_{s_1} ,u_{r_2} - B_{r_2}u_{r_1}  \right)  .\\
+\end{array} \right. 
+$$
+
+
+
+
+
+
+\section{解的构造}
+选取一组满足相容性条件的$\tilde{h}_i(t),i=r_1,s_1$,以$\varphi(x)$为初值得到一个解$\tilde{u}$.考虑倒向问题
+$$
+\partial _tu+\varLambda \partial _xu=0.
+$$
+边界条件为
+$$
+\left\{ \begin{matrix}
+	x=L:&		u_{s_{r_2}} =L_1\left( \tilde{u} _{\hat{s} _{r_2}} ,u_{r_2}-B_{r_2}u_{r_1} ,\tilde{u} _{s_2} - B_{s_2}\tilde{u} _{s_1}  \right) ,\\
+	&		    u _{\hat{s} _{r_2}} =\tilde{u} _{\hat{s} _{r_2}} ,\\
+	&           u_{s_2} - B_{s_2}u_{s_1} =\tilde{u} _{s_2} - B_{s_2}\tilde{u} _{s_1} ,\\
+\end{matrix}\right. 
+$$
+$$
+\left\{ \begin{matrix}
+	x=0:&	u_{r_{s_2}} =L_2\left(\tilde{ u} _{\hat{r} _{s_2}} ,u_{s_2}-B_{s_2}u_{s_1} ,\tilde{u} _{r_2} - B_{r_2}\tilde{u} _{r_1}  \right), \\
+	&		 u _{\hat{r} _{s_2}} =\tilde{u} _{\hat{r} _{s_2}} ,\\
+	&           u_{r_2} - B_{r_2}u_{r_1} =\tilde{u} _{r_2} - B_{r_2}\tilde{u} _{r_1} .\\
+\end{matrix} \right. 
+$$
+可见边界条件能推出原边界条件。下面验证初值（暂时无法验证）。
+记倒向问题导出的初值为$\bar{\varphi } $.有
+$$ 
+\bar{\varphi } _{r_2} (x_{r_2})- B_{r_2}\bar{\varphi } _{r_1} (x_{r_1}) = u_{r_2} (t_1 ,0)- B_{r_2}u_{r_1} (t_1 ,0)=\tilde{u} _{r_2} (t_1 ,0)- B_{r_2}\tilde{u} _{r_1} (t_1 ,0)= \varphi  _{r_2} (x_{r_2})- B_{r_2}\varphi _{r_1} (x_{r_1}) .
+$$
+$$
+u_{s_2}(t_1 ,0)-B_{s_2}u_{s_1}(t_1 ,0)=\bar{A}_2 u_{r_1}+\tilde{A}_{s_2r_2}(u_{r_2} - B_{r_2}u_{r_1})(t_1 ,0)
+$$
+其中
+$$
+u_{r_1}(t_1 ,0)=\varphi _{r_1} (x_{r_1}) .
+$$
+$$
+(u_{r_2} - B_{r_2}u_{r_1})(t_1 ,0)=(\tilde{u} _{r_2} - B_{r_2}\tilde{u} _{r_1})(t_1 ,0)
+$$
+$$
+u_{s_2}(t_1 ,0)-B_{s_2}u_{s_1}(t_1 ,0) \neq u_{s_2}(t_2 ,L)-B_{s_2}u_{s_1}(t_2 ,L) =\tilde{u} _{s_2}(t_2 ,L)-B_{s_2}\tilde{u} _{s_1}(t_2 ,L) .
+$$
+关键问题在于特征不同导致特征线与边界线交点不同，无法直接利用边界条件。可能需要调整边界条件的设计。
+\end{document}
