@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.24)  11 JUL 2025 20:35
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.24)  19 JUL 2025 20:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -374,14 +374,7 @@ File: l3backend-xetex.def 2024-02-20 L3 backend support: XeTeX
 \g__pdf_backend_object_int=\count302
 \g__pdf_backend_annotation_int=\count303
 \g__pdf_backend_link_int=\count304
-) (./WNGD(2).aux
-
-LaTeX Warning: Label `21' multiply defined.
-
-
-LaTeX Warning: Label `G' multiply defined.
-
-)
+) (./WNGD(2).aux)
 \openout1 = `WNGD(2).aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
@@ -506,20 +499,33 @@ Overfull \hbox (4.27731pt too wide) detected at line 705
  []
 
 
-Overfull \hbox (25.80312pt too wide) detected at line 716
+Overfull \hbox (62.4246pt too wide) detected at line 716
 [][][] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 C[]\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.95 k[] \OT1/cmr/m/n/10.95 + \OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 '\OMS/cmsy/m/n/10.95 k[] \OT1/cmr/m/n/10.95 + \OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 g\OMS/cmsy/m/n/10.95 k[] \OT1/cmr/m/n/10.95 + \OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 f[]\OMS/cmsy/m/n/10.95 k[]k\OML/cmm/m/it/10.95 f[]\OMS/cmsy/m/n/10.95 k[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; ^^U[]; ^^U[] \OMS/cmsy/m/n/10.95 2 f\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; L\OMS/cmsy/m/n/10.95 g\OML/cmm/m/it/10.95 ;  p \OT1/cmr/m/n/10.95 = 1\OML/cmm/m/it/10.95 ; []  ; k \OT1/cmr/m/n/10.95 + 1\OML/cmm/m/it/10.95 :
  []
 
-[8]
+[8] [9]
+Overfull \hbox (10.45709pt too wide) detected at line 799
+\OML/cmm/m/it/10.95 w[] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []
+ []
 
-LaTeX Warning: Reference `54' on page 9 undefined on input line 793.
+
+LaTeX Warning: Reference `d44' on page 10 undefined on input line 810.
 
 
-LaTeX Warning: Reference `54' on page 9 undefined on input line 819.
+Overfull \hbox (38.53632pt too wide) detected at line 829
+\OML/cmm/m/it/10.95 ! [] \U/msa/m/n/10.95 6 \OML/cmm/m/it/10.95 C[]\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.95 k[] \OT1/cmr/m/n/10.95 + \OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 '\OMS/cmsy/m/n/10.95 k[] \OT1/cmr/m/n/10.95 + \OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 g\OMS/cmsy/m/n/10.95 k[] \OT1/cmr/m/n/10.95 + \OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 f[]\OMS/cmsy/m/n/10.95 k[]k\OML/cmm/m/it/10.95 f[]\OMS/cmsy/m/n/10.95 k[]\OT1/cmr/m/n/10.95 ) []
+ []
 
-[9]
+[10]
+
+LaTeX Warning: Reference `54' on page 11 undefined on input line 886.
+
+
+LaTeX Warning: Reference `54' on page 11 undefined on input line 912.
+
+[11]
 No file WNGD(2).bbl.
-[10] (./WNGD(2).aux)
+[12] (./WNGD(2).aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -528,17 +534,14 @@ L3 programming layer <2024-02-20>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 14603 strings out of 476653
- 290165 string characters out of 5798491
+ 14616 strings out of 476653
+ 290405 string characters out of 5798491
  1958842 words of memory out of 5000000
- 36228 multiletter control sequences out of 15000+600000
+ 36241 multiletter control sequences out of 15000+600000
  565818 words of font info for 79 fonts, out of 8000000 for 9000
  197 hyphenation exceptions out of 8191
  102i,19n,107p,1501b,383s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on WNGD(2).pdf (10 pages).
+Output written on WNGD(2).pdf (12 pages).
