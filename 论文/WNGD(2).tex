@@ -870,6 +870,57 @@ $$
 \omega \left( \eta \mid w_s\left( t_p\left( 0;\cdot \right) ,0 \right) \right) \leqslant C\left( \omega \left( \eta \mid w\left( t_{p-1}\left( x;\cdot \right) ,x \right) +\omega \left( \eta \mid g^{\prime} \right) +\omega \left( \eta \mid h^{\prime} \right) \right) \right. 
 $$
 Then using Gronwall's inequality and \eqref{inductive assumption for w eta}, we can get \eqref{inductive assumption for w eta} holds for $j=p$.
+Next we consider $\omega\left(\eta \mid \omega\left(t_p(\cdot, \xi), \cdot\right)\right)$.
+From \eqref{e of w_s 1} and \eqref{e of w_s p}, we know that
+$$
+\omega \left( \eta \mid w\left( t_p(\cdot ;\xi ),\cdot \right) \right) \leqslant \left( \left\| \partial _ta \right\| _{c^0}\parallel u\parallel _{c^1}+\left\| f^{(1)} \right\| _{c^1}\left\| f^{(2)} \right\| _{c^1} \right) \eta 
+$$
+Therefore, we take
+$$
+\begin{aligned}
+	\varOmega (\eta )&=\quad C_0C_{A,k,\varepsilon _0}\left( \omega \left( \eta \mid \varphi ^{\prime} \right) +(\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1}+\left\| \partial _ta \right\| _{C^0}\left\| \psi \right\| _{C^1}+\left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1})\eta +\left\| \psi \right\| _{C^1}+\left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1}\omega \left( \eta \mid \partial _tb \right) \right.\\
+	&\quad +\left( \left\| \varphi \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) \omega \left( \eta \mid a \right) +\omega \left( \eta \mid \partial f^{(1)}\partial f^{(2)} \right) +\omega \left( \eta \mid \psi ^{\prime} \right)\\
+	&\quad +\left. \left\| f^{(1)} \right\| _{C^1}\left( \omega \left( \eta \mid \partial _x{f_s}^{(2)}(0,\cdot ) \right) +\omega \left( \eta \mid \partial _xf_{s}^{(2)}(0,\cdot ) \right) \right) \right)\\
+\end{aligned}
+$$
+where $C_0 \gg 1 $ is a constant, and then we know that
+$$
+\omega \left( \eta \mid h'_i(t) \right) \leqslant \varOmega (\eta ) .
+$$
+$$
+\omega \left( \eta \mid \partial _tu(t,x) \right) \leqslant \varOmega (\eta ) .
+$$
+For $\partial _xu(t,x)$, from \eqref{e1} we have
+$$
+\omega \left( \eta \mid \partial _xu \right) \leqslant C\left( \omega \left( \eta \mid \partial _tu \right) +\parallel u\parallel _{C^1}\omega (\eta \mid a)+\omega \left( \eta \mid \partial f^{(1)}\partial f^{(2)} \right) \right) 
+$$
+Thereby, after adjusting $C_0$, we can get
+$$
+\omega \left( \eta \mid \partial _xu(t,x) \right) \leqslant \varOmega (\eta ) .
+$$
+\begin{rem}
+	From the above analysis, we can see that the continuity paradigm of $h'_i(t) $, $\partial _xu(t,x)$ and $\partial _tu(t,x)$ is uniform in $t$ and $x$.
+\end{rem}
+
+\section{linearization iteration}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

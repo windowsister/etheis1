@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.24)  19 JUL 2025 20:25
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.24)  20 JUL 2025 20:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -505,7 +505,7 @@ Overfull \hbox (62.4246pt too wide) detected at line 716
 
 [8] [9]
 Overfull \hbox (10.45709pt too wide) detected at line 799
-\OML/cmm/m/it/10.95 w[] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []
+[]\OML/cmm/m/it/10.95 w[] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []
  []
 
 
@@ -516,16 +516,39 @@ Overfull \hbox (38.53632pt too wide) detected at line 829
 \OML/cmm/m/it/10.95 ! [] \U/msa/m/n/10.95 6 \OML/cmm/m/it/10.95 C[]\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.95 k[] \OT1/cmr/m/n/10.95 + \OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 '\OMS/cmsy/m/n/10.95 k[] \OT1/cmr/m/n/10.95 + \OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 g\OMS/cmsy/m/n/10.95 k[] \OT1/cmr/m/n/10.95 + \OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 f[]\OMS/cmsy/m/n/10.95 k[]k\OML/cmm/m/it/10.95 f[]\OMS/cmsy/m/n/10.95 k[]\OT1/cmr/m/n/10.95 ) []
  []
 
+
+LaTeX Warning: Reference `e of w_s' on page 10 undefined on input line 831.
+
+
+Overfull \hbox (307.39787pt too wide) detected at line 834
+[] \U/msa/m/n/10.95 6 \OML/cmm/m/it/10.95 C []
+ []
+
+
+Overfull \hbox (62.78452pt too wide) detected at line 854
+[][]
+ []
+
 [10]
+Overfull \hbox (369.9377pt too wide) detected at line 867
+[] \U/msa/m/n/10.95 6 \OML/cmm/m/it/10.95 C []
+ []
 
-LaTeX Warning: Reference `54' on page 11 undefined on input line 886.
 
-
-LaTeX Warning: Reference `54' on page 11 undefined on input line 912.
+Overfull \hbox (344.3308pt too wide) detected at line 885
+[][]
+ []
 
 [11]
+
+LaTeX Warning: Reference `54' on page 12 undefined on input line 979.
+
+[12]
+
+LaTeX Warning: Reference `54' on page 13 undefined on input line 1005.
+
 No file WNGD(2).bbl.
-[12] (./WNGD(2).aux)
+[13] (./WNGD(2).aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -536,12 +559,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 14616 strings out of 476653
- 290405 string characters out of 5798491
+ 14624 strings out of 476653
+ 290548 string characters out of 5798491
  1958842 words of memory out of 5000000
- 36241 multiletter control sequences out of 15000+600000
+ 36249 multiletter control sequences out of 15000+600000
  565818 words of font info for 79 fonts, out of 8000000 for 9000
  197 hyphenation exceptions out of 8191
  102i,19n,107p,1501b,383s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on WNGD(2).pdf (12 pages).
+Output written on WNGD(2).pdf (13 pages).
