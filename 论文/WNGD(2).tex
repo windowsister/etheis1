@@ -275,25 +275,26 @@ $$
 a^{(m)}=a\left(\widetilde{U}^{(m)}, \widetilde{U}_t^{(m)}, \widetilde{U}_x^{(m)}\right) .
 $$
 One can get uniform bounds
-$$
- \left\lVert U^{\left( m \right)}\right\rVert  _{C^2}\leq C\varepsilon ,
-$$
-$$
- \left\lVert H^{\left( m \right)}\right\rVert  _{C^1}\leq C\varepsilon .
-$$
+\begin{equation}\label{bounds u}
+ \left\lVert U^{\left( m \right)}\right\rVert  _{C^2}\leq C_P\varepsilon ,
+\end{equation}
+\begin{equation}\label{bounds h}
+ \left\lVert H^{\left( m \right)}\right\rVert  _{C^1}\leq C_P\varepsilon .
+\end{equation}
 as well as Cauchy sequence 
-$$
-\left\lVert  U^{\left( m \right)}-U^{\left( m-1 \right)}\right\rVert  _{C^1}\leq C\varepsilon \alpha ^{m-1},
-$$
-$$
-\left\lVert  H^{\left( m \right)}-H^{\left( m-1 \right)}\right\rVert  _{C^0}\leq C\varepsilon \alpha ^{m-1}.
-$$
+\begin{equation}\label{cauchy u}
+\left\lVert  U^{\left( m \right)}-U^{\left( m-1 \right)}\right\rVert  _{C^1}\leq C_P\varepsilon \alpha ^{m-1},
+\end{equation}
+where $\alpha$ is a constant satisfying $0<\alpha <1$ and $C_P$ is a large constant. The sequence $\{H^{(m)}\}_{m=1}^\infty$ is also a Cauchy sequence in $C^0$ space, i.e.,
+\begin{equation}\label{cauchy h}
+\left\lVert  H^{\left( m \right)}-H^{\left( m-1 \right)}\right\rVert  _{C^0}\leq C_P\varepsilon \alpha ^{m-1}.
+\end{equation}
 with additional equi-continuity by estimates on modulus of continuity
-$$
+\begin{equation}\label{modulus of continuity}
 \omega \left( \eta \left| \frac{\partial H^{\left( m \right)}}{\partial t} \right. \right) +\omega \left(  \eta \left|\frac{\partial ^2U^{\left( m \right)}}{\partial t^2} \right. \right) +\omega \left( \eta \left|\frac{\partial ^2U^{\left( m \right)}}{\partial x^2} \right.  \right) +\omega \left( \eta \left|\frac{\partial ^2U^{\left( m \right)}}{\partial t\partial x} \right. \right) \leq \Omega \left( \eta \right) .
-$$
-\end{prop}
+\end{equation}
 Where  $\Omega(\eta)$ is a monotonically increasing continuous function satisfying $\Omega(0)=0$.
+\end{prop}
 Theorem \ref{thm:main} follows after obtaining Proposition \ref{prop:main}.In fact, The sequence $\{U ^{(m)}\} _{m=1} ^ \infty $ is a Cauchy sequence in $C^1$ space, and thus converges to some $C^1$ function $ U$ uniformly, applying Arzelà-Ascoli theorem, we know that there exists a subsequence of $\{U ^{(m)}\} _{m=1} ^\infty $ ,which converges uniformly in $C^2$ space. Thus we know that the whole original sequence$\{U ^{(m)}\} _{m=1} ^\infty $ converges to $U$ in $C^2$ space. Therefore, $U$ is $C^2$ smooth and satisfies the control condition, where $U^(m+1)$ for each step can be 
 obtained using the Dirichlet boundary condition as
 $$
@@ -399,14 +400,14 @@ The characteristic lines of the system \eqref{e1} are given as follows:
     \end{array} \right. 
 \end{equation}
 thereby obtaining the following equations:
-$$
+\begin{equation}\label{time line 1}
 \begin{aligned}
 	t_1 \left( x;x_0 \right) &=T+\int_{x_0}^x b\left( t_1 \left( s;x_0 \right) ,s \right) \text{d}s ,\\
     t_p \left( x;x_0 \right) &=t_{p-1} \left( L;x_0 \right)+\int_{L}^x b\left( t_p \left( s;x_0 \right) ,s \right) \text{d}s , p=2 , \cdots , k+1 ,\\
 	\partial _{x_0}t_1\left( x;x_0 \right) &=-b\left( T,x_0 \right) +\int_{x_0}^x{ \partial _t}b\left( t_1 \left( s;x_0 \right) ,s \right) \partial _{x_0}t_1\left( s;x_0 \right) \text{d}s ,\\
 	\partial _{x_0}t_p\left( x;x_0 \right) &=\partial _{x_0} t _{p-1} \left( L;x_0 \right) +\int_{L}^x{ \partial _t}b\left( t_p \left( s;x_0 \right) ,s \right) \partial _{x_0}t_p \left( s;x_0 \right) \text{d}s , p=2 , \cdots , k+1 .
 \end{aligned}
-$$
+\end{equation}
 Denote $z_p(x;x_0)=\partial _{x_0}t_p \left( x;x_0 \right)$, which conduces that
 $$
 \frac{\text{d}}{\text{d}x}z_p \left( x;x_0 \right) = \partial _t b_p \left( t\left( x;x_0 \right) ,x \right) z_p \left( x;x_0 \right) .
@@ -726,7 +727,10 @@ Using \eqref{H}, we can get the estimate of $H\left[ n \right] \left( x \right)$
 \begin{equation}\label{estimate of H[n]}
 	\left\| H\left[ n \right] \left( x \right) \right\|_{C^1} \leq C_{A,k,\lVert a-1 \rVert _{C^1}}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,\ x\in [0,L].
 \end{equation}
-Namely, $\lVert h_i(t) \rVert _{C^1}  \leq C_{A,k,\lVert a-1 \rVert _{C^1}}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) $,$ t \in [0,T]$,  $i=1,\cdots,n$ .
+Namely, 
+\begin{equation}\label{estimate of h}	
+\lVert h_i(t) \rVert _{C^1}  \leq C_{A,k,\lVert a-1 \rVert _{C^1}}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,t \in [0,T],  i=1,\cdots,n.
+\end{equation}
 Then we try to get the estimate of $u(t,x)$:
 From \eqref{e1}, we know that
 $$
@@ -876,19 +880,19 @@ $$
 \omega \left( \eta \mid w\left( t_p(\cdot ;\xi ),\cdot \right) \right) \leqslant \left( \left\| \partial _ta \right\| _{c^0}\parallel u\parallel _{c^1}+\left\| f^{(1)} \right\| _{c^1}\left\| f^{(2)} \right\| _{c^1} \right) \eta 
 $$
 Therefore, we take
-$$
+\begin{equation}\label{continuity paradigm}
 \begin{aligned}
 	\varOmega (\eta )&=\quad C_0C_{A,k,\varepsilon _0}\left( \omega \left( \eta \mid \varphi ^{\prime} \right) +(\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1}+\left\| \partial _ta \right\| _{C^0}\left\| \psi \right\| _{C^1}+\left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1})\eta +\left\| \psi \right\| _{C^1}+\left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1}\omega \left( \eta \mid \partial _tb \right) \right.\\
 	&\quad +\left( \left\| \varphi \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) \omega \left( \eta \mid a \right) +\omega \left( \eta \mid \partial f^{(1)}\partial f^{(2)} \right) +\omega \left( \eta \mid \psi ^{\prime} \right)\\
 	&\quad +\left. \left\| f^{(1)} \right\| _{C^1}\left( \omega \left( \eta \mid \partial _x{f_s}^{(2)}(0,\cdot ) \right) +\omega \left( \eta \mid \partial _xf_{s}^{(2)}(0,\cdot ) \right) \right) \right)\\
 \end{aligned}
-$$
+\end{equation}
 where $C_0 \gg 1 $ is a constant, and then we know that
 $$
 \omega \left( \eta \mid h'_i(t) \right) \leqslant \varOmega (\eta ) .
 $$
 $$
-\omega \left( \eta \mid \partial _tu(t,x) \right) \leqslant \varOmega (\eta ) .
+\omega \left( \eta \mid \partial _tu(t,x) \right) \leqslant \varOmega (\eta ).
 $$
 For $\partial _xu(t,x)$, from \eqref{e1} we have
 $$
@@ -896,20 +900,108 @@ $$
 $$
 Thereby, after adjusting $C_0$, we can get
 $$
-\omega \left( \eta \mid \partial _xu(t,x) \right) \leqslant \varOmega (\eta ) .
+\omega \left( \eta \mid \partial _xu(t,x) \right) \leqslant \varOmega (\eta ).
 $$
 \begin{rem}
 	From the above analysis, we can see that the continuity paradigm of $h'_i(t) $, $\partial _xu(t,x)$ and $\partial _tu(t,x)$ is uniform in $t$ and $x$.
 \end{rem}
+Then we consider the continuity of control functions and solutions with regard to the coefficients of equations.
+Consider another controlling problem with the coefficients $\tilde{a} (t,x)$, $\tilde{f}^{(1)} (t,x)$, $\tilde{f}^{(2)} (t,x)$, $\tilde{g} (t,x)$ and its solution $v(t,x)$,where we assume that the values of these coefficients are the same as those of $a(t,x)$, $f^{(1)}(t,x)$, $f^{(2)}(t,x)$, $g(t,x)$ at $t=0$ and $t=L$ and thereby we can select the same set of functions $\widetilde{H}(t)$ to satisfy the compatibility.
+We first consider the initial boundary value problem \eqref{e4} and \eqref{e5} with the coefficients $\tilde{a} (t,x)$, $\tilde{f}^{(1)} (t,x)$, $\tilde{f}^{(2)} (t,x)$, $\tilde{g} (t,x)$.%% When $x$ is close to $0$, we can use the same method as \eqref{F} to obtain the equation of $\tilde{u}(T,x)$:
+We can easily prove that 
+$$
+\begin{array}{c}
+	\parallel \tilde{u}(T,x)-\tilde{v}(T,x)\parallel _{C^0}\leqslant C\left( \left( \left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) \left\| a-\tilde{a} \right\| _{C^0} \right.\\
+	\left. +\left\| g-\tilde{g} \right\| _{C^0}+\left\| f^{(2)} \right\| _{C^1}\left\| f^{(1)}-\tilde{f}^{(1)} \right\| _{C^0}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)}-\tilde{f}^{(2)} \right\| _{C^0} \right)\\
+\end{array}
+$$
+From \eqref{time line}, we know that
+$$
+\left\| t\left( x;x_0 \right) -\tilde{t}\left( x;x_0 \right) \right\| _{c^0}\leqslant C\parallel a-\tilde{a}\parallel _{c^0}
+$$
+From \eqref{polynomial k+1 r}-\eqref{polynomial p s}, we know that
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{linearization iteration}
-
-
-
-
-
-
-
+In this section, we will show the proof of Theorem \ref{prop:main} with inductive reasoning. Denote $\tilde{a}^{(m)}=a^{(m)}-1$,and we know that
+$$
+\left\| \tilde{a}^{(m)} \right\| _{C^1}\leqslant C\left\| \tilde{U}^{(m)} \right\| _{C^2}\leqslant CC_P\varepsilon 
+$$
+using the inductive assumption \eqref{bounds of U}.
+Denote
+$$
+\begin{aligned}
+	G^{(m)} &=\left(\widetilde{D}^{+}\left(\widetilde{U}^{(m)}, \widetilde{U}_t^{(m)}, \widetilde{U}_x^{(m)}\right)-\widetilde{D}^{+}(0,0,0)\right) \widetilde{D}^{+}(0,0,0)^{-1} \widetilde{V}^{-(m)} \\
+		& -\left(\widetilde{D}^{-}\left(\widetilde{U}^{(m)}, \widetilde{U}_t^{(m)}, \widetilde{U}_x^{(m)}\right)-\widetilde{D}^{-}(0,0,0)\right) \widetilde{D}^{+}(0,0,0)^{-1} \widetilde{V}^{+(m)}.
+\end{aligned}
+$$
+Then we have
+$$
+\left\| G^{(m)} \right\| _{C^1}\leqslant C\left\| \tilde{U}^{(m)} \right\| _{C^2}^{2}\leqslant CC_{P}^{2}\varepsilon ^2
+$$
+Using \eqref{estimate of h} and \eqref{estimate of u}, we can get
+$$
+\left\| H^{(m+1)} \right\| _{C^1}\leqslant 2C\left( 1+CC_{P}^{2}\varepsilon \right) \varepsilon 
+$$
+$$
+\left\| \tilde{V}^{(m+1)} \right\| _{C^1} \leqslant 2C\left( 1+CC_{P}^{2}\varepsilon \right) \varepsilon 
+$$
+and then
+$$
+\left\| \tilde{U}^{(m+1)} \right\| _{C^2} \leqslant 2C\left( 1+CC_{P}^{2}\varepsilon \right) \varepsilon 
+$$
+Select $\varepsilon _0$ small enough and $C_P$ large enough such that
+$$
+2C\left( 1+CC_{P}^{2}\varepsilon _0 \right) \leqslant C_P
+$$
+Then we can get
+$$
+\left\| H^{(m+1)} \right\| _{C^1}\leqslant C_P\varepsilon.
+$$
+and
+$$
+\left\| \tilde{U}^{(m+1)} \right\| _{C^2}\leqslant C_P\varepsilon.
+$$
+Using \eqref{continuity modulus} and inductive assumptions, we know that
+\begin{equation}
+\omega \left( \eta \left| \frac{\partial H^{\left( m +1\right)}}{\partial t} \right. \right) +\omega \left(  \eta \left|\frac{\partial ^2U^{\left( m +1\right)}}{\partial t^2} \right. \right) +\omega \left( \eta \left|\frac{\partial ^2U^{\left( m +1\right)}}{\partial x^2} \right.  \right) +\omega \left( \eta \left|\frac{\partial ^2U^{\left( m+1 \right)}}{\partial t\partial x} \right. \right) \leq \tilde{\Omega} \left( \eta \right) .
+\end{equation}
+where
+$$
+\widetilde{\Omega }(\eta )=C\left( \omega \left( \eta \mid \varphi ^{\prime} \right) +\omega \left( \eta \mid \psi ^{\prime} \right) +\left( 1+C_{P}^{2}\varepsilon \right) \varepsilon \eta +C_P\varepsilon \Omega (\eta ) \right) 
+$$
+Select $\varepsilon _0$ small enough and $C_P$ large enough such that
+$$
+\widetilde{\Omega }(\eta )\leqslant \Omega (\eta )
+$$
+Then we can get the uniform continuity paradigm of $H^{(m+1)}$ and $\tilde{U}^{(m+1)}$.
+Then we try to get the cauchy property \eqref{cauchy of H} and \eqref{cauchy of U}. Provided the method of obtaining the controls $h_i(t)$, we first condider the cauchy property of $\tilde{\varphi }^{(m)}(x)$, where $\tilde{\varphi }^{(m)}(x)=\tilde{u}^{(m)}(T,x)$ and $\tilde{u}^{(m)}(t,x)$ is the solution of the equation below:
+$$
+\begin{cases}
+	&		\partial _t\widetilde{u}^{\pm (m+1)}\pm a^{(m)}\partial _x\widetilde{u}^{\pm (m+1)}=\mp \chi \left( t \right) \partial _x\widetilde{U}^{(m)}\left( \partial _t\pm a^{(m)}\partial _x \right) \left( a^{(m)} \right) ,\\
+	&		x=L:\widetilde{u}^{-(m+1)}=-\widetilde{u}^{+(m+1)},\quad t\in \mathbb{R} ^+,\\
+	&		x=0:\widetilde{u}^{-(m+1)}=B_0\widetilde{u}^{+(m+1)}+\widetilde{H}(t)+G^{\left( m \right)}\left( t \right) ,\\
+	&		t=0:\widetilde{u}^{(m+1)}=\varphi \left( x \right) ,
+\end{cases}
+$$
+where $\chi (t)$ is the same as in section 2 and $\widetilde{H}(t)$ is a set of functions selected that satisfy the compatibility condition.
+Provided that $G^{\left( m \right)}\left( 0 \right)$ depends on $\varphi (x)$ and is independent of $m$, we can select the same set of functions $\widetilde{H}(t)$ for all $m$.
+When $x$ is close to $0$ or $L$, we can use the same method as \eqref{F} to obtain the equation of $\tilde{\varphi }^{(m)}(x)$:
 
 
 
