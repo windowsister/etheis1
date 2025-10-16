@@ -195,17 +195,17 @@ Consider the controllability for system of the quasilinear wave equations below
 \end{equation}
 where
 $$
-U=\left(u_1, \ldots, u_n\right)^T(t, x) \in C^2 .
+U=\left(u_1, \ldots, u_n\right)^T(t, x) \in C^2([0,L]\times [0,T]) .
 $$
-$a\left(U, U_t, U_x\right)>0$ is the $C^1$ uniform wave speed. $D\left(u_1, u_2, u_3\right)=\left(d_{i j}\left(u_1, u_2, u_3\right)\right)_{i, j=1}^n$ is an   $n \times n$ matrix with $C^1$ regularity. Part of the components of $H(t)=\left(h_1(t), \ldots, h_n(t)\right)^T$ would be chosen as boundary controls. We denote $D^{\pm}\left( U,U_t,U_x \right) =a I_n \pm D $ , which we request are invertible. We also request that
+$a\left(U, U_t, U_x\right)>0$ is the $C^1$ uniform wave speed. $D\left(y_1, y_2, y_3\right)=\left(d_{i j}\left(y_1, y_2, y_3\right)\right)_{i, j=1}^n$ is an   $n \times n$ matrix with $C^1$ regularity. Part of the components of $H(t)=\left(h_1(t), \ldots, h_n(t)\right)^T$ would be chosen as boundary controls. We denote $D^{\pm}\left( U,U_t,U_x \right) =a I_n \pm D $ , which we request are invertible. We also request that
 $$
 \begin{aligned}
 	\lVert \left( \varphi  \left( x \right) ,\psi \left( x \right) \right) \rVert _{\left( C^{2,1}\left[ 0,L \right] \right) ^n\times \left( C^{1,1}\left[ 0,L \right] \right) ^n}  < \varepsilon ,\\
-	\lVert \left( \varphi  \left( x \right) ,\Psi \left( x \right) \right) \rVert _{\left( C^{2,1}\left[ 0,L \right] \right) ^n\times \left( C^{1,1}\left[ 0,L \right] \right) ^n}  < \varepsilon .\\
+	\lVert \left( \varPhi   \left( x \right) ,\Psi \left( x \right) \right) \rVert _{\left( C^{2,1}\left[ 0,L \right] \right) ^n\times \left( C^{1,1}\left[ 0,L \right] \right) ^n}  < \varepsilon .\\
 \end{aligned}
 $$
-where $0 < \varepsilon \ll 1$.
-Without loss of generosity, we set $a(0,0,0)=1$, \ $H(t)=\left(h_1(t), \ldots, h_p(t), 0, \ldots, 0\right)^T$. Now we try to reduce the wave equation to a hyperbolic equation group. Denote
+where $0 < \varepsilon < \varepsilon _0 \ll 1$.
+Without loss of generosity, we set $a(0,0,0)=1$, \ $H(t)=\left(h_1(t), \ldots, h_p(t), 0, \ldots, 0\right)^T$. Now we try to reduce the wave equation to a hyperbolic equation system. Denote
 $$
 \begin{aligned}
 & \tilde{U}=D^{+}(0,0,0) U ,\\
@@ -253,7 +253,7 @@ where $k$ is a positive integer.
 
 The following theorem can be obtained.
 \begin{thm} \label{thm:main}
-	Under Assumption \eqref{41}, if $T > kL$, there exists a small $\varepsilon _0$ and a set of $C^1$ smooth control functions $H_i(t)$, $i=1,\cdots ,p$, such that for any $\varepsilon < \varepsilon _0 $ and any $\varPhi (x),\ \varphi  (x)$ which are $C^{2,1}$ smooth and satisfy the $C^2$ compatibility condition and $\varPsi (x),\ \psi (x)$ which are $C^{1,1}$ smooth and satisfy the $C^1$ compatibility condition, there exists a unique $C^2$ smooth solution $U(t,x)$ to the control problem \eqref{42}.
+	Under Assumption \eqref{41}, if $T > kL$, there exists a small $\varepsilon _0$ and a set of $C^1$ smooth control functions $H_i(t)$, $i=1,\cdots ,p$, such that for any $\varepsilon < \varepsilon _0 $ and any $\varPhi (x),\ \varphi  (x)$ which are $C^{2,1}$ smooth and satisfy the $C^2$ compatibility condition and $\varPsi (x),\ \psi (x)$ which are $C^{1,1}$ smooth and satisfy the $C^1$ compatibility condition, there exists a $C^2$ smooth solution $U(t,x)$ to the control problem \eqref{42}.
 \end{thm}
 
 The proof of Theorem \ref{thm:main} requires the following proposition.
@@ -279,7 +279,7 @@ One can get uniform bounds
  \left\lVert U^{\left( m \right)}\right\rVert  _{C^{2,1}}\leq C_P\varepsilon ,
 \end{equation}
 \begin{equation}\label{bounds h}
- \left\lVert H^{\left( m \right)}\right\rVert  _{C^{1,1}}\leq C_P\varepsilon .
+ \left\lVert H^{\left( m \right)}\right\rVert  _{C^{1,1}}\leq C_P\varepsilon ,
 \end{equation}
 as well as Cauchy sequence 
 \begin{equation}\label{cauchy u}
@@ -311,18 +311,18 @@ $$
 We need to introduce a lemma about the linear equation. Consider the following linear equation system
 \begin{equation}\label{e1}
 	\left\{\begin{array}{l}
-	\partial_t u_i- a(t,x)\partial_x u_i=f^{(1)}_i(t,x)(\partial_t - a(t,x)\partial_x)f^{(2)}_i(t,x), i=1, \cdots, r, \\
-	\partial_t u_i+ a(t,x)\partial_x u_i=f^{(1)}_i(t,x)(\partial_t + a(t,x)\partial_x)f^{(2)}_i(t,x), i=r+1, \cdots, r+s.
+	\partial_t u_i- a(t,x)\partial_x u_i=f^{(1)}_i(t,x)(\partial_t - a(t,x)\partial_x)f^{(2)}_i(t,x),\ i=1, \cdots, r, \\
+	\partial_t u_i+ a(t,x)\partial_x u_i=f^{(1)}_i(t,x)(\partial_t + a(t,x)\partial_x)f^{(2)}_i(t,x),\ i=r+1, \cdots, r+s.
 	\end{array}\right.
 \end{equation}
-where $a(t,x)$ is a $C^{1,1}$ function satisfying that $\left\lVert a(t,x)-1\right\rVert _{C^{1,1}} \leq \varepsilon _0$. $\varepsilon _0$ is a constant small enough. $f^{(\kappa )}_i(t,x)$, $i=1,\cdots,r+s,\kappa =1,2$ are $C^{1,1}$ functions. The boundary conditions are given as follows:
+where $r+s=n$ and $a(t,x)$ is a $C^{1,1}$ function satisfying that $\left\lVert a(t,x)-1\right\rVert _{C^{1,1}} \leq \varepsilon _0$. Denote $\tilde{a}=a-1 $.  $\varepsilon _0$ is a constant small enough. $f^{(\kappa )}_i(t,x)$, $i=1,\cdots,r+s,\kappa =1,2$ are $C^{1,1}$ functions. The boundary conditions are given as follows:
 \begin{equation}\label{e2}
 	\left\{ \begin{array}{l}
 		x=0:\ u_i=\sum_{j=1}^r{a_{ij}u_j + g_i(t) + h_i\left( t \right) ,\ i=r+1,\cdots ,n,}\\
 		x=L:\ u_i=\sum_{j=r+1}^n{a_{ij}u_j +g_i(t) + h_i\left( t \right) ,\ i=1,\cdots ,r.}\\
 	\end{array} \right. 
 \end{equation}
-where $g_i(t)$ is a $C^{1,1}$ function, $h_i(t)$ is a $C^{1,1}$ controlling function. The matrix $A=\left( a_{ij} \right) ,\ i=1,\cdots ,n,\ j=1,\cdots ,n$ is a matrix. $u(t,x)$ satisfies
+where $g_i(t), i=1,\cdots, n$ are $C^{1,1}$ function, $h_i(t), i=1,\cdots, n$ are $C^{1,1}$ controlling function. The matrix $A=\left( a_{ij} \right) ,\ i=1,\cdots ,n,\ j=1,\cdots ,n$ is a matrix. $u(t,x)$ satisfies
 \begin{equation}\label{4}
 	u\left( 0,x \right) =\varphi \left( x \right) .
 \end{equation}
@@ -341,7 +341,7 @@ where $r_1 +r_2 =r,\ s_1+s_2=s,\ r+s=n $. The Kalman rank condition is given as 
 \end{equation}
 where $k$ is a positive integer. The following lemma is the main result of this section.
 \begin{lem}\label{lem:linear}
-Under the conditions of \eqref{kalman}, if $T>kL$, then there exists a set of $C^{1,1}$ smooth control functions $h_i(t)$, $i=1,\cdots ,r_1, r+1,\cdots ,r+s_1$, such that for any $C^{1,1}$ smooth functions $g_i(t), f_i(t,x)$, $i=1,\cdots ,n$ and any $C^{1,1}$ smooth functions $\varphi (x), \psi (x)$, which satisfy the $C^1$ compatibility conditions, there exists a unique $C^{1,1}$ smooth solution $u(t,x)$ to the control problem \eqref{e1}-\eqref{4} satisfying
+Under the conditions of \eqref{kalman}, if $T>kL$, then there exists a set of $C^{1,1}$ smooth control functions $h_i(t)$, $i=1,\cdots ,r_1, r+1,\cdots ,r+s_1$, such that for any $C^{1,1}$ smooth functions $g_i(t), f^{\kappa}_i(t,x)$, $i=1,\cdots ,n$ ,$\kappa=1,2$and any $C^{1,1}$ smooth functions $\varphi (x), \psi (x)$, which satisfy the $C^1$ compatibility conditions, there exists a $C^{1,1}$ smooth solution $u(t,x)$ to the control problem \eqref{e1}-\eqref{4} satisfying
 	\begin{equation}\label{5}
         u(T,x)=\psi(x).
     \end{equation}
@@ -380,8 +380,9 @@ The initial and final conditions are given as follows:
 		u(0,x)=0 ,\quad u(T,x)=\psi (x)- \tilde{u}(T,x).
 	\end{equation}
 Finally, the two sets of control functions and solutions obtained can be added separately.
+
 We determine $h_i\left( t \right)$ in the following order:
-In the following we first study the equations of characteristic lines. Let 
+In the following we first study the characteristic lines of equations. Let 
 $$
 b(t,x)=\frac{1}{a(t,x)}.
 $$
@@ -404,9 +405,9 @@ thereby obtaining the following equations:
 \begin{equation}\label{time line 1}
 \begin{aligned}
 	t_1 \left( x;x_0 \right) &=T+\int_{x_0}^x b\left( t_1 \left( s;x_0 \right) ,s \right) \text{d}s ,\\
-    t_p \left( x;x_0 \right) &=t_{p-1} \left( L;x_0 \right)+\int_{L}^x b\left( t_p \left( s;x_0 \right) ,s \right) \text{d}s , p=2 , \cdots , k+1 ,\\
+    t_p \left( x;x_0 \right) &=t_{p-1} \left( L;x_0 \right)+\int_{L}^x b\left( t_p \left( s;x_0 \right) ,s \right) \text{d}s ,\ p=2 , \cdots , k+1 ,\\
 	\partial _{x_0}t_1\left( x;x_0 \right) &=-b\left( T,x_0 \right) +\int_{x_0}^x{ \partial _t}b\left( t_1 \left( s;x_0 \right) ,s \right) \partial _{x_0}t_1\left( s;x_0 \right) \text{d}s ,\\
-	\partial _{x_0}t_p\left( x;x_0 \right) &=\partial _{x_0} t _{p-1} \left( L;x_0 \right) +\int_{L}^x{ \partial _t}b\left( t_p \left( s;x_0 \right) ,s \right) \partial _{x_0}t_p \left( s;x_0 \right) \text{d}s , p=2 , \cdots , k+1 .
+	\partial _{x_0}t_p\left( x;x_0 \right) &=\partial _{x_0} t _{p-1} \left( L;x_0 \right) +\int_{L}^x{ \partial _t}b\left( t_p \left( s;x_0 \right) ,s \right) \partial _{x_0}t_p \left( s;x_0 \right) \text{d}s ,\ p=2 , \cdots , k+1 .
 \end{aligned}
 \end{equation}
 Denote $z_p(x;x_0)=\partial _{x_0}t_p \left( x;x_0 \right)$, which conduces that
@@ -473,11 +474,14 @@ H^{+}\left( t \right) =\left( h_{r+1}\left( t \right) ,\cdots ,h_{r+s_1}\left( t
 $$
 Let
 $$
-h_{i}\left( x\right) =0,\,\,x < 0 ,i = 1, \dots , n.
+h_{i}\left( x\right) =0,\ x < 0 ,\ i = 1, \dots , n.
 $$
-Define
+Denote
 $$
 u\left(t, x \right) =\left( u^-\left( t,x \right) ,u^{+}\left( t,x\right)   \right) ^T,
+$$
+$$
+H\left(t \right) =\left( H^-\left( t\right) ,H^{+}\left( t\right)   \right) ^T,
 $$
 where
 $$
@@ -522,7 +526,7 @@ If a solution $u(t,x)$ satisfying the requirement exists,for any $x\in [0,L]$, w
 							   &=A^kB(H_{k+1}\left( x \right)+G_{k+1}\left( x \right)+F_{k+1}\left( x \right)) +\cdots  +B(H_1\left( x \right)+G_1\left( x \right)+F_1\left( x \right)) ,\ x\in \left[ 0,L \right].
 	\end{aligned}
 	\end{equation}
-Using this equation, we first determine the value of the function and derivative of $h_i(t_p(0;0))$, $h_i(t_p(0;L))$, $h_i(t_p(L;0))$, $h_i(t_p(L;L))$, $(i=1,\cdots,n; p=1,\cdots,k+1)$.
+Using this equation, we first determine the value of the function and derivative of $h_i(t_p(0;0))$, $h_i(t_p(0;L))$, $h_i(t_p(L;0))$, $h_i(t_p(L;L))$, $(i=1,\cdots,n;\ p=1,\cdots,k+1)$.
 Consider the vector $\tilde{G}  (x) = \sum_{l=0}^k A^l G _{l+1}(x)$.
 $$
 \tilde{G}^-  (L) =G^- _1 (L) +A_1 G^+ _2 (L) +A_1 A_2 G^- _3 (L)  +\cdots +A_1 A_2 \cdots A_1 G^+ _{k+1} (L) ,
@@ -569,7 +573,7 @@ $$
 $$
 \tilde{F}^+  (L) =F^+ _1 (L) +A_2 F^- _2 (L) +A_2 A_1 F^+ _3 (L)  +\cdots +A_2 A_1 \cdots A_2 F^- _{k+1} (L) .
 $$
-From the defination of $\chi (t)$ ,we can assume that $f^{(j)}_i(t,x)=0,t < T-\frac{L}{4},\ j=1,2,\ i=1,\cdots,n$. Recognizing \eqref{29}-\eqref{210} and $T-kL < \frac{L}{4}$, we can get 
+From the defination of $\chi (t)$ ,we can assume that $f^{(\kappa)}_i(t,x)=0,\ t < T-\frac{L}{4},\ \kappa=1,2,\ i=1,\cdots,n$. Recognizing \eqref{29}-\eqref{210} and $T-kL < \frac{L}{4}$, we can get 
 $$
 F^- _{1}(L)=0,
 $$
@@ -577,10 +581,10 @@ $$
 F^- _{k+1}(L)=0,
 $$
 $$
-F^+ _{m}(L) =F^+ _{m+1}(L) ,\ m is odd ,\ m=1,\cdots ,k,
+F^+ _{m}(L) =F^+ _{m+1}(L) ,\ m\ is\ odd ,\ m=1,\cdots ,k,
 $$
 $$
-F^+ _{m}(L) =F^+ _{m+1}(L) ,\ m is even ,\ m=1,\cdots ,k.
+F^+ _{m}(L) =F^+ _{m+1}(L) ,\ m\ is\ even ,\ m=1,\cdots ,k.
 $$
 Therefore,
 \begin{equation}
@@ -675,7 +679,7 @@ we know that the vector $(\psi '_r-\tilde{G}'_--\tilde{F}'_-,-\psi '_s+\tilde{G}
 \begin{equation}\label{c1 continuity at L}
 	\psi  '\left( L \right)=A^kB(H'_{k+1}\left( L \right)+G'_{k+1}\left( L \right)+F'_{k+1}\left( L \right)) +\cdots + B(H'_1\left( L \right)+G'_1\left( L \right)+F'_1\left( L \right)) ,
 \end{equation}
-to determine the values of $h'_i$ at $t_p(0;0),t_p(0;L),t_p(L;0),t_p(L;L)$,$(i=1,\cdots,n; p=1,\cdots,k+1)$.
+to determine the values of $h'_i$ at $t_p(0;0),t_p(0;L),t_p(L;0),t_p(L;L)$,$i=1,\cdots,n;\ p=1,\cdots,k+1$.
 Now we continue to determine the other values of $h_i(t)$. \eqref{F} can be written as
 \begin{equation}\label{G}
     \psi\left( x \right) =A^kBH_{k+1}\left( x \right) +\left[B, AB, \ldots, A^{k-1} B\right] \hat{H}(x)  ,\ x\in \left( 0,L \right),
@@ -686,16 +690,16 @@ $$
 $$
 From \eqref{kalman} and the implicit function existence theorem, we know that there exist $n$ components of $\hat{H}(x)$ denoted as $H[n](x) $, s.t.
 \begin{equation}\label{H}
-H\left[ n \right] \left( x \right) =\mathcal{H} \left( \psi\left( x \right) ,H_{k+1}\left( x \right) ,\hat{H}\left[ \hat{n} \right] \left( x \right) \right) ,
+H\left[ n \right] \left( x \right) =\mathcal{H} \left( \psi\left( x \right) ,H_{k+1}\left( x \right) ,H\left[ \hat{n} \right] \left( x \right) \right) ,
 \end{equation}
-where $\hat{H}\left[ \hat{n} \right] \left( x \right)$ is the other components of $\hat{H}(x)$, and $\mathcal{H}$ is a $C^1$ continuous function. For $H_{k+1}\left( x \right) $, we utilize the interpolation method to obtain the following equations:
+where $H\left[ \hat{n} \right] \left( x \right)$ is the other components of $\hat{H}(x)$, and $\mathcal{H}$ is a $C^1$ continuous function. For $H_{k+1}\left( x \right) $, we utilize the interpolation method to obtain the following equations:
 \begin{equation}\label{polynomial k+1 r}
 h_r\left( t_{k+1}\left( L;x \right) \right) =p\left( L-x;h_r\left( t_{k+1}\left( L;0 \right) \right) ,-h'_r\left( t_{k+1}\left( L;0 \right) \right) \right) ,
 \end{equation}
 \begin{equation}\label{polynomial k+1 s}
 	h_s\left( t_{k+1}\left( 0;x \right) \right) =p\left( x;h_s\left( t_{k+1}\left( 0;L \right) \right) ,h'_s\left( t_{k+1}\left( 0;L \right) \right) \right) ,
 \end{equation}
-where $p(x;\alpha ,\alpha  ') ,\ x \in [0,L]$ is a polynomial determined by $\alpha ,\alpha  '$ satisfying $p(x;\alpha ,\alpha  ') =0, \  x \in [0,T-\frac{t_0}{4}]$ and $p(L)=\alpha ,\ p'(L)=\alpha  '$ .Similarly, for the components of $\hat{H}\left[ \hat{n} \right] \left( x \right)$, we can also use the interpolation method to obtain the following equations:
+where $p(x;\alpha ,\alpha  ') ,\ x \in [0,L]$ is a polynomial determined by $\alpha ,\alpha  '$ satisfying $p(x;\alpha ,\alpha  ') =0, \  x \in [0,T-\frac{t_0}{4}]$ and $p(L)=\alpha ,\ p'(L)=\alpha  '$ .Similarly, for the components of $H\left[ \hat{n} \right] \left( x \right)$, we can also use the interpolation method to obtain the following equations:
 \begin{equation}\label{polynomial p r}
 	h_r\left( \tilde{t}_p\left( L;x \right) \right) =p\left( x;h_r\left( \tilde{t}_p\left( L;0 \right) \right) ,h'_r\left( \tilde{t}_p\left( L;0 \right) \right) ,h_r\left( \tilde{t}_p\left( L;L \right) \right) ,h'_r\left( \tilde{t}_p\left( L;L \right) \right) \right) ,p=1,\cdots,k,
 \end{equation}
@@ -724,13 +728,13 @@ Using \eqref{c0 continuity at 0}, \eqref{c0 continuity at L}, \eqref{c1 continui
 \begin{equation}\label{estimate of h_i at t_p}
 	\left\| h_i(t_p(\lambda _1;\lambda _2)) \right\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,\lambda _1,\lambda _2 \in \{ 0,L \} ,\ p=1,\cdots,k+1.
 \end{equation}
-From the defination $H_{k+1}(x)$ and $\hat{H}\left[ \hat{n} \right] \left( x \right)$, we know that
+From the defination $H_{k+1}(x)$ and $H\left[ \hat{n} \right] \left( x \right)$, we know that
 \begin{equation}\label{estimate of H}
 	\left\| H_{k+1}(x) \right\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,\ x\in [0,L],
 \end{equation}
 and
 \begin{equation}\label{estimate of hat{H}}
-	\left\| \hat{H}\left[ \hat{n} \right] \left( x \right) \right\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,\ x\in [0,L].
+	\left\| H\left[ \hat{n} \right] \left( x \right) \right\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,\ x\in [0,L].
 \end{equation}
 Using \eqref{H}, we can get the estimate of $H\left[ n \right] \left( x \right)$:
 \begin{equation}\label{estimate of H[n]}
@@ -738,7 +742,7 @@ Using \eqref{H}, we can get the estimate of $H\left[ n \right] \left( x \right)$
 \end{equation}
 Namely, 
 \begin{equation}\label{estimate of h}	
-\lVert h_i(t) \rVert _{C^1}  \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,t \in [0,T],  i=1,\cdots,n.
+\lVert H(t) \rVert _{C^1}  \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}).
 \end{equation}
 Then we try to get the estimate of $u(t,x)$:
 From \eqref{e1}, we know that
@@ -751,11 +755,11 @@ u_s\left( t_1\left( x;\xi \right) ,x \right) =u_s(0,\xi )+\int_{\xi}^x{f_{s}^{(1
 $$
 Therefore,
 $$
-\left| u_s\left( t_1(x;\xi ),x \right) \right|\leq C\left( \left\| \varphi \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
+\left| u_s\left( t_1(x;\xi ),x \right) \right|\leq C\left( \left\| \varphi \right\| _{C^0}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
 $$
-Similarly, we can get the estimate of $u_r\left( t_1(x;\xi ),x \right) $:
+Similarly, we can get the estimate of $u_r\left( \tilde{t} _1(x;\xi ),x \right) $:
 $$
-\left| u_r\left( t_1(x;\xi ),x \right) \right|\leq C\left( \left\| \varphi \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
+\left| u_r\left( \tilde{t} _1(x;\xi ),x \right) \right|\leq C\left( \left\| \varphi \right\| _{C^0}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
 $$
 Below we make inductive assumptions that for $j=1,\cdots,p-1$, the following estimates hold:
 \begin{equation}\label{inductive assumption}
@@ -804,7 +808,7 @@ $$
 $$
 Below we make inductive assumptions that for $j=1,\cdots,p-1$, the following estimates hold:
 \begin{equation}\label{inductive assumption for w}
-\left| w\left( t_j(x;\xi ),x \right) \right|\leq C_{A,\varepsilon _0}\left( \left\| \varphi \right\| _{C^1}+\left\| \psi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) ,
+\left| w\left( t_j(x;\xi ),x \right) \right|\leq C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^1}+\left\| \psi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) ,
 \end{equation}
 Then for $j=p$, we have
 \begin{equation}\label{e of w_s p}
@@ -817,30 +821,30 @@ where
 and then using \eqref{inductive assumption for w} and Gronwall' inequality, we can get \eqref{inductive assumption for w} holds for $j=p$.
 Finally, we can get the estimate of $u(t,x)$:
 \begin{equation}\label{estimate of u}
-	\left\| u(t,x) \right\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,\ t\in [0,T], x\in [0,L].
+	\left\| u(t,x) \right\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,\ t\in [0,T],\ x\in [0,L].
 \end{equation}
-Below we estimate the continuity paradigm of  $h'_i(t) $ ,$\partial _x u(t,x)$and  $\partial _t u(t,x)$ .
-For $h_i(t) \in \hat{H}\left[ \hat{n} \right] $ and $H_{k+1}$ ,where $t=t_p(\lambda;\xi)$for some $p \in 1,\cdots , k+1$, $\lambda \in \{ 0,L \} $, using \eqref{polynomial k+1 r}- \eqref{polynomial p s} and \eqref{d44}, we have
+Below we estimate the continuity paradigm of  $h'_i(t)$, $\partial _x u(t,x)$ and  $\partial _t u(t,x)$ .
+For $ H\left[ \hat{n} \right] $ and $H_{k+1}$ , using \eqref{polynomial k+1 r}- \eqref{polynomial p s} and \eqref{d44}, we have
 $$
-\left| h' _i\left( t_1 \right) -h'_i\left( t_2 \right) \right|\leq C(\left\| p \right\| _{C^2}\left| x_1-x_2 \right|+\left\| p \right\| _{C^1}\left\| \tilde{a} \right\| _{C^{1,1}}\left| x_1-x_2 \right|),
+\left| h' _i\left( t_1 \right) -h'_i\left( t_2 \right) \right|\leq C_{k,\varepsilon _0}(\left\| p \right\| _{C^2}\left| x_1-x_2 \right|+\left\| p \right\| _{C^1}\left\| \tilde{a} \right\| _{C^{1,1}}\left| x_1-x_2 \right|),
 $$
-where $t_1=t_p(\lambda _1;x _1)$, $t_2=t_p(\lambda _2;x _2)$, $\lambda _1,\lambda _2 \in \{ 0,L \} $, $x _1,x _2 \in [0,L]$ and $C$ is a constant depending on $A$, $k$ and $\varepsilon _0$ and
+where $t_1=t_p(\lambda ;x _1)$, $t_2=t_p(\lambda;x _2)$, $\lambda  \in { 0,L } $, $x _1,x _2 \in [0,L]$  and
 $$
 \|p\|_{C^2} \leq C\|h\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) .
 $$
 Using \eqref{estimate of time line}, we can get
 $$
-\left| x_1-x_2 \right|\le C_{\varepsilon _0}\left| t_p\left( \lambda ;x_1 \right) -t_p\left( \lambda ;x_2 \right) \right|=C_{\varepsilon _0}\left| t_1-t_2 \right|.
+\left| x_1-x_2 \right|\le C_{k,\varepsilon _0}\left| t_p\left( \lambda ;x_1 \right) -t_p\left( \lambda ;x_2 \right) \right|=C_{k,\varepsilon _0}\left| t_1-t_2 \right|.
 $$
-For $h_i(t) \in H\left[ n \right] $, using \eqref{H} and \eqref{estimate of H[n]}, we can get
+For $ H\left[ n \right] $, using \eqref{H} and \eqref{estimate of H[n]}, we can get
 $$
-\left| h^{\prime }_i\left( t_1 \right) -h^{\prime }_i\left( t_2 \right) \right|\leq C_A(\left\| \psi \right\| _{C^{1,1}}+\left\| \varphi \right\| _{C^{1,1}}+\sum_{h_i\in H\left[ \hat{n} \right]}{\left\| h_i(t) \right\| _{C^{1,1}}}).
+\left| h^{\prime }_i\left( t_1 \right) -h^{\prime }_i\left( t_2 \right) \right|\leq C_A(\left\| \psi \right\| _{C^{1,1}}+\left\| \varphi \right\| _{C^{1,1}}+ \left\|H\left[ \hat{n} \right] \right\| _{C^{1,1}}+\left\|H_{k+1}\right\| _{C^{1,1}}).
 $$
-Thereby, we can get the $C^{1,1}$ estimate of $h'_i(t) $:
+Thereby, we can get the $C^{1,1}$ estimate of $h_i(t) $:
 $$
-\left\| h \right\| _{C^{1,1}}\leq C_{A,k,\varepsilon _0}(\left\| \psi \right\| _{C^{1,1}}+\left\| \varphi \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}}).
+\left\| H(t) \right\| _{C^{1,1}}\leq C_{A,k,\varepsilon _0}(\left\| \psi \right\| _{C^{1,1}}+\left\| \varphi \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}}).
 $$
-Then we try to get the $C^{1,1}$ of $ u(t,x)$.We first consider $\omega \left( \eta \mid \partial _tu(\cdot ,x) \right) $.
+Then we try to get the $C^{1,1}$ estimate of $ u(t,x)$.We first consider $\omega \left( \eta \mid \partial _tu(\cdot ,x) \right) $.
 From \eqref{e of w_s} and \eqref{w_s at 0}, we know that
 $$
 \begin{aligned}
@@ -879,7 +883,7 @@ Then using Gronwall's inequality and \eqref{inductive assumption for w eta}, we 
 Next we consider $\omega\left(\eta \mid \omega\left(t_p(\cdot, \xi), \cdot\right)\right)$.
 From \eqref{e of w_s 1} and \eqref{e of w_s p}, we know that
 $$
-\omega \left( \eta \mid w\left( t_p(\cdot ;\xi ),\cdot \right) \right) \leq \left( \left\| \tilde{a} \right\| _{C^1}\parallel u\parallel _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) \eta .
+\omega \left( \eta \mid w\left( t_p(\cdot ;\xi ),\cdot \right) \right) \leq \left( \left\| \tilde{a} \right\| _{C^1}\left\lVert u\right\rVert  _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) \eta .
 $$
 Therefore, we get
 \begin{equation}
