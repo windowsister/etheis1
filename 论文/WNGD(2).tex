@@ -195,17 +195,17 @@ Consider the controllability for system of the quasilinear wave equations below
 \end{equation}
 where
 $$
-U=\left(u_1, \ldots, u_n\right)^T(t, x) \in C^2 .
+U=\left(u_1, \ldots, u_n\right)^T(t, x) \in C^2([0,L]\times [0,T]) .
 $$
-$a\left(U, U_t, U_x\right)>0$ is the $C^1$ uniform wave speed. $D\left(u_1, u_2, u_3\right)=\left(d_{i j}\left(u_1, u_2, u_3\right)\right)_{i, j=1}^n$ is an   $n \times n$ matrix with $C^1$ regularity. Part of the components of $H(t)=\left(h_1(t), \ldots, h_n(t)\right)^T$ would be chosen as boundary controls. We denote $D^{\pm}\left( U,U_t,U_x \right) =a I_n \pm D $ , which we request are invertible. We also request that
+$a\left(U, U_t, U_x\right)>0$ is the $C^1$ uniform wave speed. $D\left(y_1, y_2, y_3\right)=\left(d_{i j}\left(y_1, y_2, y_3\right)\right)_{i, j=1}^n$ is an   $n \times n$ matrix with $C^1$ regularity. Part of the components of $H(t)=\left(h_1(t), \ldots, h_n(t)\right)^T$ would be chosen as boundary controls. We denote $D^{\pm}\left( U,U_t,U_x \right) =a I_n \pm D $ , which we request are invertible. We also request that
 $$
 \begin{aligned}
 	\lVert \left( \varphi  \left( x \right) ,\psi \left( x \right) \right) \rVert _{\left( C^{2,1}\left[ 0,L \right] \right) ^n\times \left( C^{1,1}\left[ 0,L \right] \right) ^n}  < \varepsilon ,\\
-	\lVert \left( \varphi  \left( x \right) ,\Psi \left( x \right) \right) \rVert _{\left( C^{2,1}\left[ 0,L \right] \right) ^n\times \left( C^{1,1}\left[ 0,L \right] \right) ^n}  < \varepsilon .\\
+	\lVert \left( \varPhi   \left( x \right) ,\varPsi \left( x \right) \right) \rVert _{\left( C^{2,1}\left[ 0,L \right] \right) ^n\times \left( C^{1,1}\left[ 0,L \right] \right) ^n}  < \varepsilon .\\
 \end{aligned}
 $$
-where $0 < \varepsilon \ll 1$.
-Without loss of generosity, we set $a(0,0,0)=1$, \ $H(t)=\left(h_1(t), \ldots, h_p(t), 0, \ldots, 0\right)^T$. Now we try to reduce the wave equation to a hyperbolic equation group. Denote
+where $0 < \varepsilon < \varepsilon _0 \ll 1$.
+Without loss of generosity, we set $a(0,0,0)=1$, or we consider the equations of $\bar{U}\left( t,x \right) =U\left( t,a\left( 0,0,0 \right) x \right) $, and $H(t)=\left(h_1(t), \ldots, h_p(t), 0, \ldots, 0\right)^T$. Now we try to reduce the wave equation to a hyperbolic equation system. Denote
 $$
 \begin{aligned}
 & \tilde{U}=D^{+}(0,0,0) U ,\\
@@ -253,33 +253,33 @@ where $k$ is a positive integer.
 
 The following theorem can be obtained.
 \begin{thm} \label{thm:main}
-	Under Assumption \eqref{41}, if $T > kL$, there exists a small $\varepsilon _0$ and a set of $C^1$ smooth control functions $H_i(t)$, $i=1,\cdots ,p$, such that for any $\varepsilon < \varepsilon _0 $ and any $\varPhi (x),\ \varphi  (x)$ which are $C^{2,1}$ smooth and satisfy the $C^2$ compatibility condition and $\varPsi (x),\ \psi (x)$ which are $C^{1,1}$ smooth and satisfy the $C^1$ compatibility condition, there exists a unique $C^2$ smooth solution $U(t,x)$ to the control problem \eqref{42}.
+	Under Assumption \eqref{41}, if $T > kL$, there exists a small $\varepsilon _0$ and a set of $C^1$ smooth control functions $H_i(t)$, $i=1,\cdots ,p$, such that for any $\varepsilon < \varepsilon _0 $ and any $\varPhi (x),\ \varphi  (x)$ which are $C^{2,1}$ smooth and satisfy the $C^2$ compatibility condition and $\varPsi (x),\ \psi (x)$ which are $C^{1,1}$ smooth and satisfy the $C^1$ compatibility condition, there exists a $C^2$ smooth solution $U(t,x)$ to the control problem \eqref{42}.
 \end{thm}
 
 The proof of Theorem \ref{thm:main} requires the following proposition.
 \begin{prop}\label{prop:main}
 	Taking $U^{(0)}\equiv 0$, consider the following iterative problem
 	\begin{equation}
-		\begin{cases}
-		& \partial_t \widetilde{V}^{ \pm(m+1)} \pm a^{(m)} \partial_x \widetilde{V}^{ \pm(m+1)}=\mp \partial_x \widetilde{U}^{(m)}\left(\partial_t \pm a^{(m)} \partial_x\right)\left(a^{(m)}\right), \\
-		& x=L: \widetilde{V}^{-(m+1)}=-\widetilde{V}^{+(m+1)}, \quad t \in \mathbb{R}^{+}, \\
-		& x=0: \widetilde{V}^{-(m+1)}=B_0 \widetilde{V}^{+(m+1)}+\widetilde{H}^{(m+1)}(t) \\
-		& +\left(\widetilde{D}^{+}\left(\widetilde{U}^{(m)}, \widetilde{U}_t^{(m)}, \widetilde{U}_x^{(m)}\right)-\widetilde{D}^{+}(0,0,0)\right) \widetilde{D}^{+}(0,0,0)^{-1} \widetilde{V}^{-(m)} \\
-		& -\left(\widetilde{D}^{-}\left(\widetilde{U}^{(m)}, \widetilde{U}_t^{(m)}, \widetilde{U}_x^{(m)}\right)-\widetilde{D}^{-}(0,0,0)\right) \widetilde{D}^{+}(0,0,0)^{-1} \widetilde{V}^{+(m)}.\\
-		& t=0:\left( U^{(m+1)},U^{(m+1)}_t \right) =\left( \varphi  \left( x \right) ,\psi \left( x \right) \right)  ,\\
-		& t=T:\left( U^{(m+1)},U^{(m+1)}_t \right) =\left( \varPhi   \left( x \right) ,\varPsi  \left( x \right) \right) ,
-	\end{cases}	
+\begin{cases}
+	&		\partial _tV^{\pm (m+1)}\pm a^{(m)}\partial _xV^{\pm (m+1)}=\mp \partial _xU^{(m)}\left( \partial _t\pm a^{(m)}\partial _x \right) \left( a^{(m)} \right) ,\\
+	&		x=L:V^{-(m+1)}=-V^{+(m+1)},\quad t\in \mathbb{R} ^+,\\
+	&		x=0:V^{-(m+1)}=B_0V^{+(m+1)}+\widetilde{H}^{(m+1)}(t)\\
+	&		+\left( \widetilde{D}^+\left( U^{(m)},U_{t}^{(m)},U_{x}^{(m)} \right) -\widetilde{D}^+(0,0,0) \right) \widetilde{D}^+(0,0,0)^{-1}V^{-(m)}\\
+	&		-\left( \widetilde{D}^-\left( U^{(m)},U_{t}^{(m)},U_{x}^{(m)} \right) -\widetilde{D}^-(0,0,0) \right) \widetilde{D}^+(0,0,0)^{-1}V^{+(m)}.\\
+	&		t=0:\left( U^{(m+1)},U_{t}^{(m+1)} \right) =\left( \varphi \left( x \right) ,\psi \left( x \right) \right) ,\\
+	&		t=T:\left( U^{(m+1)},U_{t}^{(m+1)} \right) =\left( \varPhi \left( x \right) ,\varPsi \left( x \right) \right) ,\\
+\end{cases}
 	\end{equation}
 where
 $$
-a^{(m)}=a\left(\widetilde{U}^{(m)}, \widetilde{U}_t^{(m)}, \widetilde{U}_x^{(m)}\right) .
+a^{(m)}=a\left(U^{(m)}, U_t^{(m)}, U_x^{(m)}\right) .
 $$
 One can get uniform bounds
 \begin{equation}\label{bounds u}
  \left\lVert U^{\left( m \right)}\right\rVert  _{C^{2,1}}\leq C_P\varepsilon ,
 \end{equation}
 \begin{equation}\label{bounds h}
- \left\lVert H^{\left( m \right)}\right\rVert  _{C^{1,1}}\leq C_P\varepsilon .
+ \left\lVert H^{\left( m \right)}\right\rVert  _{C^{1,1}}\leq C_P\varepsilon ,
 \end{equation}
 as well as Cauchy sequence 
 \begin{equation}\label{cauchy u}
@@ -311,18 +311,18 @@ $$
 We need to introduce a lemma about the linear equation. Consider the following linear equation system
 \begin{equation}\label{e1}
 	\left\{\begin{array}{l}
-	\partial_t u_i- a(t,x)\partial_x u_i=f^{(1)}_i(t,x)(\partial_t - a(t,x)\partial_x)f^{(2)}_i(t,x), i=1, \cdots, r, \\
-	\partial_t u_i+ a(t,x)\partial_x u_i=f^{(1)}_i(t,x)(\partial_t + a(t,x)\partial_x)f^{(2)}_i(t,x), i=r+1, \cdots, r+s.
+	\partial_t u_i- a(t,x)\partial_x u_i=f^{(1)}_i(t,x)(\partial_t - a(t,x)\partial_x)f^{(2)}_i(t,x),\ i=1, \cdots, r, \\
+	\partial_t u_i+ a(t,x)\partial_x u_i=f^{(1)}_i(t,x)(\partial_t + a(t,x)\partial_x)f^{(2)}_i(t,x),\ i=r+1, \cdots, r+s.
 	\end{array}\right.
 \end{equation}
-where $a(t,x)$ is a $C^{1,1}$ function satisfying that $\left\lVert a(t,x)-1\right\rVert _{C^{1,1}} \leq \varepsilon _0$. $\varepsilon _0$ is a constant small enough. $f^{(\kappa )}_i(t,x)$, $i=1,\cdots,r+s,\kappa =1,2$ are $C^{1,1}$ functions. The boundary conditions are given as follows:
+where $r+s=n$ and $a(t,x)$ is a $C^{1,1}$ function satisfying that $\left\lVert a(t,x)-1\right\rVert _{C^{1,1}} \leq \varepsilon _0$. Denote $\tilde{a}=a-1 $.  $\varepsilon _0$ is a constant small enough. $f^{(\kappa )}_i(t,x)$, $i=1,\cdots,r+s,\kappa =1,2$ are $C^{1,1}$ functions. The boundary conditions are given as follows:
 \begin{equation}\label{e2}
 	\left\{ \begin{array}{l}
 		x=0:\ u_i=\sum_{j=1}^r{a_{ij}u_j + g_i(t) + h_i\left( t \right) ,\ i=r+1,\cdots ,n,}\\
 		x=L:\ u_i=\sum_{j=r+1}^n{a_{ij}u_j +g_i(t) + h_i\left( t \right) ,\ i=1,\cdots ,r.}\\
 	\end{array} \right. 
 \end{equation}
-where $g_i(t)$ is a $C^{1,1}$ function, $h_i(t)$ is a $C^{1,1}$ controlling function. The matrix $A=\left( a_{ij} \right) ,\ i=1,\cdots ,n,\ j=1,\cdots ,n$ is a matrix. $u(t,x)$ satisfies
+where $g_i(t), i=1,\cdots, n$ are $C^{1,1}$ function, $h_i(t), i=1,\cdots, n$ are $C^{1,1}$ controlling function. The matrix $A=\left( a_{ij} \right) ,\ i=1,\cdots ,n,\ j=1,\cdots ,n$ is a matrix. $u(t,x)$ satisfies
 \begin{equation}\label{4}
 	u\left( 0,x \right) =\varphi \left( x \right) .
 \end{equation}
@@ -341,7 +341,7 @@ where $r_1 +r_2 =r,\ s_1+s_2=s,\ r+s=n $. The Kalman rank condition is given as 
 \end{equation}
 where $k$ is a positive integer. The following lemma is the main result of this section.
 \begin{lem}\label{lem:linear}
-Under the conditions of \eqref{kalman}, if $T>kL$, then there exists a set of $C^{1,1}$ smooth control functions $h_i(t)$, $i=1,\cdots ,r_1, r+1,\cdots ,r+s_1$, such that for any $C^{1,1}$ smooth functions $g_i(t), f_i(t,x)$, $i=1,\cdots ,n$ and any $C^{1,1}$ smooth functions $\varphi (x), \psi (x)$, which satisfy the $C^1$ compatibility conditions, there exists a unique $C^{1,1}$ smooth solution $u(t,x)$ to the control problem \eqref{e1}-\eqref{4} satisfying
+Under the conditions of \eqref{kalman}, if $T>kL$, then there exists a set of $C^{1,1}$ smooth control functions $h_i(t)$, $i=1,\cdots ,r_1, r+1,\cdots ,r+s_1$, such that for any $C^{1,1}$ smooth functions $g_i(t), f^{\kappa}_i(t,x)$, $i=1,\cdots ,n$ ,$\kappa=1,2$and any $C^{1,1}$ smooth functions $\varphi (x), \psi (x)$, which satisfy the $C^1$ compatibility conditions, there exists a $C^{1,1}$ smooth solution $u(t,x)$ to the control problem \eqref{e1}-\eqref{4} satisfying
 	\begin{equation}\label{5}
         u(T,x)=\psi(x).
     \end{equation}
@@ -380,8 +380,9 @@ The initial and final conditions are given as follows:
 		u(0,x)=0 ,\quad u(T,x)=\psi (x)- \tilde{u}(T,x).
 	\end{equation}
 Finally, the two sets of control functions and solutions obtained can be added separately.
+
 We determine $h_i\left( t \right)$ in the following order:
-In the following we first study the equations of characteristic lines. Let 
+In the following we first study the characteristic lines of equations. Let 
 $$
 b(t,x)=\frac{1}{a(t,x)}.
 $$
@@ -404,9 +405,9 @@ thereby obtaining the following equations:
 \begin{equation}\label{time line 1}
 \begin{aligned}
 	t_1 \left( x;x_0 \right) &=T+\int_{x_0}^x b\left( t_1 \left( s;x_0 \right) ,s \right) \text{d}s ,\\
-    t_p \left( x;x_0 \right) &=t_{p-1} \left( L;x_0 \right)+\int_{L}^x b\left( t_p \left( s;x_0 \right) ,s \right) \text{d}s , p=2 , \cdots , k+1 ,\\
+    t_p \left( x;x_0 \right) &=t_{p-1} \left( L;x_0 \right)+\int_{L}^x b\left( t_p \left( s;x_0 \right) ,s \right) \text{d}s ,\ p=2 , \cdots , k+1 ,\\
 	\partial _{x_0}t_1\left( x;x_0 \right) &=-b\left( T,x_0 \right) +\int_{x_0}^x{ \partial _t}b\left( t_1 \left( s;x_0 \right) ,s \right) \partial _{x_0}t_1\left( s;x_0 \right) \text{d}s ,\\
-	\partial _{x_0}t_p\left( x;x_0 \right) &=\partial _{x_0} t _{p-1} \left( L;x_0 \right) +\int_{L}^x{ \partial _t}b\left( t_p \left( s;x_0 \right) ,s \right) \partial _{x_0}t_p \left( s;x_0 \right) \text{d}s , p=2 , \cdots , k+1 .
+	\partial _{x_0}t_p\left( x;x_0 \right) &=\partial _{x_0} t _{p-1} \left( L;x_0 \right) +\int_{L}^x{ \partial _t}b\left( t_p \left( s;x_0 \right) ,s \right) \partial _{x_0}t_p \left( s;x_0 \right) \text{d}s ,\ p=2 , \cdots , k+1 .
 \end{aligned}
 \end{equation}
 Denote $z_p(x;x_0)=\partial _{x_0}t_p \left( x;x_0 \right)$, which conduces that
@@ -471,13 +472,13 @@ $$
 $$
 H^{+}\left( t \right) =\left( h_{r+1}\left( t \right) ,\cdots ,h_{r+s_1}\left( t \right) ,0,\cdots,0 \right) .
 $$
-Let
-$$
-h_{i}\left( x\right) =0,\,\,x < 0 ,i = 1, \dots , n.
-$$
-Define
+We require that $\tilde{t}_{k+1}(x;x_0)=0$ if there exists such $\tilde{x} \in [0,L]$ such that $\tilde{x} \leq x$ and $\tilde{t}_{k+1}(\tilde{x} ;x_0)=0$, and $t_{k+1}(x;x_0)=0$ if there exists such $\hat{x} \in [0,L]$ such that $\hat{x} \geq x$ and $t_{k+1}(\hat{x} ;x_0)=0$.
+Denote
 $$
 u\left(t, x \right) =\left( u^-\left( t,x \right) ,u^{+}\left( t,x\right)   \right) ^T,
+$$
+$$
+H\left(t \right) =\left( H^-\left( t\right) ,H^{+}\left( t\right)   \right) ^T,
 $$
 where
 $$
@@ -522,7 +523,7 @@ If a solution $u(t,x)$ satisfying the requirement exists,for any $x\in [0,L]$, w
 							   &=A^kB(H_{k+1}\left( x \right)+G_{k+1}\left( x \right)+F_{k+1}\left( x \right)) +\cdots  +B(H_1\left( x \right)+G_1\left( x \right)+F_1\left( x \right)) ,\ x\in \left[ 0,L \right].
 	\end{aligned}
 	\end{equation}
-Using this equation, we first determine the value of the function and derivative of $h_i(t_p(0;0))$, $h_i(t_p(0;L))$, $h_i(t_p(L;0))$, $h_i(t_p(L;L))$, $(i=1,\cdots,n; p=1,\cdots,k+1)$.
+Using this equation, we first determine the value of the function and derivative of $h_i(t_p(0;0))$, $h_i(t_p(0;L))$, $h_i(t_p(L;0))$, $h_i(t_p(L;L))$, $(i=1,\cdots,n;\ p=1,\cdots,k+1)$.
 Consider the vector $\tilde{G}  (x) = \sum_{l=0}^k A^l G _{l+1}(x)$.
 $$
 \tilde{G}^-  (L) =G^- _1 (L) +A_1 G^+ _2 (L) +A_1 A_2 G^- _3 (L)  +\cdots +A_1 A_2 \cdots A_1 G^+ _{k+1} (L) ,
@@ -569,7 +570,7 @@ $$
 $$
 \tilde{F}^+  (L) =F^+ _1 (L) +A_2 F^- _2 (L) +A_2 A_1 F^+ _3 (L)  +\cdots +A_2 A_1 \cdots A_2 F^- _{k+1} (L) .
 $$
-From the defination of $\chi (t)$ ,we can assume that $f^{(j)}_i(t,x)=0,t < T-\frac{L}{4},\ j=1,2,\ i=1,\cdots,n$. Recognizing \eqref{29}-\eqref{210} and $T-kL < \frac{L}{4}$, we can get 
+From the defination of $\chi (t)$ ,we can assume that $f^{(\kappa)}_i(t,x)=0,\ t < T-\frac{L}{4},\ \kappa=1,2,\ i=1,\cdots,n$. Recognizing \eqref{29}-\eqref{210} and $T-kL < \frac{L}{4}$, we can get 
 $$
 F^- _{1}(L)=0,
 $$
@@ -577,10 +578,10 @@ $$
 F^- _{k+1}(L)=0,
 $$
 $$
-F^+ _{m}(L) =F^+ _{m+1}(L) ,\ m is odd ,\ m=1,\cdots ,k,
+F^+ _{m}(L) =F^+ _{m+1}(L) ,\ m\ is\ odd ,\ m=1,\cdots ,k,
 $$
 $$
-F^+ _{m}(L) =F^+ _{m+1}(L) ,\ m is even ,\ m=1,\cdots ,k.
+F^+ _{m}(L) =F^+ _{m+1}(L) ,\ m\ is\ even ,\ m=1,\cdots ,k.
 $$
 Therefore,
 \begin{equation}
@@ -638,15 +639,18 @@ $$
 $$
 \begin{aligned}
 	F_{1}^{\prime}(x)=&\left( -f^{(1)-}(b\partial _t-\partial _x)f^{(2)-}(T,x) \right. +\int_x^L{\frac{\partial f^{(1)-}}{\partial t}\left( b\partial _t-\partial _x \right) f^{(2)-}\left( \tilde{t}_1(s,x),s \right) \frac{\partial \tilde{t}_1}{\partial x}(s;x)\mathrm{d}s}\\
-	&\quad -\int_x^L{\frac{\partial f^{(1)-}}{\partial t}\left( b\partial _t-\partial _x \right) f^{(2)-}\left( \tilde{t}_1(s,x),s \right) \frac{\partial \tilde{t}_1}{\partial x}(s;x)\mathrm{d}s}+\left. f^{(1)-}\frac{\partial f^{(2)-}}{\partial t}\left( \tilde{t}_1(s;x),s \right) \frac{\partial \tilde{t}_1}{\partial x}(s;x) \right|_{x}^{L},\\
+	&\quad \quad-\int_x^L{\frac{\partial f^{(2)-}}{\partial t}\left( b\partial _t-\partial _x \right) f^{(1)-}\left( \tilde{t}_1(s,x),s \right) \frac{\partial \tilde{t}_1}{\partial x}(s;x)\mathrm{d}s}+\left. f^{(1)-}\frac{\partial f^{(2)-}}{\partial t}\left( \tilde{t}_1(s;x),s \right) \frac{\partial \tilde{t}_1}{\partial x}(s;x) \right|_{x}^{L},\\
 	&\quad f^{(1)+}(b\partial _t-\partial _x)f^{(2)+}(T,x)+\int_0^x{\frac{\partial f^{(1)+}}{\partial t}\left( b\partial _t-\partial _x \right) f^{(2)+}\left( t_1(s,x),s \right) \frac{\partial t_1}{\partial x}(s;x)\,\mathrm{d}s}\\
-	&\quad \left. -\int_0^x{\frac{\partial f^{(1)+}}{\partial t}\left( b\partial _t-\partial _x \right) f^{(2)+}\left( t_1(s,x),s \right) \frac{\partial t_1}{\partial x}(s;x)\mathrm{d}s}+\left. f^{(1)+}\frac{\partial f^{(2)+}}{\partial t}\left( t_1(s;x),s \right) \frac{\partial t_1}{\partial x}(s;x) \right|_{0}^{x} \right)\\
+	&\quad \quad\left. -\int_0^x{\frac{\partial f^{(2)+}}{\partial t}\left( b\partial _t-\partial _x \right) f^{(1)+}\left( t_1(s,x),s \right) \frac{\partial t_1}{\partial x}(s;x)\mathrm{d}s}+\left. f^{(1)+}\frac{\partial f^{(2)+}}{\partial t}\left( t_1(s;x),s \right) \frac{\partial t_1}{\partial x}(s;x) \right|_{0}^{x} \right) ^T\\
 \end{aligned}
 $$
 $$
-F_{p}^{'}\left( x \right) =\left( \begin{matrix}
-	\int_0^L{\frac{\partial f^{\left( 1 \right) -}}{\partial t}}\left( b\partial _t-\partial _x \right) f^{\left( 2 \right) -}\left( \tilde{t}_p\left( s,x \right) ,s \right) \frac{\partial \tilde{t}_p}{\partial x}\left( s;x \right) ds-\int_0^L{\frac{\partial f^{\left( 1 \right) -}}{\partial t}}\left( b\partial _t-\partial _x \right) f^{\left( 2 \right) -}\left( \tilde{t}_p\left( s,x \right) ,s \right) \frac{\partial \tilde{t}_p}{\partial x}\left( s;x \right) ds+\left. f^{\left( 1 \right) -}\frac{\partial f^{\left( 2 \right) -}}{\partial t}\left( \tilde{t}_p\left( s;x \right) ,s \right) \frac{\partial \tilde{t}_p}{\partial x}\left( s;x \right) \right|_{0}^{L}&		\int_0^L{\frac{\partial f^{\left( 1 \right) +}}{\partial t}}\left( b\partial _t-\partial _x \right) f^{\left( 2 \right) +}\left( t_p\left( s,x \right) ,s \right) \frac{\partial t_p}{\partial x}\left( s;x \right) ds-\int_0^L{\frac{\partial f^{\left( 1 \right) +}}{\partial t}}\left( b\partial _t-\partial _x \right) f^{\left( 2 \right) +}\left( t_p\left( s,x \right) ,s \right) \frac{\partial t_p}{\partial x}\left( s;x \right) ds+\left. f^{\left( 1 \right) +}\frac{\partial f^{\left( 2 \right) +}}{\partial t}\left( t_p\left( s;x \right) ,s \right) \frac{\partial t_p}{\partial x}\left( s;x \right) \right|_{0}^{L}\\
-\end{matrix} \right) 
+\begin{aligned}
+F_{p}^{\prime}\left( x \right) &=\left( \left. f^{\left( 1 \right) -}\frac{\partial f^{\left( 2 \right) -}}{\partial t}\left( \tilde{t}_p\left( s;x \right) ,s \right) \frac{\partial \tilde{t}_p}{\partial x}\left( s;x \right) \right|_{0}^{L}+\int_0^L{\frac{\partial f^{\left( 1 \right) -}}{\partial t}\left( b\partial _t-\partial _x \right) f^{\left( 2 \right) -}\left( \tilde{t}_p\left( s,x \right) ,s \right) \frac{\partial \tilde{t}_p}{\partial x}\left( s;x \right) \mathrm{d}s} \right.\\
+& \quad \quad-\int_0^L{\frac{\partial f^{\left( 2 \right) -}}{\partial t}\left( b\partial _t-\partial _x \right) f^{\left( 1 \right) -}\left( \tilde{t}_p\left( s,x \right) ,s \right) \frac{\partial \tilde{t}_p}{\partial x}\left( s;x \right) \mathrm{d}s},\\
+& \quad\left. f^{\left( 1 \right) +}\frac{\partial f^{\left( 2 \right) +}}{\partial t}\left( t_p\left( s;x \right) ,s \right) \frac{\partial t_p}{\partial x}\left( s;x \right) \right|_{0}^{L}+\int_0^L{\frac{\partial f^{\left( 1 \right) +}}{\partial t}\left( b\partial _t-\partial _x \right) f^{\left( 2 \right) +}\left( t_p\left( s,x \right) ,s \right) \frac{\partial t_p}{\partial x}\left( s;x \right) \mathrm{d}s}\\
+& \quad  \quad\left.-\int_0^L{\frac{\partial f^{\left( 2 \right) +}}{\partial t}\left( b\partial _t-\partial _x \right) f^{\left( 1 \right) +}\left( t_p\left( s,x \right) ,s \right) \frac{\partial t_p}{\partial x}\left( s;x \right) \mathrm{d}s} \right) ^T\\
+\end{aligned}
 $$
 Consider the vector $\tilde{G'}  (x) = \sum_{l=0}^k A^l G '_{l+1}(x)$ and  $\tilde{F'}  (x) = \sum_{l=0}^k A^l F '_{l+1}(x)$.Similar to the previous case using \eqref{29}-\eqref{212}, we can get the following equations:
 $$
@@ -663,11 +667,20 @@ $$
 $$
 Combined with the $C^1$ compatibility condition satisfied by $\psi (x)$:
 $$
-a\left( T,L \right) \psi '_r\left( L \right) +f_{r}^{\left( 1 \right)}\left( \partial _t-a\left( T,L \right) \partial _x \right) f_{r}^{\left( 2 \right)}\left( T,L \right) =A_2\left( -a\left( T,L \right) \psi '_s\left( L \right) +f_{s}^{\left( 1 \right)}\left( \partial _t+a\left( T,L \right) \partial _x \right) f_{s}^{\left( 2 \right)}\left( T,L \right) \right) +g'_r\left( T \right) +h'_r\left( T \right) 
+\begin{aligned}
+	&a(T,L)\,\psi \prime _r(L)+f_{r}^{(1)}\bigl( \partial _t-a(T,L)\,\partial _x \bigr) f_{r}^{(2)}(T,L)\\
+	&=A_2\bigl( -a(T,L)\,\psi \prime _s(L)+f_{s}^{(1)}\bigl( \partial _t+a(T,L)\,\partial _x \bigr) f_{s}^{(2)}(T,L) \bigr)\\
+	&\quad +g\prime _r(T)+h\prime _r(T).\\
+\end{aligned}
 $$
 $$
--a\left( T,0 \right) \psi '_s\left( 0 \right) +f_{s}^{\left( 1 \right)}\left( \partial _t+a\left( T,0 \right) \partial _x \right) f_{s}^{\left( 2 \right)}\left( T,0 \right) =A_2\left( a\left( T,0 \right) \psi '_r\left( 0 \right) +f_{r}^{\left( 1 \right)}\left( \partial _t-a\left( T,0 \right) \partial _x \right) f_{r}^{\left( 2 \right)}\left( T,0 \right) \right) +g'_s\left( T \right) +h'_s\left( T \right) 
+\begin{aligned}
+	&-a(T,0)\,\psi \prime _s(0)+f_{s}^{(1)}\bigl( \partial _t+a(T,0)\,\partial _x \bigr) \,f_{s}^{(2)}(T,0)\\
+	&=A_2\bigl( a(T,0)\,\psi \prime _r(0)+f_{r}^{(1)}\bigl( \partial _t-a(T,0)\,\partial _x \bigr) \,f_{r}^{(2)}(T,0) \bigr)\\
+	&\quad +g\prime _s(T)+h\prime _s(T).\\
+\end{aligned}
 $$
+
 we know that the vector $(\psi '_r-\tilde{G}'_--\tilde{F}'_-,-\psi '_s+\tilde{G}'_++\tilde{F}'_+)^T$ stastisfies the conditions of Lemma \ref{l50}.Therefore, the following equations have a solution:
 \begin{equation}\label{c1 continuity at 0}
 	\psi  '\left( 0 \right)=A^kB(H'_{k+1}\left( 0\right)+G'_{k+1}\left( 0 \right)+F'_{k+1}\left( 0 \right)) +\cdots + B(H'_1\left( 0 \right)+G'_1\left( 0 \right)+F'_1\left( 0 \right)) ,
@@ -675,7 +688,7 @@ we know that the vector $(\psi '_r-\tilde{G}'_--\tilde{F}'_-,-\psi '_s+\tilde{G}
 \begin{equation}\label{c1 continuity at L}
 	\psi  '\left( L \right)=A^kB(H'_{k+1}\left( L \right)+G'_{k+1}\left( L \right)+F'_{k+1}\left( L \right)) +\cdots + B(H'_1\left( L \right)+G'_1\left( L \right)+F'_1\left( L \right)) ,
 \end{equation}
-to determine the values of $h'_i$ at $t_p(0;0),t_p(0;L),t_p(L;0),t_p(L;L)$,$(i=1,\cdots,n; p=1,\cdots,k+1)$.
+to determine the values of $h'_i$ at $t_p(0;0),t_p(0;L),t_p(L;0),t_p(L;L)$,$i=1,\cdots,n;\ p=1,\cdots,k+1$.
 Now we continue to determine the other values of $h_i(t)$. \eqref{F} can be written as
 \begin{equation}\label{G}
     \psi\left( x \right) =A^kBH_{k+1}\left( x \right) +\left[B, AB, \ldots, A^{k-1} B\right] \hat{H}(x)  ,\ x\in \left( 0,L \right),
@@ -686,16 +699,16 @@ $$
 $$
 From \eqref{kalman} and the implicit function existence theorem, we know that there exist $n$ components of $\hat{H}(x)$ denoted as $H[n](x) $, s.t.
 \begin{equation}\label{H}
-H\left[ n \right] \left( x \right) =\mathcal{H} \left( \psi\left( x \right) ,H_{k+1}\left( x \right) ,\hat{H}\left[ \hat{n} \right] \left( x \right) \right) ,
+H\left[ n \right] \left( x \right) =\mathcal{H} \left( \psi\left( x \right) ,H_{k+1}\left( x \right) ,H\left[ \hat{n} \right] \left( x \right) \right) ,
 \end{equation}
-where $\hat{H}\left[ \hat{n} \right] \left( x \right)$ is the other components of $\hat{H}(x)$, and $\mathcal{H}$ is a $C^1$ continuous function. For $H_{k+1}\left( x \right) $, we utilize the interpolation method to obtain the following equations:
+where $H\left[ \hat{n} \right] \left( x \right)$ is the other components of $\hat{H}(x)$, and $\mathcal{H}$ is a $C^1$ continuous function. For $H_{k+1}\left( x \right) $, we utilize the interpolation method to obtain the following equations:
 \begin{equation}\label{polynomial k+1 r}
 h_r\left( t_{k+1}\left( L;x \right) \right) =p\left( L-x;h_r\left( t_{k+1}\left( L;0 \right) \right) ,-h'_r\left( t_{k+1}\left( L;0 \right) \right) \right) ,
 \end{equation}
 \begin{equation}\label{polynomial k+1 s}
 	h_s\left( t_{k+1}\left( 0;x \right) \right) =p\left( x;h_s\left( t_{k+1}\left( 0;L \right) \right) ,h'_s\left( t_{k+1}\left( 0;L \right) \right) \right) ,
 \end{equation}
-where $p(x;\alpha ,\alpha  ') ,\ x \in [0,L]$ is a polynomial determined by $\alpha ,\alpha  '$ satisfying $p(x;\alpha ,\alpha  ') =0, \  x \in [0,T-\frac{t_0}{4}]$ and $p(L)=\alpha ,\ p'(L)=\alpha  '$ .Similarly, for the components of $\hat{H}\left[ \hat{n} \right] \left( x \right)$, we can also use the interpolation method to obtain the following equations:
+where $p(x;\alpha ,\alpha  ') ,\ x \in [0,L]$ is a polynomial determined by $\alpha ,\alpha  '$ satisfying $p(x;\alpha ,\alpha  ') =0, \  x \in [0,T-\frac{t_0}{4}]$ and $p(L)=\alpha ,\ p'(L)=\alpha  '$ .Similarly, for the components of $H\left[ \hat{n} \right] \left( x \right)$, we can also use the interpolation method to obtain the following equations:
 \begin{equation}\label{polynomial p r}
 	h_r\left( \tilde{t}_p\left( L;x \right) \right) =p\left( x;h_r\left( \tilde{t}_p\left( L;0 \right) \right) ,h'_r\left( \tilde{t}_p\left( L;0 \right) \right) ,h_r\left( \tilde{t}_p\left( L;L \right) \right) ,h'_r\left( \tilde{t}_p\left( L;L \right) \right) \right) ,p=1,\cdots,k,
 \end{equation}
@@ -722,15 +735,15 @@ From \eqref{time line}, we get
 \end{equation}
 Using \eqref{c0 continuity at 0}, \eqref{c0 continuity at L}, \eqref{c1 continuity at 0}, \eqref{c1 continuity at L} and \eqref{estimate of time line}, we know the estimate of $h_i(t)$, $i=1,\cdots,n$ at $t_p(0;0),t_p(0;L),t_p(L;0),t_p(L;L)$,$(p=1,\cdots,k+1)$.
 \begin{equation}\label{estimate of h_i at t_p}
-	\left\| h_i(t_p(\lambda _1;\lambda _2)) \right\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,\lambda _1,\lambda _2 \in \{ 0,L \} ,\ p=1,\cdots,k+1.
+	\left\| h_i(t_p(\lambda _1;\lambda _2)) \right\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,\lambda _1,\lambda _2 \in \{ 0,L \} .
 \end{equation}
-From the defination $H_{k+1}(x)$ and $\hat{H}\left[ \hat{n} \right] \left( x \right)$, we know that
+From the defination $H_{k+1}(x)$ and $H\left[ \hat{n} \right] \left( x \right)$, we know that
 \begin{equation}\label{estimate of H}
 	\left\| H_{k+1}(x) \right\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,\ x\in [0,L],
 \end{equation}
 and
 \begin{equation}\label{estimate of hat{H}}
-	\left\| \hat{H}\left[ \hat{n} \right] \left( x \right) \right\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,\ x\in [0,L].
+	\left\| H\left[ \hat{n} \right] \left( x \right) \right\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,\ x\in [0,L].
 \end{equation}
 Using \eqref{H}, we can get the estimate of $H\left[ n \right] \left( x \right)$:
 \begin{equation}\label{estimate of H[n]}
@@ -738,7 +751,7 @@ Using \eqref{H}, we can get the estimate of $H\left[ n \right] \left( x \right)$
 \end{equation}
 Namely, 
 \begin{equation}\label{estimate of h}	
-\lVert h_i(t) \rVert _{C^1}  \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,t \in [0,T],  i=1,\cdots,n.
+\lVert H(t) \rVert _{C^1}  \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}).
 \end{equation}
 Then we try to get the estimate of $u(t,x)$:
 From \eqref{e1}, we know that
@@ -751,11 +764,11 @@ u_s\left( t_1\left( x;\xi \right) ,x \right) =u_s(0,\xi )+\int_{\xi}^x{f_{s}^{(1
 $$
 Therefore,
 $$
-\left| u_s\left( t_1(x;\xi ),x \right) \right|\leq C\left( \left\| \varphi \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
+\left| u_s\left( t_1(x;\xi ),x \right) \right|\leq C\left( \left\| \varphi \right\| _{C^0}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
 $$
-Similarly, we can get the estimate of $u_r\left( t_1(x;\xi ),x \right) $:
+Similarly, we can get the estimate of $u_r\left( \tilde{t} _1(x;\xi ),x \right) $:
 $$
-\left| u_r\left( t_1(x;\xi ),x \right) \right|\leq C\left( \left\| \varphi \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
+\left| u_r\left( \tilde{t} _1(x;\xi ),x \right) \right|\leq C\left( \left\| \varphi \right\| _{C^0}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
 $$
 Below we make inductive assumptions that for $j=1,\cdots,p-1$, the following estimates hold:
 \begin{equation}\label{inductive assumption}
@@ -804,7 +817,7 @@ $$
 $$
 Below we make inductive assumptions that for $j=1,\cdots,p-1$, the following estimates hold:
 \begin{equation}\label{inductive assumption for w}
-\left| w\left( t_j(x;\xi ),x \right) \right|\leq C_{A,\varepsilon _0}\left( \left\| \varphi \right\| _{C^1}+\left\| \psi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) ,
+\left| w\left( t_j(x;\xi ),x \right) \right|\leq C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^1}+\left\| \psi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) ,
 \end{equation}
 Then for $j=p$, we have
 \begin{equation}\label{e of w_s p}
@@ -817,30 +830,30 @@ where
 and then using \eqref{inductive assumption for w} and Gronwall' inequality, we can get \eqref{inductive assumption for w} holds for $j=p$.
 Finally, we can get the estimate of $u(t,x)$:
 \begin{equation}\label{estimate of u}
-	\left\| u(t,x) \right\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,\ t\in [0,T], x\in [0,L].
+	\left\| u(t,x) \right\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,\ t\in [0,T],\ x\in [0,L].
 \end{equation}
-Below we estimate the continuity paradigm of  $h'_i(t) $ ,$\partial _x u(t,x)$and  $\partial _t u(t,x)$ .
-For $h_i(t) \in \hat{H}\left[ \hat{n} \right] $ and $H_{k+1}$ ,where $t=t_p(\lambda;\xi)$for some $p \in 1,\cdots , k+1$, $\lambda \in \{ 0,L \} $, using \eqref{polynomial k+1 r}- \eqref{polynomial p s} and \eqref{d44}, we have
+Below we estimate the continuity paradigm of  $h'_i(t)$, $\partial _x u(t,x)$ and  $\partial _t u(t,x)$ .
+For $ H\left[ \hat{n} \right] $ and $H_{k+1}$ , using \eqref{polynomial k+1 r}- \eqref{polynomial p s} and \eqref{d44}, we have
 $$
-\left| h' _i\left( t_1 \right) -h'_i\left( t_2 \right) \right|\leq C(\left\| p \right\| _{C^2}\left| x_1-x_2 \right|+\left\| p \right\| _{C^1}\left\| \tilde{a} \right\| _{C^{1,1}}\left| x_1-x_2 \right|),
+\left| h' _i\left( t_1 \right) -h'_i\left( t_2 \right) \right|\leq C_{k,\varepsilon _0}(\left\| p \right\| _{C^2}\left| x_1-x_2 \right|+\left\| p \right\| _{C^1}\left\| \tilde{a} \right\| _{C^{1,1}}\left| x_1-x_2 \right|),
 $$
-where $t_1=t_p(\lambda _1;x _1)$, $t_2=t_p(\lambda _2;x _2)$, $\lambda _1,\lambda _2 \in \{ 0,L \} $, $x _1,x _2 \in [0,L]$ and $C$ is a constant depending on $A$, $k$ and $\varepsilon _0$ and
+where $t_1=t_p(\lambda ;x _1)$, $t_2=t_p(\lambda;x _2)$, $\lambda  \in { 0,L } $, $x _1,x _2 \in [0,L]$  and
 $$
 \|p\|_{C^2} \leq C\|h\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) .
 $$
 Using \eqref{estimate of time line}, we can get
 $$
-\left| x_1-x_2 \right|\le C_{\varepsilon _0}\left| t_p\left( \lambda ;x_1 \right) -t_p\left( \lambda ;x_2 \right) \right|=C_{\varepsilon _0}\left| t_1-t_2 \right|.
+\left| x_1-x_2 \right|\le C_{k,\varepsilon _0}\left| t_p\left( \lambda ;x_1 \right) -t_p\left( \lambda ;x_2 \right) \right|=C_{k,\varepsilon _0}\left| t_1-t_2 \right|.
 $$
-For $h_i(t) \in H\left[ n \right] $, using \eqref{H} and \eqref{estimate of H[n]}, we can get
+For $ H\left[ n \right] $, using \eqref{H} and \eqref{estimate of H[n]}, we can get
 $$
-\left| h^{\prime }_i\left( t_1 \right) -h^{\prime }_i\left( t_2 \right) \right|\leq C_A(\left\| \psi \right\| _{C^{1,1}}+\left\| \varphi \right\| _{C^{1,1}}+\sum_{h_i\in H\left[ \hat{n} \right]}{\left\| h_i(t) \right\| _{C^{1,1}}}).
+\left| h^{\prime }_i\left( t_1 \right) -h^{\prime }_i\left( t_2 \right) \right|\leq C_A(\left\| \psi \right\| _{C^{1,1}}+\left\| \varphi \right\| _{C^{1,1}}+ \left\|H\left[ \hat{n} \right] \right\| _{C^{1,1}}+\left\|H_{k+1}\right\| _{C^{1,1}}).
 $$
-Thereby, we can get the $C^{1,1}$ estimate of $h'_i(t) $:
+Thereby, we can get the $C^{1,1}$ estimate of $h_i(t) $:
 $$
-\left\| h \right\| _{C^{1,1}}\leq C_{A,k,\varepsilon _0}(\left\| \psi \right\| _{C^{1,1}}+\left\| \varphi \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}}).
+\left\| H(t) \right\| _{C^{1,1}}\leq C_{A,k,\varepsilon _0}(\left\| \psi \right\| _{C^{1,1}}+\left\| \varphi \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}}).
 $$
-Then we try to get the $C^{1,1}$ of $ u(t,x)$.We first consider $\omega \left( \eta \mid \partial _tu(\cdot ,x) \right) $.
+Then we try to get the $C^{1,1}$ estimate of $ u(t,x)$.We first consider $\omega \left( \eta \mid \partial _tu(\cdot ,x) \right) $.
 From \eqref{e of w_s} and \eqref{w_s at 0}, we know that
 $$
 \begin{aligned}
@@ -861,15 +874,25 @@ $$
 $$
 and then
 $$
-\omega \left( \eta \mid w_s\left( t_1\left( x;\cdot \right) ,x \right) \right) \leq  C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}}+(\left\| \psi \right\| _{C^1}+\left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1})\left\| \tilde{a} \right\| _{C^{1,1}} \right) \eta
+\begin{aligned}
+\omega \left( \eta \mid w_s\left( t_1\left( x;\cdot \right) ,x \right) \right) & \leq C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^{1,1}} +\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}} \right.\\
+  &\qquad  +\left. (\left\| \psi \right\| _{C^1}+\left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1})\left\| \tilde{a} \right\| _{C^{1,1}} \right) \eta \\
+\end{aligned}
 $$
 Below we make inductive assumptions that for $j=1,\cdots,p-1$, the following estimates hold:
 \begin{equation}\label{inductive assumption for w eta}
-\omega \left( \eta \mid w_s\left( t_j\left( x;\cdot \right) ,x \right) \right) \leq  C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| \psi \right\| _{C^{1,1}}+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}+(\left\| \psi \right\| _{C^1}+\left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1})\left\| \tilde{a} \right\| _{C^{1,1}} \right) \eta 
+\begin{aligned}
+\omega \left( \eta \mid w_s\left( t_j\left( x;\cdot \right) ,x \right) \right) &\leq  C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| \psi \right\| _{C^{1,1}}+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}\right. \\
+& \qquad \left.+(\left\| \psi \right\| _{C^1}+\left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1})\left\| \tilde{a} \right\| _{C^{1,1}} \right) \eta 
+\end{aligned}
 \end{equation}
 Then for $j=p$, from \eqref{e of w_s p}, we have
 $$
-\left| w_s\left( t_p\left( x;\xi _1 \right) ,x \right) -w_s\left( t_p\left( x;\xi _2 \right) ,x \right) \right|\leq C\left( \left| w_s\left( t_p\left( 0;\xi _1 \right) ,0 \right) -w_s\left( t_p\left( 0;\xi _2 \right) ,0 \right) \right|+\left\| \tilde{a} \right\| _{C^1}\int_0^x{\left| w_s\left( \xi _1,s \right) -w_s\left( \xi _2,s \right) \right|\mathrm{d}s}+\left\| f^{\left( 1 \right)} \right\| _{C^{1,1}}\left\| f^{\left( 2 \right)} \right\| _{C^{1,1}}\left| \xi _1-\xi _2 \right|+\left\| u \right\| _{C^1}\left\| \tilde{a} \right\| _{C^{1,1}}\left| \xi _1-\xi _2 \right| \right) 
+\begin{aligned}
+	\left| w_s\left( t_p\left( x;\xi _1 \right) ,x \right) -w_s\left( t_p\left( x;\xi _2 \right) ,x \right) \right|&\le C\left( \left| w_s\left( t_p\left( 0;\xi _1 \right) ,0 \right) -w_s\left( t_p\left( 0;\xi _2 \right) ,0 \right) \right| \right.\\
+	&\quad  +\left\| \tilde{a} \right\| _{C^1}\int_0^x{\left| w_s\left( \xi _1,s \right) -w_s\left( \xi _2,s \right) \right|\mathrm{d}s}\\
+	&\quad \left.  +\left\| f^{\left( 1 \right)} \right\| _{C^{1,1}}\left\| f^{\left( 2 \right)} \right\| _{C^{1,1}}\left| \xi _1-\xi _2 \right|+\left\| u \right\| _{C^1}\left\| \tilde{a} \right\| _{C^{1,1}}\left| \xi _1-\xi _2 \right| \right)\\
+\end{aligned}
 $$
 where from \eqref{w_s at t_p(t,0)}, we know that
 $$
@@ -879,11 +902,14 @@ Then using Gronwall's inequality and \eqref{inductive assumption for w eta}, we 
 Next we consider $\omega\left(\eta \mid \omega\left(t_p(\cdot, \xi), \cdot\right)\right)$.
 From \eqref{e of w_s 1} and \eqref{e of w_s p}, we know that
 $$
-\omega \left( \eta \mid w\left( t_p(\cdot ;\xi ),\cdot \right) \right) \leq \left( \left\| \tilde{a} \right\| _{C^1}\parallel u\parallel _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) \eta .
+\omega \left( \eta \mid w\left( t_p(\cdot ;\xi ),\cdot \right) \right) \leq \left( \left\| \tilde{a} \right\| _{C^1}\left\lVert u\right\rVert  _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) \eta .
 $$
 Therefore, we get
 \begin{equation}
-\left\| \partial _t u \right\| _{C^{0,1}}\leq  C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| \psi \right\| _{C^{1,1}}+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}+(\left\| \psi \right\| _{C^1}+\left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1})\left\| \tilde{a} \right\| _{C^{1,1}} \right) 
+\begin{aligned}
+\left\| \partial _t u \right\| _{C^{0,1}}\leq&  C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| \psi \right\| _{C^{1,1}}+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}\right.\\
+&\quad \left.+(\left\| \psi \right\| _{C^1}+\left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1})\left\| \tilde{a} \right\| _{C^{1,1}} \right) 
+\end{aligned}
 \end{equation}
 For $\partial _xu(t,x)$, from \eqref{e1} we have
 $$
@@ -891,7 +917,10 @@ $$
 $$
 Thereby, we can get
 \begin{equation}\label{continuity paradigm}
-\left\| u \right\| _{C^{1,1}}\leq  C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| \psi \right\| _{C^{1,1}}+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}+(\left\| \psi \right\| _{C^1}+\left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1})\left\| \tilde{a} \right\| _{C^{1,1}} \right) 
+\begin{aligned}
+\left\| u \right\| _{C^{1,1}}\leq & C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| \psi \right\| _{C^{1,1}}+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}\right.\\
+&\quad \left.+(\left\| \psi \right\| _{C^1}+\left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1})\left\| \tilde{a} \right\| _{C^{1,1}} \right) 
+\end{aligned}
 \end{equation}
 Then we consider the continuity of control functions and solutions with regard to the coefficients of equations.
 Consider another controlling problem with the coefficients $\bar{a} (t,x)$, $\bar{f}^{(1)} (t,x)$, $\bar{f}^{(2)} (t,x)$, $\bar{g} (t,x)$ and its solution $v(t,x)$, denoting $y = \partial_t v$, where we assume that the values of these coefficients are the same as those of $a(t,x)$, $f^{(1)}(t,x)$, $f^{(2)}(t,x)$, $g(t,x)$ at $t=0$ and $t=L$ and thereby we can select the same set of functions $\widetilde{H}(t)$ to satisfy the compatibility.
@@ -913,7 +942,22 @@ $$
 $$
 Thereby,
 $$
-\left| \tilde{u}_s\left( t_1\left( L;\xi \right) ,L \right) -\tilde{v}_s\left( \bar{t}_1\left( L;\bar{\xi} \right) ,L \right) \right| \leq \left| \tilde{v}_s(0,\bar{\xi})-\tilde{u}_s(0,\xi ) \right| + C(\left( \left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^1} \right) \left| \xi -\bar{\xi} \right|+\left\| \bar{f}^{(2)} \right\| _{C^1}\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^0}+\left\| \bar{f}^{(2)} \right\| _{C^1}\left\| f^{(1)} \right\| _{C^1}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left\| f^{(1)} \right\| _{C^0}\left\| f^{(2)}-\bar{f} ^{(2)}\right\| _{C^1}+\left\| f^{\left( 1 \right)} \right\| _{C^0}\left\| \bar{f} ^{(2)}\right\| _{C^{1,1}}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left\| f^{(1)} \right\| _{C^0}\left\| f^{(2)} \right\| _{C^1}\left\| a-\bar{a} \right\| _{C^0})
+\begin{aligned}
+\bigl|\tilde u_s\!\bigl(t_1(L;\xi),L\bigr)-\tilde v_s\!\bigl(\bar t_1(L;\bar\xi),L\bigr)\bigr|
+\le{}&\ \bigl|\tilde v_s(0,\bar\xi)-\tilde u_s(0,\xi)\bigr| \\
+&\ + C\Bigl(
+   \bigl(\|f^{(1)}\|_{C^{1}}\|f^{(2)}\|_{C^{1}}
+     + \|\bar f^{(1)}\|_{C^{1}}\|\bar f^{(2)}\|_{C^{1}}\bigr)\,|\xi-\bar\xi| \Bigr.\\
+&\qquad\quad
+   + \|\bar f^{(2)}\|_{C^{1}}\;\|f^{(1)}-\bar f^{(1)}\|_{C^{0}}
+   + \|\bar f^{(2)}\|_{C^{1}}\;\|f^{(1)}\|_{C^{1}}\;\|t_1-\bar t_1\|_{C^{0}} \\
+&\qquad\quad
+   + \|f^{(1)}\|_{C^{0}}\;\|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+   + \|f^{(1)}\|_{C^{0}}\;\|\bar f^{(2)}\|_{C^{1,1}}\;\|t_1-\bar t_1\|_{C^{0}} \\
+&\qquad\quad
+   + \Bigl. \|f^{(1)}\|_{C^{0}}\;\|f^{(2)}\|_{C^{1}}\;\|a-\bar a\|_{C^{0}}
+\Bigr).
+\end{aligned}
 $$
 where
 $$
@@ -941,11 +985,32 @@ $$
 $$
 Thereby, we can get
 $$
-\left| \tilde{u}_s\left( t_0,L \right) -\tilde{v}_s\left( t_0,L \right) \right|\leq C(\left( \left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| \bar{g} \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^{1,1}} \right) \left\| a-\bar{a} \right\| _{C^0}+\left\| \bar{f}^{(2)} \right\| _{C^1}\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^0}+\left\| f^{(1)} \right\| _{C^0}\left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1})
+\begin{aligned}
+\bigl|\tilde u_s(t_0,L)-\tilde v_s(t_0,L)\bigr|
+\le{}&\ C\Bigl(
+  \bigl(\|\varphi\|_{C^{1}}+\|g\|_{C^{1}}+\|\bar g\|_{C^{1}}
+   + \|f^{(1)}\|_{C^{1}}\|f^{(2)}\|_{C^{1,1}}
+   + \|\bar f^{(1)}\|_{C^{1}}\|\bar f^{(2)}\|_{C^{1,1}}\bigr)\,
+   \|a-\bar a\|_{C^{0}} \Bigr.\\
+&\qquad \Bigl.+ \|\bar f^{(2)}\|_{C^{1}}\;\|f^{(1)}-\bar f^{(1)}\|_{C^{0}}
+        + \|f^{(1)}\|_{C^{0}}\;\|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+\Bigr).
+\end{aligned}
 $$
 Then we make inductive assumptions that for $j=1,\cdots,p-1$, the following estimates hold:
 $$
-\left| \tilde{u}_s\left( t_0,L \right) -\tilde{v}_s\left( t_0,L \right) \right|\leq C(\left( \left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| \bar{g} \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^{1,1}} \right) \left\| a-\bar{a} \right\| _{C^0}+\left\| g-\bar{g} \right\| _{C^0}+\left\| \bar{f}^{(2)} \right\| _{C^1}\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^0}+\left\| f^{(1)} \right\| _{C^0}\left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1})
+\begin{aligned}
+\bigl|\tilde u_s(t_0,L)-\tilde v_s(t_0,L)\bigr|
+\le{}&\ C\Bigl(
+  \bigl(\|\varphi\|_{C^{1}}+\|g\|_{C^{1}}+\|\bar g\|_{C^{1}}
+  + \|f^{(1)}\|_{C^{1}}\|f^{(2)}\|_{C^{1,1}}
+  + \|\bar f^{(1)}\|_{C^{1}}\|\bar f^{(2)}\|_{C^{1,1}}\bigr)\,
+  \|a-\bar a\|_{C^{0}} \Bigr.\\
+&\qquad + \Bigl. \|g-\bar g\|_{C^{0}}
+  + \|\bar f^{(2)}\|_{C^{1}}\;\|f^{(1)}-\bar f^{(1)}\|_{C^{0}}
+  + \|f^{(1)}\|_{C^{0}}\;\|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+\Bigr).
+\end{aligned}
 $$
 where $t_0=t_j(L;\xi)$ for some $\xi$. Then for $j=p$, from \eqref{estimate of u}, we have
 $$
@@ -963,11 +1028,33 @@ $$
 $$
 Therefore, using the inductive assumptions, we can get 
 $$
-\left\lvert \tilde{u}_s\left( t_p\left( 0;\xi \right) ,0 \right)-\tilde{v}_s\left( \bar{t}_p\left( 0;\bar{\xi} \right) ,0 \right)\right\rvert \leq C(\left( \left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| \bar{g} \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^{1,1}} \right) \left\| a-\bar{a} \right\| _{C^0}+\left\| g-\bar{g} \right\| _{C^0}+\left\| \bar{f}^{(2)} \right\| _{C^1}\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^0}+\left\| f^{(1)} \right\| _{C^0}\left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1})
+\begin{aligned}
+\bigl\lvert \tilde u_s\bigl(t_p(0;\xi),0\bigr)- \tilde v_s\bigl(\bar t_p(0;\bar\xi),0\bigr)\bigr\rvert
+\le{}&\ C\Bigl(
+  \bigl(\|\varphi\|_{C^{1}}+\|g\|_{C^{1}}+\|\bar g\|_{C^{1}}\bigr) \|a-\bar a\|_{C^{0}} \Bigr.
+&\qquad   \bigl(+ \|f^{(1)}\|_{C^{1}}\|f^{(2)}\|_{C^{1,1}}
+   + \|\bar f^{(1)}\|_{C^{1}}\|\bar f^{(2)}\|_{C^{1,1}}\bigr)\,
+   \|a-\bar a\|_{C^{0}}\\
+&\qquad + \Bigl. \|g-\bar g\|_{C^{0}}
+  + \|\bar f^{(2)}\|_{C^{1}}\;\|f^{(1)}-\bar f^{(1)}\|_{C^{0}}
+  + \|f^{(1)}\|_{C^{0}}\;\|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+\Bigr).
+\end{aligned}
 $$
 Then using the same method as $j=1,\cdots,p-1$, we can get that the above estimate holds for $j=p$. And thereby we can get
 $$
-\left\|\tilde{u}-\tilde{v} \right\|_{C^0 } \leq C(\left( \left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| \bar{g} \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^{1,1}} \right) \left\| a-\bar{a} \right\| _{C^0}+\left\| g-\bar{g} \right\| _{C^0}+\left\| \bar{f}^{(2)} \right\| _{C^1}\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^0}+\left\| f^{(1)} \right\| _{C^0}\left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1})
+\begin{aligned}
+\|\tilde u-\tilde v\|_{C^{0}}
+\le{}&\ C\Bigl(
+  \bigl(\|\varphi\|_{C^{1}}+\|g\|_{C^{1}}+\|\bar g\|_{C^{1}}
+  + \|f^{(1)}\|_{C^{1}}\|f^{(2)}\|_{C^{1,1}}
+  + \|\bar f^{(1)}\|_{C^{1}}\|\bar f^{(2)}\|_{C^{1,1}}\bigr)\,
+  \|a-\bar a\|_{C^{0}} \\
+&\qquad + \|g-\bar g\|_{C^{0}}
+  + \|\bar f^{(2)}\|_{C^{1}}\;\|f^{(1)}-\bar f^{(1)}\|_{C^{0}}
+  + \|f^{(1)}\|_{C^{0}}\;\|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+\Bigr).
+\end{aligned}
 $$
 Considering the point $(t_0,L)$, where $t_0=t_0(L;\xi)$ for some $\xi$ and the characteristic curve $t_1(x;t_0)$ passing through this point and passing through $t=0$ at $\xi$ and the characteristic curve $\bar{t}_1(x;t_0)$ passing through this point and passing through $t=0$ at $\bar{\xi}$, we have
 $$
@@ -985,16 +1072,99 @@ $$
 $$
 Then we have
 $$
-\left| \tilde{w}_s\left( t_1(L;\xi ),L \right) -\tilde{y}_s\left( \bar{t}_1(L;\bar{\xi}),L \right) \right|\le C_{\varepsilon _0}\left( \left| \tilde{w}_s(0,\xi )-\tilde{y}_s(0,\bar{\xi}) \right|+\left\| \tilde{a} \right\| _{C^1}\int_{\xi}^L{\left| \tilde{w}_s\left( t_1(s;\xi ),s \right) -\tilde{y}_s\left( \bar{t}_1(s;\bar{\xi}),s \right) \right|\mathrm{d}s}+\left( \left\| \tilde{a} \right\| _{C^1}\left\| \tilde{v} \right\| _{C^1}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^1}+\left\| \bar{f}^{(1)} \right\| _{C^0}\left\| \bar{f}^{(2)} \right\| _{C^{1,1}} \right) \left| \xi -\bar{\xi} \right|+\left\| \tilde{a} \right\| _{C^{1,1}}\left\| \tilde{u} \right\| _{C^1}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left\| \tilde{u} \right\| _{C^1}\left\| a-\bar{a} \right\| _{C^1}+\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^1}+\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1}+\left\| \bar{f}^{\left( 1 \right)} \right\| _{C^1}\left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1}+\left\| f^{\left( 1 \right)} \right\| _{C^1}\left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^1}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^1}\left\| a-\bar{a} \right\| _{C^1}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^{1,1}}\left\| t_1-\bar{t}_1 \right\| _{C^0} \right) 
+\begin{aligned}
+&\bigl|\tilde w_s\!\bigl(t_1(L;\xi),L\bigr)-\tilde y_s\!\bigl(\bar t_1(L;\bar\xi),L\bigr)\bigr|
+\\
+&\le C_{\varepsilon_0}\Bigl(
+   \bigl|\tilde w_s(0,\xi)-\tilde y_s(0,\bar\xi)\bigr|
+   + \|\tilde a\|_{C^{1}}\!\int_{\xi}^{L}\!\bigl|\tilde w_s\!\bigl(t_1(s;\xi),s\bigr)-\tilde y_s\!\bigl(\bar t_1(s;\bar\xi),s\bigr)\bigr|\,\mathrm{d}s
+\\[2pt]
+&\qquad
+   + \bigl(\|\tilde a\|_{C^{1}}\|\tilde v\|_{C^{1}}
+     + \|\bar f^{(1)}\|_{C^{1}}\|\bar f^{(2)}\|_{C^{1}}
+     + \|\bar f^{(1)}\|_{C^{0}}\|\bar f^{(2)}\|_{C^{1,1}}\bigr)\,|\xi-\bar\xi|
+\\
+&\qquad
+   + \|\tilde a\|_{C^{1,1}}\|\tilde u\|_{C^{1}}\|t_1-\bar t_1\|_{C^{0}}
+   + \|\tilde u\|_{C^{1}}\|a-\bar a\|_{C^{1}}
+\\
+&\qquad
+   + \|f^{(1)}-\bar f^{(1)}\|_{C^{1}}\|\bar f^{(2)}\|_{C^{1}}
+   + \|f^{(1)}-\bar f^{(1)}\|_{C^{1}}\|f^{(2)}\|_{C^{1}}
+\\
+&\qquad
+   + \|\bar f^{(1)}\|_{C^{1}}\|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+   + \|f^{(1)}\|_{C^{1}}\|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+\\
+&\qquad
+   + \|f^{(1)}\|_{C^{1}}\|f^{(2)}\|_{C^{1}}\|t_1-\bar t_1\|_{C^{0}}
+   + \|\bar f^{(1)}\|_{C^{1}}\|f^{(2)}\|_{C^{1}}\|t_1-\bar t_1\|_{C^{0}}
+\\
+&\qquad
+   + \|\bar f^{(1)}\|_{C^{1}}\|\bar f^{(2)}\|_{C^{1}}\|t_1-\bar t_1\|_{C^{0}}
+   + \|\bar f^{(1)}\|_{C^{1}}\|\bar f^{(2)}\|_{C^{1}}\|a-\bar a\|_{C^{1}}
+\\
+&\qquad
+   + \|\bar f^{(1)}\|_{C^{1}}\|\bar f^{(2)}\|_{C^{1,1}}\|t_1-\bar t_1\|_{C^{0}}
+\Bigr).
+\end{aligned}
 $$
 where
-$$
-\left| \tilde{w}_s(0,\xi )-\tilde{y}_s(0,\bar{\xi}) \right|\le C_{\varepsilon _0}\left( \left\| a-\bar{a} \right\| _{C^0}\left\| \varphi \right\| _{C^1}+\left\| \bar{a} \right\| _{C^1}\left\| \varphi \right\| _{C^1}\left| \xi -\bar{\xi} \right|+\left\| \varphi \right\| _{C^{1,1}}\left| \xi -\bar{\xi} \right|+\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^0}\left\| \bar{f}^{(2)} \right\| _{C^1}+\left\| \bar{f}^{\left( 1 \right)} \right\| _{C^0}\left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^1}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left\| \bar{f}^{(1)} \right\| _{C^0}\left\| \bar{f}^{(2)} \right\| _{C^{1,1}}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left\| \bar{f}^{(1)} \right\| _{C^0}\left\| \bar{f}^{(2)} \right\| _{C^1}\left\| a-\bar{a} \right\| _{C^0} \right) 
-$$
+\[
+\begin{aligned}
+\bigl|\tilde w_s(0,\xi)-\tilde y_s(0,\bar\xi)\bigr|
+\le{}&\ C_{\varepsilon_0}\Bigl(
+  \|a-\bar a\|_{C^{0}}\ \|\varphi\|_{C^{1}}
+  + \|\bar a\|_{C^{1}}\ \|\varphi\|_{C^{1}}\ |\xi-\bar\xi|
+  + \|\varphi\|_{C^{1,1}}\ |\xi-\bar\xi| \\
+&\quad + \|f^{(1)}-\bar f^{(1)}\|_{C^{0}}\ \|\bar f^{(2)}\|_{C^{1}}
+  + \|\bar f^{(1)}\|_{C^{0}}\ \|f^{(2)}-\bar f^{(2)}\|_{C^{1}} \\
+&\quad + \|\bar f^{(1)}\|_{C^{1}}\ \|\bar f^{(2)}\|_{C^{1}}\ \|t_1-\bar t_1\|_{C^{0}}
+  + \|\bar f^{(1)}\|_{C^{0}}\ \|\bar f^{(2)}\|_{C^{1,1}}\ \|t_1-\bar t_1\|_{C^{0}} \\
+&\quad + \|\bar f^{(1)}\|_{C^{0}}\ \|\bar f^{(2)}\|_{C^{1}}\ \|a-\bar a\|_{C^{0}}
+\Bigr).
+\end{aligned}
+\]
 Using Gronwall's inequality, we can get
-$$
-\left| \tilde{w}_s\left( t_1(L;\xi ),L \right) -\tilde{y}_s\left( \bar{t}_1(L;\bar{\xi}),L \right) \right|\le C_{\varepsilon _0}\left( \left\| a-\bar{a} \right\| _{C^0}\left\| \varphi \right\| _{C^1}+\left\| \bar{a} \right\| _{C^1}\left\| \varphi \right\| _{C^1}\left| \xi -\bar{\xi} \right|+\left\| \varphi \right\| _{C^{1,1}}\left| \xi -\bar{\xi} \right|+\left( \left\| \tilde{a} \right\| _{C^1}\left\| \tilde{v} \right\| _{C^1}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^1}+\left\| \bar{f}^{(1)} \right\| _{C^0}\left\| \bar{f}^{(2)} \right\| _{C^{1,1}} \right) \left| \xi -\bar{\xi} \right|+\left\| \tilde{a} \right\| _{C^{1,1}}\left\| \tilde{u} \right\| _{C^1}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left\| \tilde{u} \right\| _{C^1}\left\| a-\bar{a} \right\| _{C^1}+\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^1}+\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1}+\left\| \bar{f}^{\left( 1 \right)} \right\| _{C^1}\left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1}+\left\| f^{\left( 1 \right)} \right\| _{C^1}\left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^1}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^1}\left\| a-\bar{a} \right\| _{C^1}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^{1,1}}\left\| t_1-\bar{t}_1 \right\| _{C^0} \right) 
-$$
+\[
+\begin{aligned}
+\bigl|\tilde w_s\!\bigl(t_1(L;\xi),L\bigr)-\tilde y_s\!\bigl(\bar t_1(L;\bar\xi),L\bigr)\bigr|
+\le{}&\ C_{\varepsilon_0}\Bigl(
+  \|a-\bar a\|_{C^{0}}\ \|\varphi\|_{C^{1}}
+  + \|\bar a\|_{C^{1}}\ \|\varphi\|_{C^{1}}\ |\xi-\bar\xi|
+  + \|\varphi\|_{C^{1,1}}\ |\xi-\bar\xi|
+\\
+&\quad
+  + \bigl(\|\tilde a\|_{C^{1}}\|\tilde v\|_{C^{1}}
+     + \|\bar f^{(1)}\|_{C^{1}}\|\bar f^{(2)}\|_{C^{1}}
+     + \|\bar f^{(1)}\|_{C^{0}}\|\bar f^{(2)}\|_{C^{1,1}}\bigr)\,|\xi-\bar\xi|
+\\
+&\quad
+  + \|\tilde a\|_{C^{1,1}}\ \|\tilde u\|_{C^{1}}\ \|t_1-\bar t_1\|_{C^{0}}
+  + \|\tilde u\|_{C^{1}}\ \|a-\bar a\|_{C^{1}}
+\\
+&\quad
+  + \|f^{(1)}-\bar f^{(1)}\|_{C^{1}}\ \|\bar f^{(2)}\|_{C^{1}}
+  + \|f^{(1)}-\bar f^{(1)}\|_{C^{1}}\ \|f^{(2)}\|_{C^{1}}
+\\
+&\quad
+  + \|\bar f^{(1)}\|_{C^{1}}\ \|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+  + \|f^{(1)}\|_{C^{1}}\ \|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+\\
+&\quad
+  + \|f^{(1)}\|_{C^{1}}\ \|f^{(2)}\|_{C^{1}}\ \|t_1-\bar t_1\|_{C^{0}}
+  + \|\bar f^{(1)}\|_{C^{1}}\ \|f^{(2)}\|_{C^{1}}\ \|t_1-\bar t_1\|_{C^{0}}
+\\
+&\quad
+  + \|\bar f^{(1)}\|_{C^{1}}\ \|\bar f^{(2)}\|_{C^{1}}\ \|t_1-\bar t_1\|_{C^{0}}
+  + \|\bar f^{(1)}\|_{C^{1}}\ \|\bar f^{(2)}\|_{C^{1}}\ \|a-\bar a\|_{C^{1}}
+\\
+&\quad
+  + \|\bar f^{(1)}\|_{C^{1}}\ \|\bar f^{(2)}\|_{C^{1,1}}\ \|t_1-\bar t_1\|_{C^{0}}
+\Bigr).
+\end{aligned}
+\]
+
 If the characteristic curve $\bar{t} _2(x;\bar{\xi}  )$ intersects with $x=0$ at $(\bar{t}_2(0;\bar{\xi} ),0)$, we have
 $$
 \tilde{y}_s\left( \bar{t}_2(L;\bar{\xi}),L \right) =\tilde{y}_s(\bar{t}_2(0,\bar{\xi}),0)+\int_0^L{\partial _t\bar{b}\tilde{y}_s\mathrm{d}s}+\int_0^L{\partial _t\bar{f}_{s}^{(1)}\frac{\mathrm{d}\bar{f}^{(2)}}{\mathrm{d}s}\mathrm{d}s}+\left. \bar{f}_{s}^{(1)}\partial _t\bar{f}_{s}^{(2)} \right|_{0}^{L}-\int_0^L{\partial _t{\bar{f}_s}^{(2)}\frac{\mathrm{d}{\bar{f}_s}^{(1)}}{\mathrm{d}s}\mathrm{d}s},
@@ -1002,18 +1172,72 @@ $$
 and
 $$
 \begin{aligned}
-	\left| \tilde{y}_s(\bar{t}_2(0,\bar{\xi}),0)-\tilde{w}_s(0,\xi ) \right|&\le \left| \tilde{y}_s(\bar{t}_2(0,\bar{\xi}),0)-\tilde{y}_s(0,0) \right|+\left| \tilde{w}_s(0,0)-\tilde{w}_s(0,\xi ) \right|.
+	\left| \tilde{y}_s(\bar{t}_2(0,\bar{\xi}),0)-\tilde{w}_s(0,\xi ) \right|&\le \left| \tilde{y}_s(\bar{t}_2(0,\bar{\xi}),0)-\tilde{y}_s(0,0) \right|+\left| \tilde{w}_s(0,0)-\tilde{w}_s(0,\xi ) \right|\\
 	&\le C_{\varepsilon _0}\left( \left\| \tilde{v} \right\| _{C^{1,1}}+\left\| \tilde{u} \right\| _{C^{1,1}} \right) \left\| a-\bar{a} \right\| _{C^1}\\
 \end{aligned}
 $$
 Therefore, we can get
-$$
-\left| \tilde{w}_s\left( t_1(L;\xi ),L \right) -\tilde{y}_s\left( \bar{t}_1(L;\bar{\xi}),L \right) \right|\le C_{\varepsilon _0}\left( \left\| a-\bar{a} \right\| _{C^0}\left\| \varphi \right\| _{C^1}+\left\| \bar{a} \right\| _{C^1}\left\| \varphi \right\| _{C^1}\left| \xi -\bar{\xi} \right|+\left\| \varphi \right\| _{C^{1,1}}\left| \xi -\bar{\xi} \right|+\left( \left\| \tilde{a} \right\| _{C^1}\left\| \tilde{v} \right\| _{C^1}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^1}+\left\| \bar{f}^{(1)} \right\| _{C^0}\left\| \bar{f}^{(2)} \right\| _{C^{1,1}} \right) \left| \xi -\bar{\xi} \right|+\left\| \tilde{a} \right\| _{C^{1,1}}\left\| \tilde{u} \right\| _{C^1}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left( \left\| \tilde{u} \right\| _{C^{1,1}}+\left\| \tilde{v} \right\| _{C^{1,1}} \right) \left\| a-\bar{a} \right\| _{C^1}+\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^1}+\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1}+\left\| \bar{f}^{\left( 1 \right)} \right\| _{C^1}\left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1}+\left\| f^{\left( 1 \right)} \right\| _{C^1}\left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^1}\left\| t_1-\bar{t}_1 \right\| _{C^0}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^1}\left\| a-\bar{a} \right\| _{C^1}+\left\| \bar{f}^{(1)} \right\| _{C^1}\left\| \bar{f}^{(2)} \right\| _{C^{1,1}}\left\| t_1-\bar{t}_1 \right\| _{C^0} \right) 
-$$
+\[
+\begin{aligned}
+\bigl|\tilde w_s\!\bigl(t_1(L;\xi),L\bigr)-\tilde y_s\!\bigl(\bar t_1(L;\bar\xi),L\bigr)\bigr|
+\le{}&\ C_{\varepsilon_0}\Bigl(
+  \|a-\bar a\|_{C^{0}}\ \|\varphi\|_{C^{1}}
+  + \|\bar a\|_{C^{1}}\ \|\varphi\|_{C^{1}}\ |\xi-\bar\xi|
+  + \|\varphi\|_{C^{1,1}}\ |\xi-\bar\xi|
+\\
+&\quad
+  + \bigl(\|\tilde a\|_{C^{1}}\|\tilde v\|_{C^{1}}
+     + \|\bar f^{(1)}\|_{C^{1}}\|\bar f^{(2)}\|_{C^{1}}
+     + \|\bar f^{(1)}\|_{C^{0}}\|\bar f^{(2)}\|_{C^{1,1}}\bigr)\,|\xi-\bar\xi|
+\\
+&\quad
+  + \|\tilde a\|_{C^{1,1}}\ \|\tilde u\|_{C^{1}}\ \|t_1-\bar t_1\|_{C^{0}}
+  + \bigl(\|\tilde u\|_{C^{1,1}}+\|\tilde v\|_{C^{1,1}}\bigr)\ \|a-\bar a\|_{C^{1}}
+\\
+&\quad
+  + \|f^{(1)}-\bar f^{(1)}\|_{C^{1}}\ \|\bar f^{(2)}\|_{C^{1}}
+  + \|f^{(1)}-\bar f^{(1)}\|_{C^{1}}\ \|f^{(2)}\|_{C^{1}}
+\\
+&\quad
+  + \|\bar f^{(1)}\|_{C^{1}}\ \|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+  + \|f^{(1)}\|_{C^{1}}\ \|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+\\
+&\quad
+  + \|f^{(1)}\|_{C^{1}}\ \|f^{(2)}\|_{C^{1}}\ \|t_1-\bar t_1\|_{C^{0}}
+  + \|\bar f^{(1)}\|_{C^{1}}\ \|f^{(2)}\|_{C^{1}}\ \|t_1-\bar t_1\|_{C^{0}}
+\\
+&\quad
+  + \|\bar f^{(1)}\|_{C^{1}}\ \|\bar f^{(2)}\|_{C^{1}}\ \|t_1-\bar t_1\|_{C^{0}}
+  + \|\bar f^{(1)}\|_{C^{1}}\ \|\bar f^{(2)}\|_{C^{1}}\ \|a-\bar a\|_{C^{1}}
+\\
+&\quad
+  + \|\bar f^{(1)}\|_{C^{1}}\ \|\bar f^{(2)}\|_{C^{1,1}}\ \|t_1-\bar t_1\|_{C^{0}}
+\Bigr).
+\end{aligned}
+\]
+
 Then we make inductive assumptions that for $j=1,\cdots,p-1$, the following estimates hold:
-$$
-\left| \tilde{w}_s\left( t_0,L \right) -\tilde{y}_s\left( t_0,L \right) \right|\le C_{\varepsilon _0}\left( \left( \left\| f^{(1)} \right\| _{C^1}+\left\| f^{(2)} \right\| _{C^1}+\left\| \bar{f}^{\left( 1 \right)} \right\| _{C^1}+\left\| \bar{f}^{(2)} \right\| _{C^1} \right) \left( \left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1}+\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^1} \right) +\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}+\left\| \bar{g} \right\| _{C^{1,1}}+\left( \left\| f^{(1)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(1)} \right\| _{C^{1\text{,}1}} \right) \left( \left\| f^{(2)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(2)} \right\| _{C^{1,1}} \right) \right) \left\| a-\bar{a} \right\| _{C^1}+\left\| g^{(1)}-\bar{g}^{(1)} \right\| _{C^1} \right) 
-$$
+\[
+\begin{aligned}
+\bigl|\tilde w_s(t_0,L)-\tilde y_s(t_0,L)\bigr|
+\le{}&\ C_{\varepsilon_0}\Bigl(
+  \bigl(\|f^{(1)}\|_{C^{1}}+\|f^{(2)}\|_{C^{1}}
+       +\|\bar f^{(1)}\|_{C^{1}}+\|\bar f^{(2)}\|_{C^{1}}\bigr)
+  \bigl(\|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+       +\|f^{(1)}-\bar f^{(1)}\|_{C^{1}}\bigr)
+\\
+&\quad
+  + \bigl(\|\varphi\|_{C^{1,1}}+\|g\|_{C^{1,1}}+\|\bar g\|_{C^{1,1}}
+     + (\|f^{(1)}\|_{C^{1,1}}+\|\bar f^{(1)}\|_{C^{1,1}})
+       (\|f^{(2)}\|_{C^{1,1}}+\|\bar f^{(2)}\|_{C^{1,1}})\bigr)
+       \,\|a-\bar a\|_{C^{1}}
+\\
+&\quad
+  + \|g^{(1)}-\bar g^{(1)}\|_{C^{1}}
+\Bigr).
+\end{aligned}
+\]
+
 where $t_0=t_j(L;\xi)$ for some $\xi$. Then for $j=p$, we have
 $$
 \tilde{w}_s\left( t_p(L;\xi ),L \right) =\tilde{w}_s(t_p(0,\xi ),0)+\int_0^L{\partial _tb\tilde{w}_s\mathrm{d}s}+\int_0^L{\partial _tf_{s}^{(1)}\frac{\mathrm{d}f^{(2)}}{\mathrm{d}s}\mathrm{d}s}+\left. f_{s}^{(1)}\partial _tf_{s}^{(2)} \right|_{0}^{L}-\int_0^L{\partial _t{f_s}^{(2)}\frac{\mathrm{d}{f_s}^{(1)}}{\mathrm{d}s}\mathrm{d}s},
@@ -1029,13 +1253,43 @@ $$
 \tilde{y}_s\left( \bar{t}_p\left( 0;\bar{\xi} \right) ,0 \right) =A_2\tilde{y}_r\left( \bar{t}_{p-1}\left( 0;\bar{\xi} \right) ,0 \right) +\bar{g}_{s}^{\prime}\left( \bar{t}_p(0;\bar{\xi}) \right) +h_{s}^{\prime}\left( \bar{t}_p(0;\bar{\xi}) \right) .
 $$
 Therefore, using the inductive assumptions, we can get
-$$
-\left| \tilde{w}_s\left( t_p\left( 0;\xi \right) ,0 \right) -\tilde{y}_s\left( \bar{t}_p\left( 0;\bar{\xi} \right) ,0 \right) \right|\le C_{A,\varepsilon _0}\left( \left( \left\| \tilde{u} \right\| _{C^{1,1}}+\left\| \tilde{v} \right\| _{C^{1,1}} \right) \left\| a-\bar{a} \right\| _{C^0}+\left( \left\| f^{(1)} \right\| _{C^1}+\left\| f^{(2)} \right\| _{C^1}+\left\| \bar{f}^{\left( 1 \right)} \right\| _{C^1}+\left\| \bar{f}^{(2)} \right\| _{C^1} \right) \left( \left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1}+\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^1} \right) +\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}+\left\| \bar{g} \right\| _{C^{1,1}}+\left( \left\| f^{(1)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(1)} \right\| _{C^{1\text{,}1}} \right) \left( \left\| f^{(2)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(2)} \right\| _{C^{1,1}} \right) \right) \left\| a-\bar{a} \right\| _{C^1}+\left\| g^{(1)}-\bar{g}^{(1)} \right\| _{C^1} \right) 
-$$
+\[
+\begin{aligned}
+&\bigl|\tilde w_s\bigl(t_p(0;\xi),0\bigr)-\tilde y_s\bigl(\bar t_p(0;\bar\xi),0\bigr)\bigr|
+\le{}\ C_{A,\varepsilon_0}\Bigl(
+  (\|\tilde u\|_{C^{1,1}}+\|\tilde v\|_{C^{1,1}})\,\|a-\bar a\|_{C^{0}} \\
+&\quad
+  + (\|f^{(1)}\|_{C^{1}}+\|f^{(2)}\|_{C^{1}}
+     +\|\bar f^{(1)}\|_{C^{1}}+\|\bar f^{(2)}\|_{C^{1}})\,
+    (\|f^{(2)}-\bar f^{(2)}\|_{C^{1}}+\|f^{(1)}-\bar f^{(1)}\|_{C^{1}}) \\
+&\quad
+  + \bigl(\|\varphi\|_{C^{1,1}}+\|g\|_{C^{1,1}}+\|\bar g\|_{C^{1,1}}
+     + (\|f^{(1)}\|_{C^{1,1}}+\|\bar f^{(1)}\|_{C^{1,1}})
+       (\|f^{(2)}\|_{C^{1,1}}+\|\bar f^{(2)}\|_{C^{1,1}})\bigr)\,
+    \|a-\bar a\|_{C^{1}} \\
+&\quad
+  + \|g^{(1)}-\bar g^{(1)}\|_{C^{1}}
+\Bigr).
+\end{aligned}
+\]
+
 Then using the same method as $j=1,\cdots,p-1$, we can get that the above estimate holds for $j=p$. And thereby we can get
-$$
-\left\| \tilde{u}-\tilde{v} \right\| _{C^1}\le C_{A,k,\varepsilon _0}\left( \left( \left\| f^{(1)} \right\| _{C^1}+\left\| f^{(2)} \right\| _{C^1}+\left\| \bar{f}^{\left( 1 \right)} \right\| _{C^1}+\left\| \bar{f}^{(2)} \right\| _{C^1} \right) \left( \left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1}+\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^1} \right) +\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}+\left\| \bar{g} \right\| _{C^{1,1}}+\left( \left\| f^{(1)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(1)} \right\| _{C^{1\text{,}1}} \right) \left( \left\| f^{(2)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(2)} \right\| _{C^{1,1}} \right) \right) \left\| a-\bar{a} \right\| _{C^1}+\left\| g-\bar{g} \right\| _{C^1} \right) 
-$$
+\[
+\begin{aligned}
+\|\tilde u-\tilde v\|_{C^{1}}
+\le{}&\ C_{A,k,\varepsilon_0}\Bigl(
+  (\|f^{(1)}\|_{C^{1}}+\|f^{(2)}\|_{C^{1}}
+   +\|\bar f^{(1)}\|_{C^{1}}+\|\bar f^{(2)}\|_{C^{1}})\,
+  (\|f^{(2)}-\bar f^{(2)}\|_{C^{1}}+\|f^{(1)}-\bar f^{(1)}\|_{C^{1}}) \\
+&\quad + \bigl(\|\varphi\|_{C^{1,1}}+\|g\|_{C^{1,1}}+\|\bar g\|_{C^{1,1}}
+   + (\|f^{(1)}\|_{C^{1,1}}+\|\bar f^{(1)}\|_{C^{1,1}})
+     (\|f^{(2)}\|_{C^{1,1}}+\|\bar f^{(2)}\|_{C^{1,1}})\bigr)\,
+     \|a-\bar a\|_{C^{1}} \\
+&\quad + \|g-\bar g\|_{C^{1}}
+\Bigr).
+\end{aligned}
+\]
+
 Then we consider the value and derivative of $h_i(t_p(0;0))$, $h_i(t_p(0;L))$, $h_i(t_p(L;0))$, $h_i(t_p(L;L))$. From \eqref{F}, we know that
 $$
 \left| h_i\left( t_p\left( \lambda _1;\lambda _2 \right) \right) -\bar{h}_i\left( \bar{t}_p\left( \lambda _1;\lambda _2 \right) \right) \right|\leq \left\| \tilde{u}-\tilde{v} \right\| _{C^0}+\sum_{p=1}^{k+1}{\left| G_p\left( \lambda _2 \right) -\bar{G}_p\left( \lambda _2 \right) \right|}+\sum_{p=1}^{k+1}{\left| F_p\left( \lambda _2 \right) -\bar{F}_p\left( \lambda _2 \right) \right|},
@@ -1044,9 +1298,19 @@ where $\lambda _1,\lambda _2=0,L$. And
 $$
 \left| G_p\left( \lambda _2 \right) -\bar{G}_p\left( \lambda _2 \right) \right|\le \left\| g-\bar{g} \right\| _{C^0}+\left\| g \right\| _{C^1}\left\| a-\bar{a} \right\| _{C^0},
 $$
-$$
-\left| F_p\left( \lambda _2 \right) -\bar{F}_p\left( \lambda _2 \right) \right|\le C_{\varepsilon _0,k}\left( \left( \left\| f^{\left( 1 \right)} \right\| _{C^1}+\left\| \bar{f}^{\left( 1 \right)} \right\| _{C^1} \right) \left( \left\| f^{\left( 2 \right)} \right\| _{C^{1,1}}+\left\| \bar{f}^{\left( 2 \right)} \right\| _{C^{1,1}} \right) \left\| a-\bar{a} \right\| _{C^0}+\left\| f^{\left( 1 \right)}-\bar{f}^{\left( 1 \right)} \right\| _{C^0}\left\| f^{\left( 2 \right)} \right\| _{C^1}+\left\| f^{\left( 2 \right)}-\bar{f}^{\left( 2 \right)} \right\| _{C^1}\left\| \bar{f}^{\left( 1 \right)} \right\| _{C^0} \right) 
-$$
+\[
+\begin{aligned}
+\bigl|F_p(\lambda_2)-\bar F_p(\lambda_2)\bigr|
+\le{}&\ C_{\varepsilon_0,k}\Bigl(
+  (\|f^{(1)}\|_{C^{1}}+\|\bar f^{(1)}\|_{C^{1}})
+  (\|f^{(2)}\|_{C^{1,1}}+\|\bar f^{(2)}\|_{C^{1,1}})
+  \|a-\bar a\|_{C^{0}} \\
+&\qquad + \|f^{(1)}-\bar f^{(1)}\|_{C^{0}}\ \|f^{(2)}\|_{C^{1}}
+  + \|f^{(2)}-\bar f^{(2)}\|_{C^{1}}\ \|\bar f^{(1)}\|_{C^{0}}
+\Bigr).
+\end{aligned}
+\]
+
 For the derivative, we have
 $$
 \left| h_{i}^{\prime}\left( t_p\left( \lambda _1;\lambda _2 \right) \right) -\bar{h}_{i}^{\prime}\left( \bar{t}_p\left( \lambda _1;\lambda _2 \right) \right) \right|\leq C_{\varepsilon _0,k}\left( \sum_{p=1}^{k+1}{\left| H_{p}^{\prime}\left( \lambda _2 \right) -\bar{H}_{p}^{\prime}\left( \lambda _2 \right) \right|}+\left\| h \right\| _{C^1}\left( \sum_{p=1}^{k+1}{\left| z_{p}^{\prime}\left( \lambda _1;\lambda _2 \right) -\bar{z}_{p}^{\prime}\left( \lambda _1;\lambda _2 \right) \right|} \right) \right) 
@@ -1062,13 +1326,46 @@ and
 $$
 \left| G_{p}^{\prime}\left( \lambda _2 \right) -\bar{G}_{p}^{\prime}\left( \lambda _2 \right) \right|\le C_{\varepsilon _0,k}\left( \left\| g-\bar{g} \right\| _{C^1}+\left\| g \right\| _{C^{1,1}}\left\| a-\bar{a} \right\| _{C^0}+\left\| g \right\| _{C^1}\left( \sum_{p=1}^{k+1}{\left| z_{p}^{\prime}\left( \lambda _1;\lambda _2 \right) -\bar{z}_{p}^{\prime}\left( \lambda _1;\lambda _2 \right) \right|} \right) \right) ,
 $$
-$$
-\left| F_{p}^{\prime}\left( \lambda _2 \right) -\bar{F}_{p}^{\prime}\left( \lambda _2 \right) \right|\le C_{\varepsilon _0,k}\left( \left( \left\| f^{\left( 1 \right)} \right\| _{C^{1,1}}+\left\| \bar{f}^{\left( 1 \right)} \right\| _{C^{1,1}} \right) \left( \left\| f^{\left( 2 \right)} \right\| _{C^{1,1}}+\left\| \bar{f}^{\left( 2 \right)} \right\| _{C^{1,1}} \right) \left\| a-\bar{a} \right\| _{C^0}+\left\| f^{\left( 1 \right)}-\bar{f}^{\left( 1 \right)} \right\| _{C^1}\left\| f^{\left( 2 \right)} \right\| _{C^1}+\left\| f^{\left( 2 \right)}-\bar{f}^{\left( 2 \right)} \right\| _{C^1}\left\| \bar{f}^{\left( 1 \right)} \right\| _{C^1}+\left\| f^{\left( 1 \right)} \right\| _{C^1}\left\| f^{\left( 2 \right)} \right\| _{C^1}\left( \sum_{p=1}^{k+1}{\left| z_{p}^{\prime}\left( \lambda _1;\lambda _2 \right) -\bar{z}_{p}^{\prime}\left( \lambda _1;\lambda _2 \right) \right|} \right) \right) 
-$$
+\[
+\begin{aligned}
+\bigl|F'_p(\lambda_2)-\bar F'_p(\lambda_2)\bigr|
+\le{}&\ C_{\varepsilon_0,k}\Bigl(
+  (\|f^{(1)}\|_{C^{1,1}}+\|\bar f^{(1)}\|_{C^{1,1}})
+  (\|f^{(2)}\|_{C^{1,1}}+\|\bar f^{(2)}\|_{C^{1,1}})\,\|a-\bar a\|_{C^{0}} \\
+&\qquad + \|f^{(1)}-\bar f^{(1)}\|_{C^{1}}\,\|f^{(2)}\|_{C^{1}}
+  + \|f^{(2)}-\bar f^{(2)}\|_{C^{1}}\,\|\bar f^{(1)}\|_{C^{1}} \\
+&\qquad + \|f^{(1)}\|_{C^{1}}\,\|f^{(2)}\|_{C^{1}}
+   \Bigl(\sum_{p=1}^{k+1}\bigl|z'_p(\lambda_1;\lambda_2)-\bar z'_p(\lambda_1;\lambda_2)\bigr|\Bigr)
+\Bigr).
+\end{aligned}
+\]
+
 Therefore, we can get
-$$
-\left\| h\left( t_p\left( \lambda _1;\lambda _2 \right) \right) -\bar{h}\left( \bar{t}_p\left( \lambda _1;\lambda _2 \right) \right) \right\| _{C^1}\le C_{A,k,\varepsilon _0}\left( \left( \left\| f^{(1)} \right\| _{C^1}+\left\| f^{(2)} \right\| _{C^1}+\left\| \bar{f}^{\left( 1 \right)} \right\| _{C^1}+\left\| \bar{f}^{(2)} \right\| _{C^1} \right) \left( \left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1}+\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^1} \right) +\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| \psi \right\| _{C^1}+\left\| g \right\| _{C^{1,1}}+\left\| \bar{g} \right\| _{C^{1,1}}+\left( \left\| f^{(1)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(1)} \right\| _{C^{1\text{,}1}} \right) \left( \left\| f^{(2)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(2)} \right\| _{C^{1,1}} \right) \right) \left\| a-\bar{a} \right\| _{C^1}+\left\| g-\bar{g} \right\| _{C^1} \right) 
-$$
+\[
+\begin{aligned}
+&\bigl\|\,h\!\bigl(t_p(\lambda_1;\lambda_2)\bigr)
+ - \bar h\!\bigl(\bar t_p(\lambda_1;\lambda_2)\bigr)\,\bigr\|_{C^{1}}
+\le{}\ C_{A,k,\varepsilon_0}\Bigl(
+   \bigl(\|\varphi\|_{C^{1,1}}+\|\psi\|_{C^{1}}
+     + \|g\|_{C^{1,1}}+\|\bar g\|_{C^{1,1}}\bigr) \|a-\bar a\|_{C^{1}}
+\\
+&\qquad \qquad
+     + (\|f^{(1)}\|_{C^{1,1}}+\|\bar f^{(1)}\|_{C^{1,1}})
+       (\|f^{(2)}\|_{C^{1,1}}+\|\bar f^{(2)}\|_{C^{1,1}})\,
+    \|a-\bar a\|_{C^{1}}
+\\
+&\qquad \qquad
+  + \bigl(\|f^{(1)}\|_{C^{1}}+\|f^{(2)}\|_{C^{1}}
+       +\|\bar f^{(1)}\|_{C^{1}}+\|\bar f^{(2)}\|_{C^{1}}\bigr)
+  \bigl(\|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+       +\|f^{(1)}-\bar f^{(1)}\|_{C^{1}}\bigr)
+\\
+&\qquad \qquad
+  + \|g-\bar g\|_{C^{1}}
+\Bigr).
+\end{aligned}
+\]
+
 For $H[\hat{n}]$, from \eqref{polynomial k+1 r}-\eqref{polynomial p s}, we know that
 $$
 \left| h_s\left( t_p(0;x) \right) -\bar{h}_s\left( \bar{t}_p(0;x) \right) \right|\le C\left\| h\left( t_p\left( \lambda _1;\lambda _2 \right) \right) -\bar{h}\left( \bar{t}_p\left( \lambda _1;\lambda _2 \right) \right) \right\| _{C^1},
@@ -1081,33 +1378,119 @@ $$
 \left| h_{s}^{\prime}\left( t_p(0;x) \right) -\bar{h}_{s}^{\prime}\left( \bar{t}_p(0;x) \right) \right|\le C_{\varepsilon _0,k}\left( \left\| h\left( t_p\left( \lambda _1;\lambda _2 \right) \right) -\bar{h}\left( \bar{t}_p\left( \lambda _1;\lambda _2 \right) \right) \right\| _{C^1}+\left\| h \right\| _{C^1}\left\| a-\bar{a} \right\| _{C^1} \right) .
 $$
 For $H[n]$, from \eqref{H}, we know that 
-$$
-\left| h_s\left( t_p(0;x) \right) -\bar{h}_s\left( \bar{t}_p(0;x) \right) \right|\le C_{\varepsilon _0,k,A}\left( \left\| \tilde{u}-\tilde{v} \right\| _{C^0}+\left\| H\left[ \hat{n} \right] \left( t_p(0;x) \right) -\bar{H}\left[ \hat{n} \right] \left( \bar{t}_p(0;x) \right) \right\| _{C^0}+\left\| G\left( t_p(0;x) \right) -\bar{G}\left( \bar{t}_p(0;x) \right) \right\| _{C^0}+\left\| F\left( t_p(0;x) \right) -\bar{F}\left( \bar{t}_p(0;x) \right) \right\| _{C^0} \right) 
-$$
+\[
+\begin{aligned}
+\bigl|\,h_s\!\bigl(t_p(0;x)\bigr)-\bar h_s\!\bigl(\bar t_p(0;x)\bigr)\,\bigr|
+\le{}&\ C_{\varepsilon_0,k,A}\Bigl(
+  \|\tilde u-\tilde v\|_{C^{0}}
+  + \bigl\| H[\hat n]\!\bigl(t_p(0;x)\bigr)-\bar H[\hat n]\!\bigl(\bar t_p(0;x)\bigr)\bigr\|_{C^{0}} \\
+&\qquad\quad
+  + \bigl\| G\!\bigl(t_p(0;x)\bigr)-\bar G\!\bigl(\bar t_p(0;x)\bigr)\bigr\|_{C^{0}}
+  + \bigl\| F\!\bigl(t_p(0;x)\bigr)-\bar F\!\bigl(\bar t_p(0;x)\bigr)\bigr\|_{C^{0}}
+\Bigr).
+\end{aligned}
+\]
+
 and
-$$
-\left| \frac{\mathrm{d}}{\mathrm{d}x}h_s\left( t_p(0;x) \right) -\frac{\mathrm{d}}{\mathrm{d}x}\bar{h}_s\left( \bar{t}_p(0;x) \right) \right|\le C_{\varepsilon _0,k,A}\left( \left\| \tilde{u}-\tilde{v} \right\| _{C^1}+\left\| H\left[ \hat{n} \right] \left( t_p(0;x) \right) -\bar{H}\left[ \hat{n} \right] \left( \bar{t}_p(0;x) \right) \right\| _{C^1}+\left\| G\left( t_p(0;x) \right) -\bar{G}\left( \bar{t}_p(0;x) \right) \right\| _{C^1}+\left\| F\left( t_p(0;x) \right) -\bar{F}\left( \bar{t}_p(0;x) \right) \right\| _{C^1} \right) 
-$$
+\[
+\begin{aligned}
+\Bigl|\tfrac{\mathrm d}{\mathrm dx}h_s\!\bigl(t_p(0;x)\bigr)
+ - \tfrac{\mathrm d}{\mathrm dx}\bar h_s\!\bigl(\bar t_p(0;x)\bigr)\Bigr|
+\le{}&\ C_{\varepsilon_0,k,A}\Bigl(
+  \|\tilde u-\tilde v\|_{C^{1}} \\
+&\quad + \bigl\| H[\hat n]\!\bigl(t_p(0;x)\bigr)
+          - \bar H[\hat n]\!\bigl(\bar t_p(0;x)\bigr) \bigr\|_{C^{1}} \\
+&\quad + \bigl\| G\!\bigl(t_p(0;x)\bigr)
+          - \bar G\!\bigl(\bar t_p(0;x)\bigr) \bigr\|_{C^{1}} \\
+&\quad + \bigl\| F\!\bigl(t_p(0;x)\bigr)
+          - \bar F\!\bigl(\bar t_p(0;x)\bigr) \bigr\|_{C^{1}}
+\Bigr).
+\end{aligned}
+\]
+
 Thereby
-$$
-\left| h_{s}^{\prime}\left( t_p(0;x) \right) -\bar{h}_{s}^{\prime}\left( \bar{t}_p(0;x) \right) \right|\le C_{\varepsilon _0,k,A}\left( \left\| h \right\| _{C^1}\left\| a-\bar{a} \right\| _{C^1}+\left\| \tilde{u}-\tilde{v} \right\| _{C^1}+\left\| H\left[ \hat{n} \right] \left( t_p(0;x) \right) -\bar{H}\left[ \hat{n} \right] \left( \bar{t}_p(0;x) \right) \right\| _{C^1}+\left\| G\left( t_p(0;x) \right) -\bar{G}\left( \bar{t}_p(0;x) \right) \right\| _{C^1}+\left\| F\left( t_p(0;x) \right) -\bar{F}\left( \bar{t}_p(0;x) \right) \right\| _{C^1} \right) 
-$$
+\[
+\begin{aligned}
+\bigl|\,h'_s\!\bigl(t_p(0;x)\bigr)-\bar h'_s\!\bigl(\bar t_p(0;x)\bigr)\,\bigr|
+\le{}&\ C_{\varepsilon_0,k,A}\Bigl(
+  \|h\|_{C^{1}}\ \|a-\bar a\|_{C^{1}}
+  + \|\tilde u-\tilde v\|_{C^{1}} \\
+&\quad + \bigl\| H[\hat n]\!\bigl(t_p(0;x)\bigr)-\bar H[\hat n]\!\bigl(\bar t_p(0;x)\bigr) \bigr\|_{C^{1}} \\
+&\quad + \bigl\| G\!\bigl(t_p(0;x)\bigr)-\bar G\!\bigl(\bar t_p(0;x)\bigr) \bigr\|_{C^{1}} \\
+&\quad + \bigl\| F\!\bigl(t_p(0;x)\bigr)-\bar F\!\bigl(\bar t_p(0;x)\bigr) \bigr\|_{C^{1}}
+\Bigr).
+\end{aligned}
+\]
+
 Therefore, we can get
-$$
-\left\| h_s\left( t_p(0;x) \right) -\bar{h}_s\left( \bar{t}_p(0;x) \right) \right\| _{C^1}\le C_{\varepsilon _0,k,A}\left( \left( \left\| f^{(1)} \right\| _{C^1}+\left\| f^{(2)} \right\| _{C^1}+\left\| \bar{f}^{\left( 1 \right)} \right\| _{C^1}+\left\| \bar{f}^{(2)} \right\| _{C^1} \right) \left( \left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1}+\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^1} \right) +\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| \psi \right\| _{C^1}+\left\| g \right\| _{C^{1,1}}+\left\| \bar{g} \right\| _{C^{1,1}}+\left( \left\| f^{(1)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(1)} \right\| _{C^{1\text{,}1}} \right) \left( \left\| f^{(2)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(2)} \right\| _{C^{1,1}} \right) \right) \left\| a-\bar{a} \right\| _{C^1}+\left\| g-\bar{g} \right\| _{C^1} \right) 
-$$
+\[
+\begin{aligned}
+&\bigl\|\,h_s\!\bigl(t_p(0;x)\bigr)-\bar h_s\!\bigl(\bar t_p(0;x)\bigr)\,\bigr\|_{C^{1}}
+\le{}\ C_{\varepsilon_0,k,A}\Bigl(
+	\bigl(\|\varphi\|_{C^{1,1}}+\|\psi\|_{C^{1}}
+     + \|g\|_{C^{1,1}}+\|\bar g\|_{C^{1,1}}\bigr)\|a-\bar a\|_{C^{1}}
+ \\
+&\qquad
+     + (\|f^{(1)}\|_{C^{1,1}}+\|\bar f^{(1)}\|_{C^{1,1}})
+       (\|f^{(2)}\|_{C^{1,1}}+\|\bar f^{(2)}\|_{C^{1,1}})\,
+    \|a-\bar a\|_{C^{1}} \\
+&\qquad
+	 + (\|f^{(1)}\|_{C^{1}}+\|f^{(2)}\|_{C^{1}}
+   +\|\bar f^{(1)}\|_{C^{1}}+\|\bar f^{(2)}\|_{C^{1}})\,
+  (\|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+   +\|f^{(1)}-\bar f^{(1)}\|_{C^{1}})\\
+&\qquad
+  + \|g-\bar g\|_{C^{1}}
+\Bigr).
+\end{aligned}
+\]
+
 For any $t\in [0,T]$, there exists some $p$ and $x\in [0,L]$ such that $t=t_p(0;x)$. Therefore, we can get
 $$
 \left\| h-\bar{h} \right\| _{C^1}\le \left\| h_s\left( t_p(0;x) \right) -\bar{h}_s\left( \bar{t}_p(0;x) \right) \right\| _{C^1}+\left\| h \right\| _{C^{1,1}}\left| t_p(0;x)-\bar{t}_p(0;x) \right|.
 $$
 Thereby
-$$
-\left\| h_s\left( t_p(0;x) \right) -\bar{h}_s\left( \bar{t}_p(0;x) \right) \right\| _{C^1}\le C_{\varepsilon _0,k,A}\left( \left( \left\| f^{(1)} \right\| _{C^1}+\left\| f^{(2)} \right\| _{C^1}+\left\| \bar{f}^{\left( 1 \right)} \right\| _{C^1}+\left\| \bar{f}^{(2)} \right\| _{C^1} \right) \left( \left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1}+\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^1} \right) +\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| \psi \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}+\left\| \bar{g} \right\| _{C^{1,1}}+\left( \left\| f^{(1)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(1)} \right\| _{C^{1\text{,}1}} \right) \left( \left\| f^{(2)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(2)} \right\| _{C^{1,1}} \right) \right) \left\| a-\bar{a} \right\| _{C^1}+\left\| g-\bar{g} \right\| _{C^1} \right) 
-$$
+\[
+\begin{aligned}
+&\bigl\|\,h_s\!-\bar h_s\!\,\bigr\|_{C^{1}}
+\le{}\ C_{\varepsilon_0,k,A}\Bigl(
+	\bigl(\|\varphi\|_{C^{1,1}}+\|\psi\|_{C^{1}}
+     + \|g\|_{C^{1,1}}+\|\bar g\|_{C^{1,1}}\bigr)\|a-\bar a\|_{C^{1}}
+ \\
+&\qquad
+     + (\|f^{(1)}\|_{C^{1,1}}+\|\bar f^{(1)}\|_{C^{1,1}})
+       (\|f^{(2)}\|_{C^{1,1}}+\|\bar f^{(2)}\|_{C^{1,1}})\,
+    \|a-\bar a\|_{C^{1}} \\
+&\qquad
+	 + (\|f^{(1)}\|_{C^{1}}+\|f^{(2)}\|_{C^{1}}
+   +\|\bar f^{(1)}\|_{C^{1}}+\|\bar f^{(2)}\|_{C^{1}})\,
+  (\|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+   +\|f^{(1)}-\bar f^{(1)}\|_{C^{1}})\\
+&\qquad
+  + \|g-\bar g\|_{C^{1}}
+\Bigr).
+\end{aligned}
+\]
+
 for $\left\| u-v \right\| _{C^1}$, similar to the estimate of $\left\| \tilde{u}-\tilde{v} \right\| _{C^1}$, we can get
-$$
-\left\| u-v \right\| _{C^1}\le C_{\varepsilon _0,k,A}\left( \left( \left\| f^{(1)} \right\| _{C^1}+\left\| f^{(2)} \right\| _{C^1}+\left\| \bar{f}^{\left( 1 \right)} \right\| _{C^1}+\left\| \bar{f}^{(2)} \right\| _{C^1} \right) \left( \left\| f^{(2)}-\bar{f}^{(2)} \right\| _{C^1}+\left\| f^{(1)}-\bar{f}^{(1)} \right\| _{C^1} \right) +\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| \psi \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}+\left\| \bar{g} \right\| _{C^{1,1}}+\left( \left\| f^{(1)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(1)} \right\| _{C^{1\text{,}1}} \right) \left( \left\| f^{(2)} \right\| _{C^{1,1}}+\left\| \bar{f}^{(2)} \right\| _{C^{1,1}} \right) \right) \left\| a-\bar{a} \right\| _{C^1}+\left\| g-\bar{g} \right\| _{C^1} \right) 
-$$
+\[
+\begin{aligned}
+&\|u-v\|_{C^{1}}
+\le{}\ C_{\varepsilon_0,k,A}\Bigl(
+  (\|f^{(1)}\|_{C^{1}}+\|f^{(2)}\|_{C^{1}}
+   +\|\bar f^{(1)}\|_{C^{1}}+\|\bar f^{(2)}\|_{C^{1}})\,
+  (\|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+   +\|f^{(1)}-\bar f^{(1)}\|_{C^{1}}) \\
+&\quad + \bigl(\|\varphi\|_{C^{1,1}}+\|\psi\|_{C^{1,1}}
+   + \|g\|_{C^{1,1}}+\|\bar g\|_{C^{1,1}}
+   + (\|f^{(1)}\|_{C^{1,1}}+\|\bar f^{(1)}\|_{C^{1,1}})
+     (\|f^{(2)}\|_{C^{1,1}}+\|\bar f^{(2)}\|_{C^{1,1}})\bigr)\,
+   \|a-\bar a\|_{C^{1}} \\
+&\quad + \|g-\bar g\|_{C^{1}}
+\Bigr).
+\end{aligned}
+\]
+
 
 
 
