@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.24)  17 OCT 2025 23:13
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.24)  19 OCT 2025 10:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -459,160 +459,183 @@ Configuring pdfsync
 \PDFSYNCeveryvb@x=\toks45
 **** pdfsync.sty: started
 
-Overfull \hbox (50.0827pt too wide) in paragraph at lines 206--209
-\TU/lmr/m/n/10.95 where $[][]\OT1/cmr/m/n/10.95 0 \OML/cmm/m/it/10.95 < " < "[] \OMS/cmsy/m/n/10.95 ^^\ \OT1/cmr/m/n/10.95 1$\TU/lmr/m/n/10.95 . Without loss of generosity, we set $[][]\OML/cmm/m/it/10.95 a\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) = 1$\TU/lmr/m/n/10.95 ,  $[][]\OML/cmm/m/it/10.95 H\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t\OT1/cmr/m/n/10.95 ) = [][]$\TU/lmr/m/n/10.95 .
- []
+Overfull \vbox (3.59293pt too high) has occurred while \output is active []
 
-[1] [2] [3] [4] [5] [6]
-Overfull \hbox (50.82736pt too wide) detected at line 649
+ [1] [2] [3] [4] [5] [6]
+Overfull \hbox (50.82736pt too wide) detected at line 646
 [][]
  []
 
 
-Overfull \hbox (33.86224pt too wide) detected at line 657
+Overfull \hbox (33.86224pt too wide) detected at line 654
 [][]
  []
 
-[7] [8]
-Overfull \hbox (4.27731pt too wide) detected at line 731
+[7]
+Overfull \hbox (16.24226pt too wide) detected at line 715
+[]\OML/cmm/m/it/10.95 H[] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 p [] ; p \OT1/cmr/m/n/10.95 = 1\OML/cmm/m/it/10.95 ; []  ; k;
+ []
+
+[8]
+Overfull \hbox (4.27731pt too wide) detected at line 729
 [][][]
  []
 
 [9]
-Overfull \hbox (13.49876pt too wide) detected at line 828
+Overfull \hbox (21.35666pt too wide) detected at line 802
+[]\OML/cmm/m/it/10.95 w[] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 ) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 :
+ []
+
+
+Overfull \hbox (68.81026pt too wide) detected at line 826
 []\OML/cmm/m/it/10.95 w[] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 ;
  []
 
 
-LaTeX Warning: Reference `d44' on page 10 undefined on input line 839.
+LaTeX Warning: Reference `d44' on page 10 undefined on input line 837.
 
 [10]
 
-LaTeX Warning: Reference `e of w_s' on page 11 undefined on input line 860.
+LaTeX Warning: Reference `e of w^+' on page 11 undefined on input line 858.
 
 
-Overfull \hbox (2.82198pt too wide) detected at line 899
+Overfull \hbox (9.7645pt too wide) detected at line 864
+[][]
+ []
+
+
+Overfull \hbox (9.98912pt too wide) detected at line 897
 [][]
  []
 
 [11]
-Overfull \hbox (33.04865pt too wide) detected at line 964
+Overfull \hbox (38.80272pt too wide) detected at line 962
 [][]
  []
 
 
-Overfull \hbox (6.20874pt too wide) detected at line 988
+Overfull \hbox (31.65833pt too wide) detected at line 986
 [][]
  []
 
 [12]
-Overfull \hbox (50.78922pt too wide) detected at line 1002
+Overfull \hbox (56.54329pt too wide) detected at line 1000
 [][]
  []
 
 
-Overfull \hbox (50.78922pt too wide) detected at line 1017
+Overfull \hbox (56.54329pt too wide) detected at line 1015
 [][]
  []
 
 
-Overfull \hbox (342.29749pt too wide) detected at line 1046
+Overfull \hbox (348.05156pt too wide) detected at line 1044
 [][]
+ []
+
+
+Overfull \hbox (34.33905pt too wide) detected at line 1063
+[] [] \OT1/cmr/m/n/10.95 = [](0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 ) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []
+ []
+
+
+Overfull \hbox (28.7424pt too wide) detected at line 1066
+[] [] \OT1/cmr/m/n/10.95 = [](0\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 ) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []
  []
 
 [13]
-Overfull \hbox (34.04422pt too wide) detected at line 1169
+Overfull \hbox (40.09294pt too wide) detected at line 1167
 [][]
  []
 
 
-Overfull \hbox (7.41733pt too wide) detected at line 1174
+Overfull \hbox (49.69377pt too wide) detected at line 1172
 [] [] \OT1/cmr/m/n/10.95 = []([](0\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 ;
  []
 
 
-Overfull \hbox (34.04422pt too wide) detected at line 1220
+Overfull \hbox (40.09294pt too wide) detected at line 1218
 [][]
  []
 
 
-Underfull \vbox (badness 3068) has occurred while \output is active []
+Underfull \vbox (badness 2865) has occurred while \output is active []
 
  [14]
-Overfull \hbox (118.09737pt too wide) detected at line 1242
+Overfull \hbox (124.14609pt too wide) detected at line 1240
 [][]
  []
 
 
-Overfull \hbox (19.86995pt too wide) detected at line 1247
+Overfull \hbox (55.34782pt too wide) detected at line 1245
 [] [] \OT1/cmr/m/n/10.95 = [](\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 ;
  []
 
 
-Overfull \hbox (7.47473pt too wide) detected at line 1250
+Overfull \hbox (49.75117pt too wide) detected at line 1248
 [] [] \OT1/cmr/m/n/10.95 = []([](0\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 ;
  []
 
 
-Overfull \hbox (1.6658pt too wide) detected at line 1277
+Overfull \hbox (1.6658pt too wide) detected at line 1275
 [][]
  []
 
 
-Overfull \hbox (63.85802pt too wide) detected at line 1294
+Overfull \hbox (63.85802pt too wide) detected at line 1292
 [][]
  []
 
 
-Overfull \hbox (1.05496pt too wide) in paragraph at lines 1296--1297
+Overfull \hbox (1.05496pt too wide) in paragraph at lines 1294--1295
 [][][]\TU/lmr/m/n/10.95 Then we consider the value and derivative of $[][]\OML/cmm/m/it/10.95 h[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (0; 0))$\TU/lmr/m/n/10.95 , $[][]\OML/cmm/m/it/10.95 h[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (0; \OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 ))$\TU/lmr/m/n/10.95 , $[][]\OML/cmm/m/it/10.95 h[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 ; 0))$\TU/lmr/m/n/10.95 , $[][]\OML/cmm/m/it/10.95 h[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 ))$\TU/lmr/m/n/10.95 .
  []
 
 [15]
-Overfull \hbox (64.2415pt too wide) detected at line 1320
+Overfull \hbox (64.2415pt too wide) detected at line 1318
 [] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 C[] []
  []
 
 
-Overfull \hbox (39.64491pt too wide) detected at line 1331
+Overfull \hbox (39.64491pt too wide) detected at line 1329
 [] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 C[] [] ;
  []
 
 
-Overfull \hbox (37.03792pt too wide) detected at line 1395
+Overfull \hbox (49.76497pt too wide) detected at line 1393
 [][]
  []
 
 [16]
-Overfull \hbox (50.75908pt too wide) detected at line 1495
+Overfull \hbox (50.75908pt too wide) detected at line 1493
 [][]
  []
 
 
-LaTeX Warning: Reference `bounds of U' on page 17 undefined on input line 1508.
+LaTeX Warning: Reference `bounds of U' on page 17 undefined on input line 1506.
 
 [17]
 
-LaTeX Warning: Reference `cauchy of H' on page 18 undefined on input line 1557.
+LaTeX Warning: Reference `cauchy of H' on page 18 undefined on input line 1555.
 
 
-LaTeX Warning: Reference `cauchy of U' on page 18 undefined on input line 1557.
+LaTeX Warning: Reference `cauchy of U' on page 18 undefined on input line 1555.
 
 
-LaTeX Warning: Reference `cauchy of U' on page 18 undefined on input line 1568.
+LaTeX Warning: Reference `cauchy of U' on page 18 undefined on input line 1566.
 
 
-LaTeX Warning: Reference `cauchy of H' on page 18 undefined on input line 1597.
+LaTeX Warning: Reference `cauchy of H' on page 18 undefined on input line 1595.
 
 
-LaTeX Warning: Reference `cauchy of U' on page 18 undefined on input line 1597.
+LaTeX Warning: Reference `cauchy of U' on page 18 undefined on input line 1595.
 
 [18]
 
-LaTeX Warning: Reference `54' on page 19 undefined on input line 1662.
+LaTeX Warning: Reference `54' on page 19 undefined on input line 1660.
 
 
-LaTeX Warning: Reference `54' on page 19 undefined on input line 1688.
+LaTeX Warning: Reference `54' on page 19 undefined on input line 1686.
 
 [19]
 No file WNGD(2).bbl.
