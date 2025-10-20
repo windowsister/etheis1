@@ -700,7 +700,7 @@ $$
 $$
 From \eqref{kalman} and the implicit function existence theorem, we know that there exist $n$ components of $\hat{H}(x)$ denoted as $H[n](x) $, s.t.
 \begin{equation}\label{H}
-H\left[ n \right] \left( x \right) =\mathcal{H} \left( \psi\left( x \right) ,H_{k+1}\left( x \right) ,H\left[ \hat{n} \right] \left( x \right) \right) ,
+H\left[ n \right] \left( x \right) =\mathcal{H} \left( \psi \left( x \right) -\tilde{G}\left( x \right) -\tilde{F}\left( x \right) ,H_{k+1}\left( x \right) ,H\left[ \hat{n} \right] \left( x \right) \right) ,
 \end{equation}
 where $H\left[ \hat{n} \right] \left( x \right)$ is the other components of $\hat{H}(x)$, and $\mathcal{H}$ is a $C^1$ continuous function. For $H_{k+1}\left( x \right) $, we utilize the interpolation method to obtain the following equations:
 \begin{equation}\label{polynomial k+1 r}
@@ -765,15 +765,15 @@ u^+\left( t_1\left( x;\xi \right) ,x \right) =u^+(0,\xi )+\int_{\xi}^x{f^{\left(
 $$
 Therefore,
 $$
-\left| u^+\left( t_1(x;\xi ),x \right) \right|\leq C\left( \left\| \varphi \right\| _{C^0}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
+\left| u^+\left( t_1(x;\xi ),x \right) \right|\leq C_{\varepsilon _0}\left( \left\| \varphi \right\| _{C^0}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
 $$
 Similarly, we can get the estimate of $u^-\left( \tilde{t} _1(x;\xi ),x \right) $:
 $$
-\left| u^-\left( \tilde{t} _1(x;\xi ),x \right) \right|\leq C\left( \left\| \varphi \right\| _{C^0}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
+\left| u^-\left( \tilde{t} _1(x;\xi ),x \right) \right|\leq C_{\varepsilon _0}\left( \left\| \varphi \right\| _{C^0}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
 $$
 Below we make inductive assumptions that for $j=1,\cdots,p-1$, the following estimates hold:
 \begin{equation}\label{inductive assumption}
-\left| u\left( t_j(x;\xi ),x \right) \right|\leq C_A\left( \left\| \varphi \right\| _{C^1}+\left\| \psi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
+\left| u^+\left( t_j(x;\xi ),x \right) \right|+\left| u^-\left( \tilde{t}_j(x;\xi ),x \right) \right|\leq C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^1}+\left\| \psi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
 \end{equation}
 Then for $j=p$, we have
 $$
@@ -789,10 +789,11 @@ u^+\left(t_p(0 ; \xi), 0\right)=A_2 u^-\left(\tilde{t}_{p-1}(0 ; \xi), 0\right)+
 $$
 and then
 $$
-\left| u\left( t_p(x;\xi ),x \right) \right|\leq C_A\left( \left\| \varphi \right\| _{C^1}+\left\| \psi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
+\left| u^+\left( t_p(x;\xi ),x \right) \right|\leq C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^1}+\left\| \psi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
 $$
+Similarly, we can get the same estimate of $u^-\left( \tilde{t} _p(x;\xi ),x \right) $.
 Therefore, \eqref{inductive assumption} holds for $j=p$.
-Multiply both sides of \eqref{e4} by $b(t,x)$ and then derive for $t$,denoting $w^+$ as the derivative of $u^+$ with respect to $t$, and we have
+Multiply both sides of \eqref{e4} by $b(t,x)$ and then derive for $t$, denoting $w^+$ as the derivative of $u^+$ with respect to $t$, and we have
 $$
 \frac{\mathrm{d}}{\mathrm{d}x}w^++\partial _tbw^+=\partial _t\left( f^{(1)+}\frac{\mathrm{d}f^{(2)+}}{\mathrm{d}x} \right). 
 $$
@@ -806,23 +807,30 @@ w^+(0, \xi)=-a \varphi^{\prime}(\xi)+f^{(1)+}\left(\partial_t+a \partial_x\right
 \end{equation}
 Thereby
 $$
-\left| w^+(0,\xi ) \right|\leq C\left( \left\| \varphi \right\| _{C^1}+\left\| f^{\left( 1 \right)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
+\left| w^+(0,\xi ) \right|\leq C_{\varepsilon _0}\left( \left\| \varphi \right\| _{C^1}+\left\| f^{\left( 1 \right)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
 $$
 Then we can get the estimate of $w^+\left( t_1(x;\xi ),x \right) $:
 $$
-\left| w^+\left( t_1(x;\xi ),x \right) \right|\leq \left\| \partial _tb \right\| _{C^0}\int_{\xi}^x{\left| w^+ \right|\mathrm{d}s}+C\left( \left\| \varphi \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
+\left| w^+\left( t_1(x;\xi ),x \right) \right|\leq \left\| \tilde{a} \right\| _{C^1}\int_{\xi}^x{\left| w^+ \right|\mathrm{d}s}+C_{\varepsilon _0}\left( \left\| \varphi \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
 $$
 Using Gronwall's inequality, we can get
 $$
 \left| w^+\left( t_1(x;\xi ),x \right) \right|\leq C_{\varepsilon _0}\left( \left\| \varphi \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
 $$
+Similarly, we can get the estimate of $w^-\left( \tilde{t} _1(x;\xi ),x \right) $:
+$$
+\left| w^-\left( \tilde{t} _1(x;\xi ),x \right) \right|\leq C_{\varepsilon _0}\left( \left\| \varphi \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) .
+$$
 Below we make inductive assumptions that for $j=1,\cdots,p-1$, the following estimates hold:
 \begin{equation}\label{inductive assumption for w}
-\left| w\left( t_j(x;\xi ),x \right) \right|\leq C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^1}+\left\| \psi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) ,
+\left| w\left( t_j(x;\xi ),x \right) \right| +  \left| w^-\left( \tilde{t}_j(x;\xi ),x \right) \right|\leq C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^1}+\left\| \psi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) ,
 \end{equation}
 Then for $j=p$, we have
 \begin{equation}\label{e of w^+ p}
-	w^+\left( t_p(x;\xi ),x \right) =w^+(t_p(0,\xi ),0)+\int_{0}^x{\partial _tbw^+\mathrm{d}s}+\int_{0}^x{\partial _tf^{(1)+}\frac{\mathrm{d}f^{(2)+}}{\mathrm{d}s}\mathrm{d}s}+\left. f^{(1)+}\partial _tf^{(2)+} \right|_{0}^{x}-\int_{0}^x{\partial _t{f}^{(2)+}\frac{\mathrm{d}{f}^{(1)+}}{\mathrm{d}s}\mathrm{d}s},
+  \begin{aligned}
+	w^+\left( t_p(x;\xi ),x \right) &=w^+(t_p(0,\xi ),0)+\int_{0}^x{\partial _tbw^+\mathrm{d}s}+\int_{0}^x{\partial _tf^{(1)+}\frac{\mathrm{d}f^{(2)+}}{\mathrm{d}s}\mathrm{d}s}\\
+  & \qquad+\left. f^{(1)+}\partial _tf^{(2)+} \right|_{0}^{x}-\int_{0}^x{\partial _t{f}^{(2)+}\frac{\mathrm{d}{f}^{(1)+}}{\mathrm{d}s}\mathrm{d}s},
+  \end{aligned}
 \end{equation}
 where
 \begin{equation}\label{w^+ at t_p(t,0)}
@@ -834,7 +842,7 @@ Finally, we can get the estimate of $u(t,x)$:
 	\left\| u(t,x) \right\|_{C^1} \leq C_{A,k,\varepsilon _0}(\lVert \psi \rVert _{C^1}+\lVert \varphi  \rVert _{C^1}+  \lVert g \rVert _{C^1}+\lVert f^{(1)} \rVert _{C^1}\lVert f^{(2)} \rVert _{C^1}) ,\ t\in [0,T],\ x\in [0,L].
 \end{equation}
 Below we estimate the continuity paradigm of  $h'_i(t)$, $\partial _x u(t,x)$ and  $\partial _t u(t,x)$ .
-For $ H\left[ \hat{n} \right] $ and $H_{k+1}$ , using \eqref{polynomial k+1 r}- \eqref{polynomial p s} and \eqref{d44}, we have
+For $ H\left[ \hat{n} \right] $ and $H_{k+1}$ , using \eqref{polynomial k+1 r}- \eqref{polynomial p s} , we have
 $$
 \left| h' _i\left( t_1 \right) -h'_i\left( t_2 \right) \right|\leq C_{k,\varepsilon _0}(\left\| p \right\| _{C^2}\left| x_1-x_2 \right|+\left\| p \right\| _{C^1}\left\| \tilde{a} \right\| _{C^{1,1}}\left| x_1-x_2 \right|),
 $$
@@ -855,11 +863,11 @@ $$
 \left\| H(t) \right\| _{C^{1,1}}\leq C_{A,k,\varepsilon _0}(\left\| \psi \right\| _{C^{1,1}}+\left\| \varphi \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}}).
 $$
 Then we try to get the $C^{1,1}$ estimate of $ u(t,x)$.We first consider $\omega \left( \eta \mid \partial _tu(\cdot ,x) \right) $.
-From \eqref{e of w^+} and \eqref{w^+ at 0}, we know that
+From \eqref{e of w^+ p} and \eqref{w^+ at 0}, we know that
 $$
 \begin{aligned}
-\left| w^+\left( t_1\left( x;\xi _1 \right) ,x \right) -w^+\left( t_1\left( x;\xi _2 \right) ,x \right) \right| & \leq C\left( \left| w^+\left( 0,\xi _1 \right) -w^+\left( 0,\xi _2 \right) \right|+\left\| u \right\| _{C^1}\left\| \tilde{a} \right\| _{C^{1,1}}\left| \xi _1-\xi _2 \right| \right. \\
-+\left\| \tilde{a} \right\| _{C^1}\int_0^x & {\left| w^+\left( \xi _1,s \right) -w^+\left( \xi _2,s \right) \right|\mathrm{d}s}  \left. +\left\| f^{\left( 1 \right)} \right\| _{C^{1,1}}\left\| f^{\left( 2 \right)} \right\| _{C^{1,1}}\left| \xi _1-\xi _2 \right| \right) ,
+&\left| w^+\left( t_1\left( x;\xi _1 \right) ,x \right) -w^+\left( t_1\left( x;\xi _2 \right) ,x \right) \right|  \leq C\left( \left| w^+\left( 0,\xi _1 \right) -w^+\left( 0,\xi _2 \right) \right|+\left\| u \right\| _{C^1}\left\| \tilde{a} \right\| _{C^{1,1}}\left| \xi _1-\xi _2 \right| \right. \\
+&+\left\| \tilde{a} \right\| _{C^1}\int_0^x  {\left| w^+\left( t_1\left( s;\xi _1 \right),s \right) -w^+\left(t_1\left( s;\xi _2 \right),s \right) \right|\mathrm{d}s}  \left. +\left\| f^{\left( 1 \right)} \right\| _{C^{1,1}}\left\| f^{\left( 2 \right)} \right\| _{C^{1,1}}\left| \xi _1-\xi _2 \right| \right) ,
 \end{aligned}
 $$
 where
@@ -871,7 +879,7 @@ $$
 $$
 Using Gronwall' inequality ,\eqref{time line} and \eqref{estimate of time line}, we can get
 $$
-\left| \xi _1-\xi _2 \right|\leq C\left| t_1\left( x;\xi _1 \right) -t_1\left( x;\xi _2 \right) \right|,
+\left| \xi _1-\xi _2 \right|\leq C_{\varepsilon _0}\left| t_1\left( x;\xi _1 \right) -t_1\left( x;\xi _2 \right) \right|,
 $$
 and then
 $$
@@ -880,11 +888,12 @@ $$
   &\qquad  +\left. (\left\| \psi \right\| _{C^1}+\left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1})\left\| \tilde{a} \right\| _{C^{1,1}} \right) \eta \\
 \end{aligned}
 $$
+Similarly, we can get the same estimate of $\omega \left( \eta \mid w^-\left( \tilde{t} _1\left( x;\cdot \right) ,x \right) \right) $.
 Below we make inductive assumptions that for $j=1,\cdots,p-1$, the following estimates hold:
 \begin{equation}\label{inductive assumption for w eta}
 \begin{aligned}
-\omega \left( \eta \mid w^+\left( t_j\left( x;\cdot \right) ,x \right) \right) &\leq  C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| \psi \right\| _{C^{1,1}}+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}\right. \\
-& \qquad \left.+(\left\| \psi \right\| _{C^1}+\left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1})\left\| \tilde{a} \right\| _{C^{1,1}} \right) \eta 
+&\omega \left( \eta \mid w^+\left( t_j\left( x;\cdot \right) ,x \right) \right) +\omega \left( \eta \mid w^-\left( \tilde{t}_j\left( x;\cdot \right) ,x \right) \right)  \leq  C_{A,k,\varepsilon _0}\left( \left\| \varphi \right\| _{C^{1,1}}+\left\| \psi \right\| _{C^{1,1}} \right. \\
+ & \qquad \left.+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}}+\left\| g \right\| _{C^{1,1}}+(\left\| \psi \right\| _{C^1}+\left\| \varphi \right\| _{C^1}+\left\| g \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1})\left\| \tilde{a} \right\| _{C^{1,1}} \right) \eta 
 \end{aligned}
 \end{equation}
 Then for $j=p$, from \eqref{e of w^+ p}, we have
@@ -897,14 +906,15 @@ $$
 $$
 where from \eqref{w^+ at t_p(t,0)}, we know that
 $$
-\omega \left( \eta \mid w^+\left( t_p\left( 0;\cdot \right) ,0 \right) \right) \leq C \omega \left( \eta \mid w\left( t_{p-1}\left( x;\cdot \right) ,x \right) +\left\| g \right\| _{C^{1,1}}+\left\| h \right\| _{C^{1,1}} \right)  .
+\omega \left( \eta \mid w^+\left( t_p\left( 0;\cdot \right) ,0 \right) \right) \leq C_{A} \left(\omega \left( \eta \mid w\left( t_{p-1}\left( x;\cdot \right) ,x \right)\right) +(\left\| g \right\| _{C^{1,1}}+\left\| h \right\| _{C^{1,1}})\eta \right)  .
 $$
-Then using Gronwall's inequality and \eqref{inductive assumption for w eta}, we can get \eqref{inductive assumption for w eta} holds for $j=p$.
-Next we consider $\omega\left(\eta \mid \omega\left(t_p(\cdot, \xi), \cdot\right)\right)$.
+Then using Gronwall's inequality and \eqref{inductive assumption for w eta} and similar estimate of $\omega \left( \eta \mid w^-\left( \tilde{t}_p\left( x;\cdot \right) ,x \right) \right)$, we can get \eqref{inductive assumption for w eta} holds for $j=p$.
+Next we consider $\omega\left(\eta \mid w^+\left(t_p(\cdot, \xi), \cdot\right)\right)$.
 From \eqref{e of w^+ 1} and \eqref{e of w^+ p}, we know that
 $$
 \omega \left( \eta \mid w\left( t_p(\cdot ;\xi ),\cdot \right) \right) \leq \left( \left\| \tilde{a} \right\| _{C^1}\left\lVert u\right\rVert  _{C^1}+\left\| f^{(1)} \right\| _{C^1}\left\| f^{(2)} \right\| _{C^1} \right) \eta .
 $$
+Similarly, we can get the same estimate of $\omega \left( \eta \mid w^-\left( \tilde{t} _p(\cdot ;\xi ),\cdot \right) \right) $.
 Therefore, we get
 \begin{equation}
 \begin{aligned}
@@ -914,7 +924,7 @@ Therefore, we get
 \end{equation}
 For $\partial _xu(t,x)$, from \eqref{e1} we have
 $$
-\left\| \partial _xu \right\| _{C^{0,1}}\leq C\left( \left\| \partial _tu \right\| _{C^{0,1}}+\parallel u\parallel _{C^1}\left\| \tilde{a} \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}} \right) .
+\left\| \partial _xu \right\| _{C^{0,1}}\leq C\left( \left\| \partial _tu \right\| _{C^{0,1}}+\left\lVert  u \right\rVert _{C^1}\left\| \tilde{a} \right\| _{C^1}+\left\| f^{(1)} \right\| _{C^{1,1}}\left\| f^{(2)} \right\| _{C^{1,1}} \right) .
 $$
 Thereby, we can get
 \begin{equation}\label{continuity paradigm}
@@ -930,7 +940,7 @@ From \eqref{time line}, we know that
 $$
 \left\| t_1\left( x;x_0 \right) -\bar{t}_1\left( x;x_0 \right) \right\| _{C^0}\leq C_{\varepsilon _0} \left\lVert a-\bar{a}\right\rVert _{C^0}.
 $$
-Select a point $(t_0,L)$, where $t_0=t_1\left( L;\xi \right)$ for some $\xi$, and condider the characteristic curve passing through this point, denoting $\xi$ as the point where this characteristic curve $t_1(x;t_0)$ intersects with $t=0$ and $\bar{\xi}$ as the point where this characteristic curve $\bar{t}_1(x;t_0)$ intersects with $t=0$, we have
+Select a point $(t_0,L)$, where $t_0=t_1\left( L;\xi \right)$ for some $\xi$, and consider the characteristic curve passing through this point, denoting $\xi$ as the point where this characteristic curve $t_1(x;t_0)$ intersects with $t=0$ and $\bar{\xi}$ as the point where this characteristic curve $\bar{t}_1(x;t_0)$ intersects with $t=0$, we have
 $$
 \left| x_1-\bar{x}_1 \right|\leq C_{\varepsilon _0}\left\| a-\bar{a} \right\| _{C^0},
 $$
@@ -1013,7 +1023,22 @@ $$
 \Bigr).
 \end{aligned}
 $$
-where $t_0=t_j(L;\xi)$ for some $\xi$. Then for $j=p$, from \eqref{estimate of u}, we have
+and
+$$
+\begin{aligned}
+\bigl|\tilde u^-(\tilde{t} _0,0)-\tilde{v}^{-}(\tilde{t} _0,0)\bigr|
+\le{}&\ C\Bigl(
+  \bigl(\|\varphi\|_{C^{1}}+\|g\|_{C^{1}}+\|\bar g\|_{C^{1}}
+  + \|f^{(1)}\|_{C^{1}}\|f^{(2)}\|_{C^{1,1}}
+  + \|\bar f^{(1)}\|_{C^{1}}\|\bar f^{(2)}\|_{C^{1,1}}\bigr)\,
+  \|a-\bar a\|_{C^{0}} \Bigr.\\
+&\qquad + \Bigl. \|g-\bar g\|_{C^{0}}
+  + \|\bar f^{(2)}\|_{C^{1}}\;\|f^{(1)}-\bar f^{(1)}\|_{C^{0}}
+  + \|f^{(1)}\|_{C^{0}}\;\|f^{(2)}-\bar f^{(2)}\|_{C^{1}}
+\Bigr).
+\end{aligned}
+$$
+where $t_0=t_j(L;\xi)$ and $\tilde{t} _0=\tilde{t} _j(0;\xi)$ for some $\xi$. Then for $j=p$, from \eqref{estimate of u}, we have
 $$
 \tilde{u}^{+}\left( t_p\left( L;\xi \right) ,L \right) =\tilde{u}^{+}\left( t_p\left( 0;\xi \right) ,0 \right) +\int_{0}^L{f^{(1)+}\frac{\mathrm{d}f^{(2)+}}{\mathrm{d}s}\left( t_p\left( s;\xi \right) ,s \right) \mathrm{d}s},
 $$
@@ -1022,10 +1047,10 @@ $$
 $$
 where
 $$
-\tilde{u}^{+}\left( t_p\left( 0;\xi \right) ,0 \right) =A_2\tilde{u}^{-}\left( t_{p-1}\left( 0;\xi \right) ,0 \right) +G^+ \left( t_p(0;\xi ) \right) +H^+\left( t_p(0;\xi ) \right) ,
+\tilde{u}^{+}\left( t_p\left( 0;\xi \right) ,0 \right) =A_2\tilde{u}^{-}\left(\tilde{ t} _{p-1}\left( 0;\xi \right) ,0 \right) +G^+ \left( t_p(0;\xi ) \right) +H^+\left( t_p(0;\xi ) \right) ,
 $$
 $$
-\tilde{v}^{+}\left( \bar{t}_p\left( 0;\bar{\xi} \right) ,0 \right) =A_2\tilde{v}^-\left( \bar{t}_{p-1}\left( 0;\bar{\xi} \right) ,0 \right) +\bar{g}_s\left( \bar{t}_p(0;\bar{\xi}) \right) +H^+\left( \bar{t}_p(0;\bar{\xi}) \right) .
+\tilde{v}^{+}\left( \bar{t}_p\left( 0;\bar{\xi} \right) ,0 \right) =A_2\tilde{v}^-\left( \bar{\tilde{t} }_{p-1}\left( 0;\bar{\xi} \right) ,0 \right) +\bar{g}_s\left( \bar{t}_p(0;\bar{\xi}) \right) +H^+\left( \bar{t}_p(0;\bar{\xi}) \right) .
 $$
 Therefore, using the inductive assumptions, we can get 
 $$
@@ -1321,7 +1346,7 @@ $$
 \left| H_{p}^{\prime}\left( \lambda _2 \right) -\bar{H}_{p}^{\prime}\left( \lambda _2 \right) \right|\le C_{A,\varepsilon _0,k}\left( \left\| \tilde{u}-\tilde{v} \right\| _{C^1}+\sum_{p=1}^{k+1}{\left| G_{p}^{\prime}\left( \lambda _2 \right) -\bar{G}_{p}^{\prime}\left( \lambda _2 \right) \right|}+\sum_{p=1}^{k+1}{\left| F_{p}^{\prime}\left( \lambda _2 \right) -\bar{F}_{p}^{\prime}\left( \lambda _2 \right) \right|} \right) ,
 $$
 $$
-\left| z_{p}^{\prime}\left( \lambda _1;\lambda _2 \right) -\bar{z}_{p}^{\prime}\left( \lambda _1;\lambda _2 \right) \right|\le C_{\varepsilon _0,k}\left( \parallel a-\bar{a}\parallel _{C^1}+\parallel \tilde{a}\parallel _{C^{1,1}}\parallel a-\bar{a}\parallel _{C^0} \right) ,
+\left| z_{p}^{\prime}\left( \lambda _1;\lambda _2 \right) -\bar{z}_{p}^{\prime}\left( \lambda _1;\lambda _2 \right) \right|\le C_{\varepsilon _0,k}\left( \left\lVert  a-\bar{a}\right\rVert  _{C^1}+ \left\lVert \tilde{a}\right\rVert  _{C^{1,1}}\left\lVert  a-\bar{a}\right\rVert  _{C^0} \right) ,
 $$
 and
 $$
@@ -1473,7 +1498,7 @@ Thereby
 \end{aligned}
 \]
 
-for $\left\| u-v \right\| _{C^1}$, similar to the estimate of $\left\| \tilde{u}-\tilde{v} \right\| _{C^1}$, we can get
+For $\left\| u-v \right\| _{C^1}$, similar to the estimate of $\left\| \tilde{u}-\tilde{v} \right\| _{C^1}$, we can get
 \[
 \begin{aligned}
 &\|u-v\|_{C^{1}}
