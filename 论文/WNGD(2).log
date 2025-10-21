@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.24)  20 OCT 2025 22:50
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.24)  21 OCT 2025 22:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -458,195 +458,167 @@ Configuring pdfsync
 **** pdfsync.sty: Synchronizing at \everyvbox
 \PDFSYNCeveryvb@x=\toks45
 **** pdfsync.sty: started
-
-Overfull \vbox (3.59293pt too high) has occurred while \output is active []
-
- [1] [2] [3] [4] [5] [6]
-Overfull \hbox (50.82736pt too wide) detected at line 646
+[1] [2] [3] [4] [5] [6]
+Overfull \hbox (50.82736pt too wide) detected at line 640
 [][]
  []
 
 
-Overfull \hbox (33.86224pt too wide) detected at line 654
+Overfull \hbox (33.86224pt too wide) detected at line 648
 [][]
  []
 
 [7]
-Overfull \hbox (16.24226pt too wide) detected at line 715
+Overfull \hbox (16.24226pt too wide) detected at line 707
 []\OML/cmm/m/it/10.95 H[] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 p [] ; p \OT1/cmr/m/n/10.95 = 1\OML/cmm/m/it/10.95 ; []  ; k;
  []
 
-[8]
-Overfull \hbox (4.27731pt too wide) detected at line 729
+
+Overfull \hbox (4.27731pt too wide) detected at line 721
 [][][]
  []
 
-[9]
-Overfull \hbox (21.35666pt too wide) detected at line 803
+[8] [9]
+Overfull \hbox (21.35666pt too wide) detected at line 795
 []\OML/cmm/m/it/10.95 w[] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 ) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 :
  []
 
 [10]
-Overfull \hbox (9.51721pt too wide) detected at line 898
+Overfull \hbox (9.51721pt too wide) detected at line 890
 [][][]
  []
 
 
-Overfull \hbox (9.98912pt too wide) detected at line 906
+Overfull \hbox (9.98912pt too wide) detected at line 898
 [][]
  []
 
 [11]
-Overfull \hbox (38.80272pt too wide) detected at line 972
+Overfull \hbox (38.80272pt too wide) detected at line 964
+[][]
+ []
+
+
+Overfull \hbox (31.65833pt too wide) detected at line 988
+[][]
+ []
+
+
+Overfull \hbox (56.54329pt too wide) detected at line 1002
 [][]
  []
 
 [12]
-Overfull \hbox (31.65833pt too wide) detected at line 996
+Overfull \hbox (56.54329pt too wide) detected at line 1018
 [][]
  []
 
 
-Overfull \hbox (56.54329pt too wide) detected at line 1010
+Overfull \hbox (52.58913pt too wide) detected at line 1033
 [][]
  []
 
 
-Overfull \hbox (56.54329pt too wide) detected at line 1025
+Overfull \hbox (348.05156pt too wide) detected at line 1062
 [][]
  []
 
 
-Overfull \hbox (348.05156pt too wide) detected at line 1054
-[][]
- []
-
-
-Overfull \hbox (34.33905pt too wide) detected at line 1073
+Overfull \hbox (34.33905pt too wide) detected at line 1081
 [] [] \OT1/cmr/m/n/10.95 = [](0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 ) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []
  []
 
 
-Overfull \hbox (28.7424pt too wide) detected at line 1076
+Overfull \hbox (28.7424pt too wide) detected at line 1084
 [] [] \OT1/cmr/m/n/10.95 = [](0\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 ) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []
  []
 
 [13]
-Overfull \hbox (40.09294pt too wide) detected at line 1177
+Overfull \hbox (40.09294pt too wide) detected at line 1185
 [][]
  []
 
 
-Overfull \hbox (49.69377pt too wide) detected at line 1182
+Overfull \hbox (49.69377pt too wide) detected at line 1189
 [] [] \OT1/cmr/m/n/10.95 = []([](0\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 ;
  []
 
 
-Overfull \hbox (40.09294pt too wide) detected at line 1228
+Overfull \hbox (40.09294pt too wide) detected at line 1235
 [][]
  []
 
 
-Underfull \vbox (badness 1394) has occurred while \output is active []
+Underfull \vbox (badness 2865) has occurred while \output is active []
 
  [14]
-Overfull \hbox (124.14609pt too wide) detected at line 1250
+Overfull \hbox (1.6658pt too wide) detected at line 1257
 [][]
  []
 
 
-Overfull \hbox (55.34782pt too wide) detected at line 1255
+Overfull \hbox (1.6658pt too wide) detected at line 1278
+[][]
+ []
+
+
+Overfull \hbox (55.34782pt too wide) detected at line 1282
 [] [] \OT1/cmr/m/n/10.95 = [](\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 ;
  []
 
 
-Overfull \hbox (49.75117pt too wide) detected at line 1258
+Overfull \hbox (49.75117pt too wide) detected at line 1285
 [] [] \OT1/cmr/m/n/10.95 = []([](0\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 ;
  []
 
 
-Overfull \hbox (1.6658pt too wide) detected at line 1285
+Overfull \hbox (1.6658pt too wide) detected at line 1312
 [][]
  []
 
 
-Overfull \hbox (63.85802pt too wide) detected at line 1302
+Overfull \hbox (63.85802pt too wide) detected at line 1328
 [][]
- []
-
-
-Overfull \hbox (1.05496pt too wide) in paragraph at lines 1304--1305
-[][][]\TU/lmr/m/n/10.95 Then we consider the value and derivative of $[][]\OML/cmm/m/it/10.95 h[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (0; 0))$\TU/lmr/m/n/10.95 , $[][]\OML/cmm/m/it/10.95 h[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (0; \OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 ))$\TU/lmr/m/n/10.95 , $[][]\OML/cmm/m/it/10.95 h[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 ; 0))$\TU/lmr/m/n/10.95 , $[][]\OML/cmm/m/it/10.95 h[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 L\OT1/cmr/m/n/10.95 ))$\TU/lmr/m/n/10.95 .
  []
 
 [15]
-Overfull \hbox (64.2415pt too wide) detected at line 1328
+Overfull \hbox (64.2415pt too wide) detected at line 1352
 [] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 C[] []
  []
 
 
-Overfull \hbox (39.64491pt too wide) detected at line 1339
+Overfull \hbox (39.64491pt too wide) detected at line 1363
 [] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 C[] [] ;
  []
 
 
-Overfull \hbox (3.19246pt too wide) detected at line 1390
+Overfull \hbox (3.19246pt too wide) detected at line 1412
 [] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 C[] [] :
  []
 
-
-Overfull \hbox (49.76497pt too wide) detected at line 1403
-[][]
- []
-
 [16]
-Overfull \hbox (50.75908pt too wide) detected at line 1503
+Overfull \hbox (35.54256pt too wide) detected at line 1425
 [][]
  []
 
 
-LaTeX Warning: Reference `bounds of U' on page 17 undefined on input line 1516.
+Overfull \hbox (50.75908pt too wide) detected at line 1520
+[][]
+ []
 
-[17]
-
-LaTeX Warning: Reference `cauchy of H' on page 18 undefined on input line 1565.
-
-
-LaTeX Warning: Reference `cauchy of U' on page 18 undefined on input line 1565.
-
-
-LaTeX Warning: Reference `cauchy of U' on page 18 undefined on input line 1576.
-
-
-LaTeX Warning: Reference `cauchy of H' on page 18 undefined on input line 1605.
-
-
-LaTeX Warning: Reference `cauchy of U' on page 18 undefined on input line 1605.
-
-[18]
-
-LaTeX Warning: Reference `54' on page 19 undefined on input line 1670.
-
-
-LaTeX Warning: Reference `54' on page 19 undefined on input line 1696.
-
-[19]
+[17] [18] [19]
 No file WNGD(2).bbl.
 [20] (./WNGD(2).aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 14632 strings out of 476653
- 290673 string characters out of 5798491
- 1960842 words of memory out of 5000000
- 36257 multiletter control sequences out of 15000+600000
+ 14628 strings out of 476653
+ 290630 string characters out of 5798491
+ 1957842 words of memory out of 5000000
+ 36253 multiletter control sequences out of 15000+600000
  565818 words of font info for 79 fonts, out of 8000000 for 9000
  197 hyphenation exceptions out of 8191
  102i,19n,107p,1502b,383s stack positions out of 10000i,1000n,20000p,200000b,200000s
