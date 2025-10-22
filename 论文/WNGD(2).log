@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.24)  21 OCT 2025 22:21
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.24)  22 OCT 2025 22:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -459,92 +459,92 @@ Configuring pdfsync
 \PDFSYNCeveryvb@x=\toks45
 **** pdfsync.sty: started
 [1] [2] [3] [4] [5] [6]
-Overfull \hbox (50.82736pt too wide) detected at line 640
+Overfull \hbox (50.82736pt too wide) detected at line 643
 [][]
  []
 
 
-Overfull \hbox (33.86224pt too wide) detected at line 648
+Overfull \hbox (33.86224pt too wide) detected at line 651
 [][]
  []
 
 [7]
-Overfull \hbox (16.24226pt too wide) detected at line 707
+Overfull \hbox (16.24226pt too wide) detected at line 710
 []\OML/cmm/m/it/10.95 H[] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 p [] ; p \OT1/cmr/m/n/10.95 = 1\OML/cmm/m/it/10.95 ; []  ; k;
  []
 
 
-Overfull \hbox (4.27731pt too wide) detected at line 721
+Overfull \hbox (4.27731pt too wide) detected at line 724
 [][][]
  []
 
 [8] [9]
-Overfull \hbox (21.35666pt too wide) detected at line 795
+Overfull \hbox (21.35666pt too wide) detected at line 798
 []\OML/cmm/m/it/10.95 w[] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 ) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 :
  []
 
 [10]
-Overfull \hbox (9.51721pt too wide) detected at line 890
+Overfull \hbox (9.51721pt too wide) detected at line 893
 [][][]
  []
 
 
-Overfull \hbox (9.98912pt too wide) detected at line 898
+Overfull \hbox (9.98912pt too wide) detected at line 901
 [][]
  []
 
 [11]
-Overfull \hbox (38.80272pt too wide) detected at line 964
+Overfull \hbox (38.80272pt too wide) detected at line 967
 [][]
  []
 
 
-Overfull \hbox (31.65833pt too wide) detected at line 988
+Overfull \hbox (31.65833pt too wide) detected at line 991
 [][]
  []
 
 
-Overfull \hbox (56.54329pt too wide) detected at line 1002
+Overfull \hbox (56.54329pt too wide) detected at line 1005
 [][]
  []
 
 [12]
-Overfull \hbox (56.54329pt too wide) detected at line 1018
+Overfull \hbox (56.54329pt too wide) detected at line 1021
 [][]
  []
 
 
-Overfull \hbox (52.58913pt too wide) detected at line 1033
+Overfull \hbox (52.58913pt too wide) detected at line 1036
 [][]
  []
 
 
-Overfull \hbox (348.05156pt too wide) detected at line 1062
+Overfull \hbox (348.05156pt too wide) detected at line 1065
 [][]
  []
 
 
-Overfull \hbox (34.33905pt too wide) detected at line 1081
+Overfull \hbox (34.33905pt too wide) detected at line 1084
 [] [] \OT1/cmr/m/n/10.95 = [](0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 ) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []
  []
 
 
-Overfull \hbox (28.7424pt too wide) detected at line 1084
+Overfull \hbox (28.7424pt too wide) detected at line 1087
 [] [] \OT1/cmr/m/n/10.95 = [](0\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 ) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []
  []
 
 [13]
-Overfull \hbox (40.09294pt too wide) detected at line 1185
+Overfull \hbox (40.09294pt too wide) detected at line 1188
 [][]
  []
 
 
-Overfull \hbox (49.69377pt too wide) detected at line 1189
+Overfull \hbox (49.69377pt too wide) detected at line 1192
 [] [] \OT1/cmr/m/n/10.95 = []([](0\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 ;
  []
 
 
-Overfull \hbox (40.09294pt too wide) detected at line 1235
+Overfull \hbox (40.09294pt too wide) detected at line 1238
 [][]
  []
 
@@ -552,57 +552,57 @@ Overfull \hbox (40.09294pt too wide) detected at line 1235
 Underfull \vbox (badness 2865) has occurred while \output is active []
 
  [14]
-Overfull \hbox (1.6658pt too wide) detected at line 1257
+Overfull \hbox (1.6658pt too wide) detected at line 1260
 [][]
  []
 
 
-Overfull \hbox (1.6658pt too wide) detected at line 1278
+Overfull \hbox (1.6658pt too wide) detected at line 1281
 [][]
  []
 
 
-Overfull \hbox (55.34782pt too wide) detected at line 1282
+Overfull \hbox (55.34782pt too wide) detected at line 1285
 [] [] \OT1/cmr/m/n/10.95 = [](\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 ;
  []
 
 
-Overfull \hbox (49.75117pt too wide) detected at line 1285
+Overfull \hbox (49.75117pt too wide) detected at line 1288
 [] [] \OT1/cmr/m/n/10.95 = []([](0\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 ;
  []
 
 
-Overfull \hbox (1.6658pt too wide) detected at line 1312
+Overfull \hbox (1.6658pt too wide) detected at line 1315
 [][]
  []
 
 
-Overfull \hbox (63.85802pt too wide) detected at line 1328
+Overfull \hbox (63.85802pt too wide) detected at line 1331
 [][]
  []
 
 [15]
-Overfull \hbox (64.2415pt too wide) detected at line 1352
+Overfull \hbox (64.2415pt too wide) detected at line 1355
 [] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 C[] []
  []
 
 
-Overfull \hbox (39.64491pt too wide) detected at line 1363
+Overfull \hbox (39.64491pt too wide) detected at line 1366
 [] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 C[] [] ;
  []
 
 
-Overfull \hbox (3.19246pt too wide) detected at line 1412
+Overfull \hbox (3.19246pt too wide) detected at line 1415
 [] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 C[] [] :
  []
 
 [16]
-Overfull \hbox (35.54256pt too wide) detected at line 1425
+Overfull \hbox (35.54256pt too wide) detected at line 1428
 [][]
  []
 
 
-Overfull \hbox (50.75908pt too wide) detected at line 1520
+Overfull \hbox (50.75908pt too wide) detected at line 1523
 [][]
  []
 
