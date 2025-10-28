@@ -309,17 +309,23 @@ We need to introduce a lemma about the linear equation. Consider the following l
 \begin{equation}\label{e1}
 	\left\{\begin{array}{l}
 	\partial_t u_i- a(t,x)\partial_x u_i=f^{(1)}_i(t,x)(\partial_t - a(t,x)\partial_x)f^{(2)}_i(t,x),\ i=1, \cdots, r, \\
-	\partial_t u_i+ a(t,x)\partial_x u_i=f^{(1)}_i(t,x)(\partial_t + a(t,x)\partial_x)f^{(2)}_i(t,x),\ i=r+1, \cdots, r+s.
+	\partial_t u_i+ a(t,x)\partial_x u_i=f^{(1)}_i(t,x)(\partial_t + a(t,x)\partial_x)f^{(2)}_i(t,x),\ i=r+1, \cdots, r+s,
 	\end{array}\right.
 \end{equation}
-where $r+s=n$ and $a(t,x)$ is a $C^{1,1}$ function satisfying that $\left\lVert a(t,x)-1\right\rVert _{C^{1,1}} \leq \varepsilon _0$. Denote $\tilde{a}=a-1 $.  $\varepsilon _0$ is a constant small enough. $f^{(\kappa )}_i(t,x)$, $i=1,\cdots,r+s,\kappa =1,2$ are $C^{1,1}$ functions. The boundary conditions are given as follows:
+where $r+s=n$ and $a(t,x)$ is a $C^{1,1}$ function satisfying that $\left\lVert a(t,x)-1\right\rVert _{C^{1,1}} \leq \varepsilon _0$. 
+Denote $\tilde{a}=a-1 $.  $\varepsilon _0$ is a constant small enough. 
+$f^{(\kappa )}_i(t,x)$, $i=1,\cdots,r+s,\ \kappa =1,2$ are $C^{1,1}$ functions. 
+The boundary conditions are given as follows:
 \begin{equation}\label{e2}
 	\left\{ \begin{array}{l}
 		x=0:\ u_i=\sum_{j=1}^r{a_{ij}u_j + g_i(t) + h_i\left( t \right) ,\ i=r+1,\cdots ,n,}\\
-		x=L:\ u_i=\sum_{j=r+1}^n{a_{ij}u_j +g_i(t) + h_i\left( t \right) ,\ i=1,\cdots ,r.}\\
+		x=L:\ u_i=\sum_{j=r+1}^n{a_{ij}u_j +g_i(t) + h_i\left( t \right) ,\ i=1,\cdots ,r,}\\
 	\end{array} \right. 
 \end{equation}
-where $g_i(t), i=1,\cdots, n$ are $C^{1,1}$ function, $h_i(t), i=1,\cdots, n$ are $C^{1,1}$ controlling function. The matrix $A=\left( a_{ij} \right) ,\ i=1,\cdots ,n,\ j=1,\cdots ,n$ is a matrix. $u(t,x)$ satisfies
+where $g_i(t),\ i=1,\cdots, n,$ are $C^{1,1}$ function, 
+$h_i(t),\ i=1,\cdots, n,$ are $C^{1,1}$ controlling function. 
+The matrix $A=\left( a_{ij} \right) ,\ i=1,\cdots ,n,\ j=1,\cdots ,n,$ is a matrix. 
+$u(t,x)$ satisfies
 \begin{equation}\label{4}
 	u\left( 0,x \right) =\varphi \left( x \right) .
 \end{equation}
@@ -338,7 +344,10 @@ where $r_1 +r_2 =r,\ s_1+s_2=s,\ r+s=n $. The Kalman rank condition is given as 
 \end{equation}
 where $k$ is a positive integer. The following lemma is the main result of this section.
 \begin{lem}\label{lem:linear}
-Under the conditions of \eqref{kalman}, if $T>kL$, then there exists a set of $C^{1,1}$ smooth control functions $h_i(t)$, $i=1,\cdots ,r_1, r+1,\cdots ,r+s_1$, such that for any $C^{1,1}$ smooth functions $g_i(t), f^{\kappa}_i(t,x)$, $i=1,\cdots ,n$ ,$\kappa=1,2$and any $C^{1,1}$ smooth functions $\varphi (x), \psi (x)$, which satisfy the $C^1$ compatibility conditions, there exists a $C^{1,1}$ smooth solution $u(t,x)$ to the control problem \eqref{e1}-\eqref{4} satisfying
+Under the conditions of \eqref{kalman}, 
+if $T>kL$, 
+then there exists a set of $C^{1,1}$ smooth control functions $h_i(t)$, $i=1,\cdots ,r_1, r+1,\cdots ,r+s_1$, 
+such that for any $C^{1,1}$ smooth functions $g_i(t), f^{\kappa}_i(t,x)$, $i=1,\cdots ,n$ ,$\kappa=1,2$ and any $C^{1,1}$ smooth functions $\varphi (x),\ \psi (x)$, which satisfy the $C^1$ compatibility conditions, there exists a $C^{1,1}$ smooth solution $u(t,x)$ to the control problem \eqref{e1}-\eqref{4} satisfying
 	\begin{equation}\label{5}
         u(T,x)=\psi(x).
     \end{equation}
