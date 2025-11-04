@@ -313,7 +313,7 @@ We need to introduce a lemma about the linear equation. Consider the following l
 	\end{array}\right.
 \end{equation}
 where $r+s=n$ and $a(t,x)$ is a $C^{1,1}$ function satisfying that $\left\lVert a(t,x)-1\right\rVert _{C^{1,1}} \leq \varepsilon _0$. 
-Denote $\tilde{a}=a-1 $.  $\varepsilon _0$ is a constant small enough. 
+Denote $\tilde{a}=a-1 $ and $t_0 = T-kL$.  $\varepsilon _0$ is a constant small enough. 
 $f^{(\kappa )}_i(t,x)$, $i=1,\cdots,r+s,\ \kappa =1,2$ are $C^{1,1}$ functions. 
 The boundary conditions are given as follows:
 \begin{equation}\label{e2}
@@ -356,28 +356,28 @@ such that for any $C^{1,1}$ smooth functions $g_i(t), f^{\kappa}_i(t,x)$, $i=1,\
 	Without loss of generality, we can assume that $k$ is odd, $T-kL < \frac{L}{4}$ and $\varphi (x)=0$, or take any set of $\tilde{h}_i(t)$ that satisfies the compatibility conditions at $(0,0)$ and $(0,L)$ and consider the equations of $\tilde{u}(t,x)$ satisfying $\tilde{u}(0,x)= \varphi(x)$ below:
 	\begin{equation}\label{e4}
 		\left\{\begin{array}{l}
-		\partial_t \tilde{u} _i- a(t,x)\partial_x \tilde{u} _i=\chi (t)f^{(1)}_i(t,x)(\partial_t - a(t,x)\partial_x)f^{(2)}_i(t,x), i=1, \cdots, r, \\
-		\partial_t \tilde{u} _i+ a(t,x)\partial_x \tilde{u} _i=\chi (t)f^{(1)}_i(t,x)(\partial_t + a(t,x)\partial_x)f^{(2)}_i(t,x), i=r+1, \cdots, r+s,
+		\partial_t \tilde{u} _i- a(t,x)\partial_x \tilde{u} _i=\chi (t)f^{(1)}_i(t,x)(\partial_t - a(t,x)\partial_x)f^{(2)}_i(t,x),\ i=1, \cdots, r, \\
+		\partial_t \tilde{u} _i+ a(t,x)\partial_x \tilde{u} _i=\chi (t)f^{(1)}_i(t,x)(\partial_t + a(t,x)\partial_x)f^{(2)}_i(t,x),\ i=r+1, \cdots, r+s,
 		\end{array}\right.
 	\end{equation}
 where $\chi (t)$ is a smooth function that satisfies $\chi (t)=1$ for $t\in [0,\frac{L}{2}]$ and $\chi (t)=0$ for $t\in [T-\frac{L}{2},T]$. The boundary conditions are given as follows:
 \begin{equation}\label{e5}
 		\left\{ \begin{array}{l}
-		x=0:\ \tilde{u} _i=\sum_{j=1}^r{a_{ij}\tilde{u} _j + \chi (t)g_i(t) + \tilde{h} _i\left( t \right) ,\ i=r+1,\cdots ,n,}\\
+		x=0:\ \tilde{u} _i=\sum_{j=1}^r{a_{ij}\tilde{u} _j + \chi (t)g_i(t) + \tilde{h} _i\left( t \right) ,\ i=r+1,\cdots ,r+s,}\\
 		x=L:\ \tilde{u} _i=\sum_{j=r+1}^n{a_{ij}\tilde{u} _j +\chi (t)g_i(t) + \tilde{h} _i\left( t \right) ,\ i=1,\cdots ,r.}
 		\end{array} \right. 
 	\end{equation}
 Then we can get that $\tilde{u}(T,x)$ satisfies the $C^1$ compatibility conditions at $(T,0)$ and $(T,L)$ and consider the following controllability problem:
 	\begin{equation}\label{e6}
 		\left\{\begin{array}{l}
-		\partial_t u_i- a(t,x)\partial_x u_i=(1-\chi (t))f^{(1)}_i(t,x)(\partial_t - a(t,x)\partial_x)f^{(2)}_i(t,x), i=1, \cdots, r, \\
-		\partial_t u_i+ a(t,x)\partial_x u_i=(1-\chi (t))f^{(1)}_i(t,x)(\partial_t + a(t,x)\partial_x)f^{(2)}_i(t,x), i=r+1, \cdots, r+s,
+		\partial_t u_i- a(t,x)\partial_x u_i=(1-\chi (t))f^{(1)}_i(t,x)(\partial_t - a(t,x)\partial_x)f^{(2)}_i(t,x),\ i=1, \cdots, r, \\
+		\partial_t u_i+ a(t,x)\partial_x u_i=(1-\chi (t))f^{(1)}_i(t,x)(\partial_t + a(t,x)\partial_x)f^{(2)}_i(t,x),\ i=r+1, \cdots, r+s,
 		\end{array}\right.
 	\end{equation}
 where the boundary conditions are given as follows:
 \begin{equation}\label{e7}
 		\left\{ \begin{array}{l}
-		x=0:\ u_i=\sum_{j=1}^r{a_{ij}u_j + (1-\chi (t))g_i(t) + h_i\left( t \right) ,\ i=r+1,\cdots ,n,}\\
+		x=0:\ u_i=\sum_{j=1}^r{a_{ij}u_j + (1-\chi (t))g_i(t) + h_i\left( t \right) ,\ i=r+1,\cdots ,r+s,}\\
 		x=L:\ u_i=\sum_{j=r+1}^n{a_{ij}u_j +(1-\chi (t))g_i(t) + h_i\left( t \right) ,\ i=1,\cdots ,r.}\\
 		\end{array} \right. 
 	\end{equation}
@@ -387,7 +387,6 @@ The initial and final conditions are given as follows:
 	\end{equation}
 Finally, the two sets of control functions and solutions obtained can be added separately.
 
-We determine $h_i\left( t \right)$ in the following order:
 In the following we first study the characteristic lines of equations. Let 
 $$
 b(t,x)=\frac{1}{a(t,x)}.
@@ -427,14 +426,13 @@ Then we can get the following equations:
 	z_p \left( x;x_0 \right) &=\partial _{x_0} t_{p-1} \left( L;x_0 \right) \exp \left(  \int_{L}^x{\partial _t}b\left( t_p \left( s;x_0 \right) ,s \right) \text{d}s \right).
 \end{aligned}
 \end{equation}
-
 Similarly one can obtain that
 $$
 \begin{aligned}
 	\tilde{t}  _1 \left( x;x_0 \right) &=T-\int_{x_0}^x b\left( \tilde{t}  _1 \left( s;x_0 \right) ,s \right) \text{d}s ,\\
-    \tilde{t} _p \left( x;x_0 \right) &=t _{p-1} \left( 0;x_0 \right)-\int_{0}^x b\left( \tilde{t} _p \left( s;x_0 \right) ,s \right) \text{d}s ,\ l=2 , \cdots , k+1 ,\\
+    \tilde{t} _p \left( x;x_0 \right) &=t _{p-1} \left( 0;x_0 \right)-\int_{0}^x b\left( \tilde{t} _p \left( s;x_0 \right) ,s \right) \text{d}s ,\ p=2 , \cdots , k+1 ,\\
 	\tilde{z} _1 \left( x;x_0 \right) &=b\left( T,x_0 \right) \exp \left(  -\int_{x_0}^x{\partial _t}b\left(\tilde{ t} _1 \left( s;x_0 \right) ,s \right) \text{d}s \right), \\
-	\tilde{z} _p \left( x;x_0 \right) &=\partial _{x_0} t _{p-1} \left( 0;x_0 \right) \exp \left(  \int_{0}^x{\partial _t}b\left( \tilde{t} _p \left( s;x_0 \right) ,s \right) \text{d}s \right).\\
+	\tilde{z} _p \left( x;x_0 \right) &=\partial _{x_0} t _{p-1} \left( 0;x_0 \right) \exp \left(  \int_{0}^x{\partial _t}b\left( \tilde{t} _p \left( s;x_0 \right) ,s \right) \text{d}s \right) ,\ p=2 , \cdots , k+1 .\\
 \end{aligned}
 $$
 Therefore
@@ -467,11 +465,12 @@ and
         \partial _{x_0}\tilde{t}_{2m}(x;0) = -\partial _{x_0}\tilde{t}_{2m - 1}(x;0) .
     \end{array} \right. 
 \end{equation}
+
 The following defines a set of vector functions:
 $$
-H_p\left( x \right) =\left( H^{-}\left( \tilde{t}  _{p}(L;x) \right) ,H^{+}\left( t_{p}(0;x)\right) \right) ^T,
+H_p\left( x \right) =\left( H^{-}\left( \tilde{t}  _{p}(L;x) \right) ,H^{+}\left( t_{p}(0;x)\right) \right) ^T ,\ p=1 , \cdots , k+1 ,
 $$
-where
+where $H^{-}\left( t \right)$ is an $r$-dimensional vector function and $H^{+}\left( t \right)$ is an $s$-dimensional vector function defined as follows:
 $$
 H^{-}\left( t \right) =\left( h_1\left( t \right) ,\cdots ,h_{r_1}\left( t \right) ,0,\cdots,0 \right) ,
 $$
@@ -518,7 +517,7 @@ $$
 $$
 F^{+}\left( t ,x\right) =\left( f^{(1)}_{r+1}(t,x)(b(t,x)\partial_t - \partial_x)f^{(2)}_1(t,x) ,\cdots ,f^{(1)}_{r+s}(t,x)(b(t,x)\partial_t - \partial_x)f^{(2)}_{r+s}(t,x)\right) .
 $$
-If a solution $u(t,x)$ satisfying the requirement exists,for any $x\in [0,L]$, we can get the following equations with characteristic lines method:
+If a solution $u(t,x)$ satisfying the requirement exists, for any $x\in [0,L]$, we can get the following equations with characteristic lines method:
 \begin{equation}\label{F}
 	\begin{aligned}
 	\psi\left( x \right) &=u(T,x) \\
@@ -529,7 +528,7 @@ If a solution $u(t,x)$ satisfying the requirement exists,for any $x\in [0,L]$, w
 							   &=A^kB(H_{k+1}\left( x \right)+G_{k+1}\left( x \right)+F_{k+1}\left( x \right)) +\cdots  +B(H_1\left( x \right)+G_1\left( x \right)+F_1\left( x \right)) ,\ x\in \left[ 0,L \right].
 	\end{aligned}
 	\end{equation}
-Using this equation, we first determine the value of the function and derivative of $h_i(t_p(0;0))$, $h_i(t_p(0;L))$, $h_i(t_p(L;0))$, $h_i(t_p(L;L))$, $(i=1,\cdots,n;\ p=1,\cdots,k+1)$.
+Using this equation, we first determine the value and derivative of $h_i$ at $(t_p(0;0))$, $(t_p(0;L))$, $(t_p(L;0))$ and $(t_p(L;L))$, $(i=1,\cdots,n;\ p=1,\cdots,k+1)$.
 Consider the vector $\tilde{G}  (x) = \sum_{l=0}^k A^l G _{l+1}(x)$.
 $$
 \tilde{G}^-  (L) =G^- _1 (L) +A_1 G^+ _2 (L) +A_1 A_2 G^- _3 (L)  +\cdots +A_1 A_2 \cdots A_1 G^+ _{k+1} (L) ,
@@ -542,10 +541,10 @@ $$
 G^- _{k+1}(L)=0,
 $$
 $$
-G^+ _{m}(L) =G^+ _{m+1}(L) ,\ m\ is\ odd ,\ m=1,\cdots ,k,
+G^+ _{m}(L) =G^+ _{m+1}(L) ,\ m\ is\ odd of {1,\cdots ,k},
 $$
 $$
-G^+ _{m}(L) =G^+ _{m+1}(L) ,\ m\ is\ even ,\ m=1,\cdots ,k.
+G^+ _{m}(L) =G^+ _{m+1}(L) ,\ m\ is\ even of {1,\cdots ,k}.
 $$
 Therefore,
 \begin{equation}
@@ -576,7 +575,7 @@ $$
 $$
 \tilde{F}^+  (L) =F^+ _1 (L) +A_2 F^- _2 (L) +A_2 A_1 F^+ _3 (L)  +\cdots +A_2 A_1 \cdots A_2 F^- _{k+1} (L) .
 $$
-From the defination of $\chi (t)$ ,we can assume that $f^{(\kappa)}_i(t,x)=0,\ t < T-\frac{L}{4},\ \kappa=1,2,\ i=1,\cdots,n$. Recognizing \eqref{29}-\eqref{210} and $T-kL < \frac{L}{4}$, we can get 
+From the defination of $\chi (t)$, we can assume that $f^{(\kappa)}_i(t,x)=0,\ t < \frac{L}{2},\ \kappa=1,2,\ i=1,\cdots,n$. Recognizing \eqref{29}-\eqref{210} and $T-kL < \frac{L}{4}$, we can get 
 $$
 F^- _{1}(L)=0,
 $$
@@ -584,10 +583,10 @@ $$
 F^- _{k+1}(L)=0,
 $$
 $$
-F^+ _{m}(L) =F^+ _{m+1}(L) ,\ m\ is\ odd ,\ m=1,\cdots ,k,
+F^+ _{m}(L) =F^+ _{m+1}(L) ,\ m\ is\ odd of {1,\cdots ,k},
 $$
 $$
-F^+ _{m}(L) =F^+ _{m+1}(L) ,\ m\ is\ even ,\ m=1,\cdots ,k.
+F^+ _{m}(L) =F^+ _{m+1}(L) ,\ m\ is\ even of {1,\cdots ,k}.
 $$
 Therefore,
 \begin{equation}
@@ -613,7 +612,7 @@ Namely,
 \end{equation}
 The $C^0$ compatibility condition of $\psi(x)$ is
 \begin{equation}\label{21}
-    \psi _i\left( 0 \right) =\sum_{j=1}^r{a_{ij}\psi _j\left( 0 \right) + g_i(T),\,\,i=r+s_1+1,\cdots ,n},
+    \psi _i\left( 0 \right) =\sum_{j=1}^r{a_{ij}\psi _j\left( 0 \right) + g_i(T),\,\,i=r+s_1+1,\cdots ,r+s},
 \end{equation}
 \begin{equation}\label{22}
     \psi _i\left( L \right) =\sum_{j=r+1}^n{a_{ij}\psi _j\left( L \right) +g_i(T),\,\,i=r_1+1,\cdots ,r}.
@@ -625,7 +624,7 @@ So $\psi -\tilde{G} -\tilde{F} $ satisfies the conditions of Lemma \ref{l50}. Th
 \begin{equation}\label{c0 continuity at L}
 \psi\left(L \right) =A^k\left( H_{k+1}\left( L \right) +G_{k+1}\left( L \right)+F_{k+1}\left( L \right) \right)+\cdots +\left( H_1\left( L \right) +G_1\left( L \right)+F_1\left( L \right) \right) ,
 \end{equation}
-to determine the values of $h_i$ at $t_p(0;0),t_p(0;L),t_p(L;0),t_p(L;L)$,$(i=1,\cdots,n; p=1,\cdots,k+1)$.
+to determine the values of $h_i$ at $t_p(0;0),t_p(0;L),t_p(L;0),t_p(L;L)$, $(i=1,\cdots,n; p=1,\cdots,k+1)$.
 Derivation of  \eqref{F} with respect to $x$ gives the following equations:
 \begin{equation}\label{derivative of psi}
 	\psi  '\left( x \right)=A^kB(H'_{k+1}\left( x \right)+G'_{k+1}\left( x \right)+F'_{k+1}\left( x \right)) +\cdots + B(H'_1\left( x \right)+G'_1\left( x \right)+F'_1\left( x \right)) ,\ x\in \left[ 0,L \right],
@@ -647,7 +646,7 @@ $$
 	F_{1}^{\prime}(x)=&\left( -f^{(1)-}(b\partial _t-\partial _x)f^{(2)-}(T,x) \right. +\int_x^L{\frac{\partial f^{(1)-}}{\partial t}\left( b\partial _t-\partial _x \right) f^{(2)-}\left( \tilde{t}_1(s,x),s \right) \frac{\partial \tilde{t}_1}{\partial x}(s;x)\mathrm{d}s}\\
 	&\quad \quad-\int_x^L{\frac{\partial f^{(2)-}}{\partial t}\left( b\partial _t-\partial _x \right) f^{(1)-}\left( \tilde{t}_1(s,x),s \right) \frac{\partial \tilde{t}_1}{\partial x}(s;x)\mathrm{d}s}+\left. f^{(1)-}\frac{\partial f^{(2)-}}{\partial t}\left( \tilde{t}_1(s;x),s \right) \frac{\partial \tilde{t}_1}{\partial x}(s;x) \right|_{x}^{L},\\
 	&\quad f^{(1)+}(b\partial _t-\partial _x)f^{(2)+}(T,x)+\int_0^x{\frac{\partial f^{(1)+}}{\partial t}\left( b\partial _t-\partial _x \right) f^{(2)+}\left( t_1(s,x),s \right) \frac{\partial t_1}{\partial x}(s;x)\,\mathrm{d}s}\\
-	&\quad \quad\left. -\int_0^x{\frac{\partial f^{(2)+}}{\partial t}\left( b\partial _t-\partial _x \right) f^{(1)+}\left( t_1(s,x),s \right) \frac{\partial t_1}{\partial x}(s;x)\mathrm{d}s}+\left. f^{(1)+}\frac{\partial f^{(2)+}}{\partial t}\left( t_1(s;x),s \right) \frac{\partial t_1}{\partial x}(s;x) \right|_{0}^{x} \right) ^T\\
+	&\quad \quad\left. -\int_0^x{\frac{\partial f^{(2)+}}{\partial t}\left( b\partial _t-\partial _x \right) f^{(1)+}\left( t_1(s,x),s \right) \frac{\partial t_1}{\partial x}(s;x)\mathrm{d}s}+\left. f^{(1)+}\frac{\partial f^{(2)+}}{\partial t}\left( t_1(s;x),s \right) \frac{\partial t_1}{\partial x}(s;x) \right|_{0}^{x} \right) ^T ,
 \end{aligned}
 $$
 $$
@@ -655,10 +654,11 @@ $$
 F_{p}^{\prime}\left( x \right) &=\left( \left. f^{\left( 1 \right) -}\frac{\partial f^{\left( 2 \right) -}}{\partial t}\left( \tilde{t}_p\left( s;x \right) ,s \right) \frac{\partial \tilde{t}_p}{\partial x}\left( s;x \right) \right|_{0}^{L}+\int_0^L{\frac{\partial f^{\left( 1 \right) -}}{\partial t}\left( b\partial _t-\partial _x \right) f^{\left( 2 \right) -}\left( \tilde{t}_p\left( s,x \right) ,s \right) \frac{\partial \tilde{t}_p}{\partial x}\left( s;x \right) \mathrm{d}s} \right.\\
 & \quad \quad-\int_0^L{\frac{\partial f^{\left( 2 \right) -}}{\partial t}\left( b\partial _t-\partial _x \right) f^{\left( 1 \right) -}\left( \tilde{t}_p\left( s,x \right) ,s \right) \frac{\partial \tilde{t}_p}{\partial x}\left( s;x \right) \mathrm{d}s},\\
 & \quad\left. f^{\left( 1 \right) +}\frac{\partial f^{\left( 2 \right) +}}{\partial t}\left( t_p\left( s;x \right) ,s \right) \frac{\partial t_p}{\partial x}\left( s;x \right) \right|_{0}^{L}+\int_0^L{\frac{\partial f^{\left( 1 \right) +}}{\partial t}\left( b\partial _t-\partial _x \right) f^{\left( 2 \right) +}\left( t_p\left( s,x \right) ,s \right) \frac{\partial t_p}{\partial x}\left( s;x \right) \mathrm{d}s}\\
-& \quad  \quad\left.-\int_0^L{\frac{\partial f^{\left( 2 \right) +}}{\partial t}\left( b\partial _t-\partial _x \right) f^{\left( 1 \right) +}\left( t_p\left( s,x \right) ,s \right) \frac{\partial t_p}{\partial x}\left( s;x \right) \mathrm{d}s} \right) ^T\\
+& \quad  \quad\left.-\int_0^L{\frac{\partial f^{\left( 2 \right) +}}{\partial t}\left( b\partial _t-\partial _x \right) f^{\left( 1 \right) +}\left( t_p\left( s,x \right) ,s \right) \frac{\partial t_p}{\partial x}\left( s;x \right) \mathrm{d}s} \right) ^T.
 \end{aligned}
 $$
-Consider the vector $\tilde{G'}  (x) = \sum_{l=0}^k A^l G '_{l+1}(x)$ and  $\tilde{F'}  (x) = \sum_{l=0}^k A^l F '_{l+1}(x)$.Similar to the previous case using \eqref{29}-\eqref{212}, we can get the following equations:
+Consider the vector $\tilde{G'}  (x) = \sum_{l=0}^k A^l G '_{l+1}(x)$ and  $\tilde{F'}  (x) = \sum_{l=0}^k A^l F '_{l+1}(x)$. 
+Similar to the previous case using \eqref{29}-\eqref{212}, we can get the following equations:
 $$
 \tilde{G}^{-\prime}\left( L \right) =b\left( T,L \right) g^{-\prime}\left( T \right) -A_1\tilde{G}^{+\prime}\left( L \right) ,
 $$
@@ -676,24 +676,25 @@ $$
 \begin{aligned}
 	&a(T,L)\,\psi ^{-\prime}(L)+f^{\left( 1 \right) -}\bigl( \partial _t-a(T,L)\,\partial _x \bigr) f^{\left( 2 \right) -}(T,L)\\
 	&=A_2\bigl( -a(T,L)\,\psi ^{+\prime}(L)+f^{\left( 1 \right) +}\bigl( \partial _t+a(T,L)\,\partial _x \bigr) f^{\left( 2 \right) +}(T,L) \bigr)\\
-	&\quad +g^{-\prime}(T)+h^{-\prime}(T).\\
+	&\quad +g^{-\prime}(T)+h^{-\prime}(T).
 \end{aligned}
 $$
 $$
 \begin{aligned}
 	&-a(T,0)\,\psi ^{+\prime}(0)+f^{\left( 1 \right) +}\bigl( \partial _t+a(T,0)\,\partial _x \bigr) \,f^{\left( 2 \right) +}(T,0)\\
 	&=A_2\bigl( a(T,0)\,\psi ^{-\prime}(0)+f^{\left( 1 \right) -}\bigl( \partial _t-a(T,0)\,\partial _x \bigr) \,f^{\left( 2 \right) -}(T,0) \bigr)\\
-	&\quad +g^{+\prime}(T)+h^{+\prime}(T).\\
+	&\quad +g^{+\prime}(T)+h^{+\prime}(T).
 \end{aligned}
 $$
-we know that the vector $(\psi ^{-\prime}-\tilde{G}^{-\prime}-\tilde{F}^{-\prime},-\psi ^{+\prime}+\tilde{G}^{+\prime}+\tilde{F}^{+\prime})^T$ stastisfies the conditions of Lemma \ref{l50}.Therefore, the following equations have a solution:
+we know that the vector $(\psi ^{-\prime}-\tilde{G}^{-\prime}-\tilde{F}^{-\prime},-\psi ^{+\prime}+\tilde{G}^{+\prime}+\tilde{F}^{+\prime})^T$ stastisfies the conditions of Lemma \ref{l50}. 
+Therefore, the following equations have a solution:
 \begin{equation}\label{c1 continuity at 0}
 	\psi  '\left( 0 \right)=A^kB(H'_{k+1}\left( 0\right)+G'_{k+1}\left( 0 \right)+F'_{k+1}\left( 0 \right)) +\cdots + B(H'_1\left( 0 \right)+G'_1\left( 0 \right)+F'_1\left( 0 \right)) ,
 \end{equation}
 \begin{equation}\label{c1 continuity at L}
 	\psi  '\left( L \right)=A^kB(H'_{k+1}\left( L \right)+G'_{k+1}\left( L \right)+F'_{k+1}\left( L \right)) +\cdots + B(H'_1\left( L \right)+G'_1\left( L \right)+F'_1\left( L \right)) ,
 \end{equation}
-to determine the values of $h'_i$ at $t_p(0;0),t_p(0;L),t_p(L;0),t_p(L;L)$,$i=1,\cdots,n;\ p=1,\cdots,k+1$.
+to determine the values of $h'_i$ at $t_p(0;0),t_p(0;L),t_p(L;0),t_p(L;L)$, $i=1,\cdots,n;\ p=1,\cdots,k+1$.
 Now we continue to determine the other values of $h_i(t)$. \eqref{F} can be written as
 \begin{equation}\label{G}
 \psi \left( x \right) -\tilde{G}\left( x \right) -\tilde{F}\left( x \right) =A^kBH_{k+1}\left( x \right) +\left[ B,AB,...,A^{k-1}B \right] \hat{H}(x), x\in \left( 0,L \right) ,
@@ -713,14 +714,17 @@ H^-\left( t_{k+1}\left( L;x \right) \right) =p\left( L-x;H^-\left( t_{k+1}\left(
 \begin{equation}\label{polynomial k+1 s}
 	H^+\left( t_{k+1}\left( 0;x \right) \right) =p\left( x;H^+\left( t_{k+1}\left( 0;L \right) \right) ,H^{+ \prime}\left( t_{k+1}\left( 0;L \right) \right) \right) ,
 \end{equation}
-where $p(x;\alpha ,\alpha  ') ,\ x \in [0,L]$ is a polynomial determined by $\alpha ,\alpha  '$ satisfying $p(x;\alpha ,\alpha  ') =0, \  x \in [0,T-\frac{t_0}{4}]$ and $p(L)=\alpha ,\ p'(L)=\alpha  '$ .Similarly, for the components of $H\left[ \hat{n} \right] \left( x \right)$, we can also use the interpolation method to obtain the following equations:
+where $p(x;\alpha ,\alpha  ') ,\ x \in [0,L]$ is a polynomial determined by $\alpha ,\alpha  '$ satisfying $p(x;\alpha ,\alpha  ') =0, \  x \in [0,T-\frac{t_0}{4}]$ and $p(L)=\alpha ,\ p'(L)=\alpha  '$. 
+Similarly, for the components of $H\left[ \hat{n} \right] \left( x \right)$, we can also use the interpolation method to obtain the following equations:
 \begin{equation}\label{polynomial p r}
-	H^-\left( \tilde{t}_p\left( L;x \right) \right) =p\left( x;H^-\left( \tilde{t}_p\left( L;0 \right) \right) ,H^{- \prime}\left( \tilde{t}_p\left( L;0 \right) \right) ,H^-\left( \tilde{t}_p\left( L;L \right) \right) ,H^{- \prime}\left( \tilde{t}_p\left( L;L \right) \right) \right) ,p=1,\cdots,k,
+	H^-\left( \tilde{t}_p\left( L;x \right) \right) =p\left( x;H^-\left( \tilde{t}_p\left( L;0 \right) \right) ,H^{- \prime}\left( \tilde{t}_p\left( L;0 \right) \right) ,H^-\left( \tilde{t}_p\left( L;L \right) \right) ,H^{- \prime}\left( \tilde{t}_p\left( L;L \right) \right) \right) ,
 \end{equation}
 \begin{equation}\label{polynomial p s}
-	H^+\left( t_p\left( 0;x \right) \right) =p\left( x;H^+\left( t_p\left( 0;0 \right) \right) ,H^{+ \prime}\left( t_p\left( 0;0 \right) \right) ,H^+\left( t_p\left( 0;L \right) \right) ,H^{+ \prime}\left( t_p\left( 0;L \right) \right) \right) ,p=1,\cdots,k,
+	H^+\left( t_p\left( 0;x \right) \right) =p\left( x;H^+\left( t_p\left( 0;0 \right) \right) ,H^{+ \prime}\left( t_p\left( 0;0 \right) \right) ,H^+\left( t_p\left( 0;L \right) \right) ,H^{+ \prime}\left( t_p\left( 0;L \right) \right) \right) ,
 \end{equation}
-where $p(x;\alpha ,\alpha  ',\beta ,\beta  ') ,\ x \in [0,L]$ is a polynomial determined by $\alpha ,\alpha  ',\beta ,\beta  '$ satisfying $p(0)=\alpha ,\ p'(0)=\alpha  ',\ p(L)=\beta ,\ p'(L)=\beta  '$ . Finally, we use \eqref{H} to obtain the values of $H\left[ n \right] \left( x \right),\  x \in (0,L)$.From the $C^1$ continuity of $\mathcal{H}$ , \eqref{c0 continuity at 0} and \eqref{c0 continuity at L}, \eqref{c1 continuity at 0} and \eqref{c1 continuity at L} and \eqref{kalman} ,we know that $h_i(t)$ is $C^1$ continuous in $[0,T]$ .
+where $p=1,\cdots,k$ and $p(x;\alpha ,\alpha  ',\beta ,\beta  '),\ x \in [0,L]$ is a polynomial determined by $\alpha ,\alpha  ',\beta ,\beta  '$ satisfying $p(0)=\alpha ,\ p'(0)=\alpha  ',\ p(L)=\beta ,\ p'(L)=\beta  '$. 
+Finally, we use \eqref{H} to obtain the values of $H\left[ n \right] \left( x \right),\  x \in [0,L]$. 
+From the $C^1$ continuity of $\mathcal{H}$, \eqref{c0 continuity at 0} and \eqref{c0 continuity at L}, \eqref{c1 continuity at 0} and \eqref{c1 continuity at L} and \eqref{kalman}, we know that $h_i(t)$ is $C^1$ continuous in $[0,T]$. 
 A solution $u(t,x)$ is obtained using the obtained boundary conditions and initial value conditions. Then
 \begin{equation}
 	\begin{aligned}
@@ -731,7 +735,7 @@ A solution $u(t,x)$ is obtained using the obtained boundary conditions and initi
 							   &=A^kB(H_{k+1}\left( x \right)+G_{k+1}\left( x \right)+F_{k+1}\left( x \right)) +\cdots  +B(H_1\left( x \right)+G_1\left( x \right)+F_1\left( x \right)) ,\ x\in \left[ 0,L \right].
 	\end{aligned}
 \end{equation}
-Therefore, $u(T,x)=\psi(x)$ and thereby $h_i(t),i=1,\cdots,n$ are exactly the control function that satisfies the requirement.
+Therefore, from \eqref{F}, $u(T,x)=\psi(x)$ and thereby $h_i(t),\ i=1,\cdots,n$ are exactly the control function that satisfies the requirement.
 \end{proof}
 From the proof above, it is not difficult to obtain the $C^1$ estimate for $u(t,x)$ and $h_i(t)$, $i=1,\cdots,n$.
 From \eqref{time line}, we get

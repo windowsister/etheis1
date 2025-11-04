@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.24)  28 OCT 2025 23:19
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.24)  4 NOV 2025 23:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -459,12 +459,12 @@ Configuring pdfsync
 \PDFSYNCeveryvb@x=\toks45
 **** pdfsync.sty: started
 [1] [2] [3] [4] [5] [6]
-Overfull \hbox (50.82736pt too wide) detected at line 652
+Overfull \hbox (55.694pt too wide) detected at line 651
 [][]
  []
 
 
-Overfull \hbox (33.86224pt too wide) detected at line 660
+Overfull \hbox (33.86224pt too wide) detected at line 659
 [][]
  []
 
@@ -473,12 +473,12 @@ Overfull \hbox (16.24226pt too wide) detected at line 719
 []\OML/cmm/m/it/10.95 H[] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 p [] ; p \OT1/cmr/m/n/10.95 = 1\OML/cmm/m/it/10.95 ; []  ; k;
  []
 
-
+[8]
 Overfull \hbox (4.27731pt too wide) detected at line 733
 [][][]
  []
 
-[8] [9]
+[9]
 Overfull \hbox (21.35666pt too wide) detected at line 807
 []\OML/cmm/m/it/10.95 w[] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 ) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 :
  []
@@ -498,7 +498,7 @@ Overfull \hbox (38.80272pt too wide) detected at line 976
 [][]
  []
 
-
+[12]
 Overfull \hbox (31.65833pt too wide) detected at line 1000
 [][]
  []
@@ -508,7 +508,7 @@ Overfull \hbox (56.54329pt too wide) detected at line 1014
 [][]
  []
 
-[12]
+
 Overfull \hbox (56.54329pt too wide) detected at line 1030
 [][]
  []
@@ -528,12 +528,12 @@ Overfull \hbox (34.33905pt too wide) detected at line 1093
 [] [] \OT1/cmr/m/n/10.95 = [](0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 ) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []
  []
 
-
+[13]
 Overfull \hbox (28.7424pt too wide) detected at line 1096
 [] [] \OT1/cmr/m/n/10.95 = [](0\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 ) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []
  []
 
-[13]
+
 Overfull \hbox (40.09294pt too wide) detected at line 1197
 [][]
  []
@@ -543,15 +543,12 @@ Overfull \hbox (49.69377pt too wide) detected at line 1201
 [] [] \OT1/cmr/m/n/10.95 = []([](0\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 ;
  []
 
-
+[14]
 Overfull \hbox (40.09294pt too wide) detected at line 1247
 [][]
  []
 
 
-Underfull \vbox (badness 2865) has occurred while \output is active []
-
- [14]
 Overfull \hbox (1.6658pt too wide) detected at line 1269
 [][]
  []
@@ -617,7 +614,7 @@ L3 programming layer <2024-02-20>
 Here is how much of TeX's memory you used:
  14628 strings out of 476653
  290630 string characters out of 5798491
- 1958842 words of memory out of 5000000
+ 1957842 words of memory out of 5000000
  36253 multiletter control sequences out of 15000+600000
  565818 words of font info for 79 fonts, out of 8000000 for 9000
  197 hyphenation exceptions out of 8191
