@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.24)  4 NOV 2025 23:04
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.24)  16 NOV 2025 21:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -146,17 +146,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: xetex.def on input line 149.
  (d:/texlive/2024/texmf-dist/tex/latex/graphics-def/xetex.def
 File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
-) (d:/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (d:/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (d:/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (d:/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (d:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks30
-\pgfutil@tempdima=\dimen160
-\pgfutil@tempdimb=\dimen161
-) (d:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box54
-) (d:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (d:/texlive/2024/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
-))
-Package: pgf 2023-01-15 v3.1.10 (3.1.10)
- (d:/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (d:/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+) (d:/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (d:/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (d:/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
@@ -167,9 +157,19 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 107.
 )
-\Gin@req@height=\dimen162
-\Gin@req@width=\dimen163
-) (d:/texlive/2024/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (d:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+\Gin@req@height=\dimen160
+\Gin@req@width=\dimen161
+) (d:/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (d:/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (d:/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (d:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks30
+\pgfutil@tempdima=\dimen162
+\pgfutil@tempdimb=\dimen163
+) (d:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box54
+) (d:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (d:/texlive/2024/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (d:/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (d:/texlive/2024/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (d:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
  (d:/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks31
@@ -459,165 +459,165 @@ Configuring pdfsync
 \PDFSYNCeveryvb@x=\toks45
 **** pdfsync.sty: started
 [1] [2] [3] [4] [5] [6]
-Overfull \hbox (55.694pt too wide) detected at line 651
+Overfull \hbox (55.694pt too wide) detected at line 654
 [][]
  []
 
 
-Overfull \hbox (33.86224pt too wide) detected at line 659
+Overfull \hbox (33.86224pt too wide) detected at line 662
 [][]
  []
 
-[7]
-Overfull \hbox (16.24226pt too wide) detected at line 719
-[]\OML/cmm/m/it/10.95 H[] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 p [] ; p \OT1/cmr/m/n/10.95 = 1\OML/cmm/m/it/10.95 ; []  ; k;
- []
-
-[8]
-Overfull \hbox (4.27731pt too wide) detected at line 733
+[7] [8]
+Overfull \hbox (4.27731pt too wide) detected at line 740
 [][][]
  []
 
 [9]
-Overfull \hbox (21.35666pt too wide) detected at line 807
+Overfull \hbox (21.35666pt too wide) detected at line 814
 []\OML/cmm/m/it/10.95 w[] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 ) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 :
  []
 
 [10]
-Overfull \hbox (9.51721pt too wide) detected at line 902
+Overfull \hbox (9.51721pt too wide) detected at line 909
 [][][]
  []
 
 
-Overfull \hbox (9.98912pt too wide) detected at line 910
+Overfull \hbox (9.98912pt too wide) detected at line 917
 [][]
  []
 
 [11]
-Overfull \hbox (38.80272pt too wide) detected at line 976
+Overfull \hbox (38.80272pt too wide) detected at line 983
 [][]
  []
 
 [12]
-Overfull \hbox (31.65833pt too wide) detected at line 1000
+Overfull \hbox (31.65833pt too wide) detected at line 1007
 [][]
  []
 
 
-Overfull \hbox (56.54329pt too wide) detected at line 1014
+Overfull \hbox (56.54329pt too wide) detected at line 1021
 [][]
  []
 
 
-Overfull \hbox (56.54329pt too wide) detected at line 1030
+Overfull \hbox (56.54329pt too wide) detected at line 1037
 [][]
  []
 
 
-Overfull \hbox (52.58913pt too wide) detected at line 1045
+Overfull \hbox (52.58913pt too wide) detected at line 1052
 [][]
  []
 
 
-Overfull \hbox (348.05156pt too wide) detected at line 1074
+Overfull \hbox (348.05156pt too wide) detected at line 1081
 [][]
  []
 
 
-Overfull \hbox (34.33905pt too wide) detected at line 1093
+Overfull \hbox (34.33905pt too wide) detected at line 1100
 [] [] \OT1/cmr/m/n/10.95 = [](0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 ) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []
  []
 
 [13]
-Overfull \hbox (28.7424pt too wide) detected at line 1096
+Overfull \hbox (28.7424pt too wide) detected at line 1103
 [] [] \OT1/cmr/m/n/10.95 = [](0\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 ) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []
  []
 
 
-Overfull \hbox (40.09294pt too wide) detected at line 1197
+Overfull \hbox (40.09294pt too wide) detected at line 1204
 [][]
  []
 
 
-Overfull \hbox (49.69377pt too wide) detected at line 1201
+Overfull \hbox (49.69377pt too wide) detected at line 1208
 [] [] \OT1/cmr/m/n/10.95 = []([](0\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 ;
  []
 
 [14]
-Overfull \hbox (40.09294pt too wide) detected at line 1247
+Overfull \hbox (40.09294pt too wide) detected at line 1254
 [][]
  []
 
 
-Overfull \hbox (1.6658pt too wide) detected at line 1269
+Overfull \hbox (1.6658pt too wide) detected at line 1276
 [][]
  []
 
 
-Overfull \hbox (1.6658pt too wide) detected at line 1290
+Overfull \hbox (1.6658pt too wide) detected at line 1297
 [][]
  []
 
 
-Overfull \hbox (55.34782pt too wide) detected at line 1294
+Overfull \hbox (55.34782pt too wide) detected at line 1301
 [] [] \OT1/cmr/m/n/10.95 = [](\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; ^^X\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 ;
  []
 
 
-Overfull \hbox (49.75117pt too wide) detected at line 1297
+Overfull \hbox (49.75117pt too wide) detected at line 1304
 [] [] \OT1/cmr/m/n/10.95 = []([](0\OML/cmm/m/it/10.95 ; []\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) + [][] [] + [][] [] + [][] \OMS/cmsy/m/n/10.95 ^^@ [][] []\OML/cmm/m/it/10.95 ;
  []
 
 
-Overfull \hbox (1.6658pt too wide) detected at line 1324
+Overfull \hbox (1.6658pt too wide) detected at line 1331
 [][]
  []
 
 
-Overfull \hbox (63.85802pt too wide) detected at line 1340
+Overfull \hbox (63.85802pt too wide) detected at line 1347
 [][]
  []
 
 [15]
-Overfull \hbox (64.2415pt too wide) detected at line 1364
+Overfull \hbox (64.2415pt too wide) detected at line 1371
 [] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 C[] []
  []
 
 
-Overfull \hbox (39.64491pt too wide) detected at line 1375
+Overfull \hbox (39.64491pt too wide) detected at line 1382
 [] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 C[] [] ;
  []
 
 
-Overfull \hbox (3.19246pt too wide) detected at line 1424
+Overfull \hbox (3.19246pt too wide) detected at line 1431
 [] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 C[] [] :
  []
 
 [16]
-Overfull \hbox (35.54256pt too wide) detected at line 1437
+Overfull \hbox (35.54256pt too wide) detected at line 1444
 [][]
  []
 
 
-Overfull \hbox (50.75908pt too wide) detected at line 1532
+Overfull \hbox (50.75908pt too wide) detected at line 1539
 [][]
  []
 
 [17] [18] [19]
+Overfull \hbox (14.07228pt too wide) detected at line 1766
+[][] \OT1/cmr/m/n/10.95 = [] [] \OML/cmm/m/it/10.95 :
+ []
+
+[20]
 No file WNGD(2).bbl.
-[20] (./WNGD(2).aux)
+[21] (./WNGD(2).aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14628 strings out of 476653
- 290630 string characters out of 5798491
+ 14633 strings out of 476653
+ 290708 string characters out of 5798491
  1957842 words of memory out of 5000000
- 36253 multiletter control sequences out of 15000+600000
+ 36258 multiletter control sequences out of 15000+600000
  565818 words of font info for 79 fonts, out of 8000000 for 9000
  197 hyphenation exceptions out of 8191
- 102i,19n,107p,1502b,383s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,19n,93p,1502b,402s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on WNGD(2).pdf (20 pages).
+Output written on WNGD(2).pdf (21 pages).

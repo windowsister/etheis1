@@ -15,7 +15,7 @@
 %\usepackage{latexsym}
 \usepackage{mathrsfs}
 \usepackage{color}
-%\usepackage{graphicx}
+\usepackage{graphicx}
 
 \usepackage{tikz} % Use TikZ for drawing
 %\pgfrealjobname{WNGD}
@@ -105,8 +105,8 @@
 % For the formation of theorems
 
 \newtheorem{lem}{Lemma}[section]
-%\newtheorem{cor}[lem]{Corollary}
-\newtheorem*{cor}{Corollary}
+\newtheorem{cor}[lem]{Corollary}
+%\newtheorem*{cor}{Corollary}
 \newtheorem{prop}[lem]{Proposition}
 \newtheorem{thm}{Theorem}
 %\newtheorem{remark}[lem]{Remark}
@@ -191,7 +191,7 @@ where
 $$
 U=\left(u_1, \ldots, u_n\right)^T(t, x) \in C^2([0,T]\times [0,L]) .
 $$
-$a\left(U, U_t, U_x\right)>0$ is the $C^1$ uniform wave speed. $D\left(U, U_t, U_x\right)=\left(d_{i j}\left(U, U_t, U_x\right)\right)_{i, j=1}^n$ is an   $n \times n$ matrix with $C^1$ regularity. 
+$a\left(U, U_t, U_x\right)>0$ is smooth respect to $(U, U_t, U_x)$. $D\left(U, U_t, U_x\right)=\left(d_{i j}\left(U, U_t, U_x\right)\right)_{i, j=1}^n$ is an   $n \times n$ matrix smooth respect to $(U, U_t, U_x)$. 
 Part of the components of $H(t)=\left(h_1(t), \ldots, h_n(t)\right)^T$ would be chosen as boundary controls. 
 We denote $D^{\pm}\left( U,U_t,U_x \right) =a I_n \pm D $, which we request are invertible. We also request that
 $$
@@ -227,13 +227,13 @@ The original equations can be changed into
 where $\tilde{H} (t)=2aH(t)$. Then the boundary condition can be written as
 $$
 \begin{aligned}
-x=0: \widetilde{V}^{+}=B_0 \widetilde{V}^{-}+ & \widetilde{H}(t)-\left(\widetilde{D}^{-}\left(\widetilde{U}, \widetilde{U}_t, \widetilde{U}_x\right)-\widetilde{D}^{+}(0,0,0)\right) \widetilde{D}^{+}(0,0,0)^{-1} \widetilde{V}^{+} \\
+x=0: \widetilde{V}^{+}=A_0 \widetilde{V}^{-}+ & \widetilde{H}(t)-\left(\widetilde{D}^{-}\left(\widetilde{U}, \widetilde{U}_t, \widetilde{U}_x\right)-\widetilde{D}^{+}(0,0,0)\right) \widetilde{D}^{+}(0,0,0)^{-1} \widetilde{V}^{+} \\
 & -\left(\widetilde{D}^{-}\left(\widetilde{U}, \widetilde{U}_t, \widetilde{U}_x\right)-\widetilde{D}^{-}(0,0,0)\right) \widetilde{D}^{+}(0,0,0)^{-1} \widetilde{V}^{-},
 \end{aligned}
 $$
 where the coupling matrix 
 $$
-B_0=-\left(a(0,0,0) I_n-D(0,0,0)\right)\left(a(0,0,0) I_n+D(0,0,0)\right)^{-1} .
+A_0=-\left(a(0,0,0) I_n-D(0,0,0)\right)\left(a(0,0,0) I_n+D(0,0,0)\right)^{-1} .
 $$
 Define the controlling matrix as 
 $$
@@ -244,23 +244,24 @@ I_p & 0 \\
 $$
 and then the Kalman type condition as
 \begin{equation}\label{41}
-    \operatorname{Rank}\left[C, B_0 C, \ldots, B_0^{k-1} C\right]=n,
+    \operatorname{Rank}\left[C, A_0 C, \ldots, A_0^{k-1} C\right]=n,
 \end{equation}
 where $k$ is a positive integer.
 
 The following theorem can be obtained.
 \begin{thm} \label{thm:main}
-	Under Assumption \eqref{41}, if $T > kL$, there exists a small $\varepsilon _0$ and a set of $C^1$ smooth control functions $h_i(t)$, $i=1,\cdots ,p$, such that for any $\varepsilon < \varepsilon _0 $ and any $\varPhi (x),\ \varphi  (x)$ which are $C^{2,1}$ smooth and satisfy the $C^2$ compatibility condition and $\varPsi (x),\ \psi (x)$ which are $C^{1,1}$ smooth and satisfy the $C^1$ compatibility condition, there exists a $C^2$ smooth solution $U(t,x)$ to the control problem \eqref{42}.
+	Under Assumption \eqref{41}, if $T > kL$, 
+  there exists a small $\varepsilon _0 > 0$ and a set of $C^1$ smooth control functions $h_i(t)$, $i=1,\cdots ,p$, 
+  such that for any $\varepsilon \in (0, \varepsilon _0) $ and any $\varPhi (x),\ \varphi  (x)$ which are $C^{2,1}$ smooth and satisfy the $C^2$ compatibility conditions
+   and $\varPsi (x),\ \psi (x)$ which are $C^{1,1}$ smooth and satisfy the $C^1$ compatibility conditions, there exists a $C^2$ smooth solution $U(t,x)$ to the control problem \eqref{42}.
 \end{thm}
 
-The proof of Theorem \ref{thm:main} requires the following proposition.
-\begin{prop}\label{prop:main}
-	Taking $U^{(0)}\equiv 0$, consider the following iterative problem
-	\begin{equation}
+The proof of Theorem \ref{thm:main} requires the following iterative scheme. Taking $U^{(0)}\equiv 0$, consider the following linearized controllability problem for $m\geq 0$:
+\begin{equation}
 \begin{cases}
 	&		\partial _tV^{\pm (m+1)}\pm a^{(m)}\partial _xV^{\pm (m+1)}=\mp \partial _xU^{(m)}\left( \partial _t\pm a^{(m)}\partial _x \right) \left( a^{(m)} \right) ,\\
 	&		x=L:V^{-(m+1)}=-V^{+(m+1)},\quad t\in \mathbb{R} ^+,\\
-	&		x=0:V^{-(m+1)}=B_0V^{+(m+1)}+\widetilde{H}^{(m+1)}(t)\\
+	&		x=0:V^{-(m+1)}=A_0V^{+(m+1)}+\widetilde{H}^{(m+1)}(t)\\
 	&		+\left( \widetilde{D}^+\left( U^{(m)},U_{t}^{(m)},U_{x}^{(m)} \right) -\widetilde{D}^+(0,0,0) \right) \widetilde{D}^+(0,0,0)^{-1}V^{-(m)}\\
 	&		-\left( \widetilde{D}^-\left( U^{(m)},U_{t}^{(m)},U_{x}^{(m)} \right) -\widetilde{D}^-(0,0,0) \right) \widetilde{D}^+(0,0,0)^{-1}V^{+(m)}.\\
 	&		t=0:\left( U^{(m+1)},U_{t}^{(m+1)} \right) =\left( \varphi \left( x \right) ,\psi \left( x \right) \right) ,\\
@@ -271,6 +272,17 @@ where
 $$
 a^{(m)}=a\left(U^{(m)}, U_t^{(m)}, U_x^{(m)}\right) .
 $$
+$U^{(m+1)}$ for each step can be 
+obtained using the Dirichlet boundary condition as
+$$
+U^{(m+1)}(t,x)=-\int_x^L \partial _x U^{(m+1)} \text{d} x,
+$$
+where
+$$
+\partial _x U^{(m+1)}=\frac{V^{-\left( m+1 \right) }-V^{+\left( m+1 \right)}}{ 2a\left({U}^{\left( m \right)} ,U_{t}^{\left( m \right)},U_{x}^{\left( m \right)} \right)}.
+$$
+
+\begin{prop}\label{prop:main}
 One can get uniform bounds
 \begin{equation}\label{bounds u}
  \left\lVert U^{\left( m \right)}\right\rVert  _{C^{2,1}}\leq C_P\varepsilon ,
@@ -293,16 +305,7 @@ where $\alpha$ is a constant satisfying $0<\alpha <1$ and $C_P$ is a large const
 %Where  $\Omega(\eta)$ is a monotonically increasing continuous function satisfying $\Omega(0)=0$.
 \end{prop}
 Theorem \ref{thm:main} follows after obtaining Proposition \ref{prop:main}. In fact, The sequence $\{U ^{(m)}\} _{m=1} ^ \infty $ is a Cauchy sequence in $C^2$ space, and thus converges to some $C^2$ function $ U$ uniformly. % applying Arzelà-Ascoli theorem, we know that there exists a subsequence of $\{U ^{(m)}\} _{m=1} ^\infty $ ,which converges uniformly in $C^2$ space. Thus we know that the whole original sequence$\{U ^{(m)}\} _{m=1} ^\infty $ converges to $U$ in $C^2$ space. 
-Therefore, $U$ is $C^2$ smooth and satisfies the control condition, where $U^{(m+1)}$ for each step can be 
-obtained using the Dirichlet boundary condition as
-$$
-U^{(m+1)}(t,x)=-\int_x^L \partial _x U^{(m+1)} \text{d} x,
-$$
-where
-$$
-\partial _x U^{(m+1)}=\frac{V^{-\left( m+1 \right) }-V^{+\left( m+1 \right)}}{ 2a\left({U}^{\left( m \right)} ,U_{t}^{\left( m \right)},U_{x}^{\left( m \right)} \right)}.
-$$
-
+Therefore, $U$ is $C^2$ smooth and satisfies the control condition, where 
 \section{Linear Controllability Problem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We need to introduce a lemma about the linear equation. Consider the following linear equation system
@@ -528,7 +531,7 @@ If a solution $u(t,x)$ satisfying the requirement exists, for any $x\in [0,L]$, 
 							   &=A^kB(H_{k+1}\left( x \right)+G_{k+1}\left( x \right)+F_{k+1}\left( x \right)) +\cdots  +B(H_1\left( x \right)+G_1\left( x \right)+F_1\left( x \right)) ,\ x\in \left[ 0,L \right].
 	\end{aligned}
 	\end{equation}
-Using this equation, we first determine the value and derivative of $h_i$ at $(t_p(0;0))$, $(t_p(0;L))$, $(t_p(L;0))$ and $(t_p(L;L))$, $(i=1,\cdots,n;\ p=1,\cdots,k+1)$.
+Using this equation, we first determine the value and derivative of $h_i$ at $t_p(0;0)$, $t_p(0;L)$, $t_p(L;0)$ and $t_p(L;L)$, $(i=1,\cdots,n;\ p=1,\cdots,k+1)$.
 Consider the vector $\tilde{G}  (x) = \sum_{l=0}^k A^l G _{l+1}(x)$.
 $$
 \tilde{G}^-  (L) =G^- _1 (L) +A_1 G^+ _2 (L) +A_1 A_2 G^- _3 (L)  +\cdots +A_1 A_2 \cdots A_1 G^+ _{k+1} (L) ,
@@ -1541,7 +1544,7 @@ For $\left\| u-v \right\| _{C^1}$, similar to the estimate of $\left\| \tilde{u}
 
 
 
-\section{linearization iteration}
+\section{Estimation of Iterative Solutions for Linearized Equations}
 In this section, we will show the proof of Proposition \ref{prop:main} with inductive reasoning. 
 Denote $\tilde{a}^{(m)}=a^{(m)}-1$, and we know that
 $$
@@ -1596,16 +1599,16 @@ and
 $$
 \left\| \tilde{U}^{(m+1)} \right\| _{C^{2,1}}\leq C_P\varepsilon.
 $$
-Then we try to get the cauchy property. Provided the method of obtaining the controls $h_i(t)$, we first condider the cauchy property of $\tilde{\varphi }^{(m)}(x)$, where $\tilde{\varphi }^{(m)}(x)=\tilde{u}^{(m)}(T,x)$ and $\tilde{u}^{(m)}(t,x)$ is the solution of the equation below:
+Then we try to get the Cauchy property. Provided the method of obtaining the controls $h_i(t)$, we first condider the Cauchy property of $\tilde{\varphi }^{(m)}(x)$, where $\tilde{\varphi }^{(m)}(x)=\tilde{u}^{(m)}(T,x)$ and $\tilde{u}^{(m)}(t,x)$ is the solution of the equation below:
 $$
 \begin{cases}
 	&		\partial _t\widetilde{u}^{\pm (m+1)}\pm a^{(m)}\partial _x\widetilde{u}^{\pm (m+1)}=\mp \chi \left( t \right) \partial _x\widetilde{U}^{(m)}\left( \partial _t\pm a^{(m)}\partial _x \right) \left( a^{(m)} \right) ,\\
 	&		x=L:\widetilde{u}^{-(m+1)}=-\widetilde{u}^{+(m+1)},\quad t\in \mathbb{R} ^+,\\
-	&		x=0:\widetilde{u}^{-(m+1)}=B_0\widetilde{u}^{+(m+1)}+\widetilde{H}(t)+\chi \left( t \right)G^{\left( m \right)}\left( t \right) ,\\
+	&		x=0:\widetilde{u}^{-(m+1)}=A_0\widetilde{u}^{+(m+1)}+\widetilde{H}(t)+\chi \left( t \right)G^{\left( m \right)}\left( t \right) ,\\
 	&		t=0:\widetilde{u}^{(m+1)}=\varphi \left( x \right) ,
 \end{cases}
 $$
-where $\chi (t)$ is the same as in section 2 and $\widetilde{H}(t)$ is a set of functions selected that satisfy the compatibility condition.
+where $\chi (t)$ is the same as in Section 2 and $\widetilde{H}(t)$ is a set of functions selected that satisfy the compatibility condition.
 Provided that $G^{\left( m \right)}\left( 0 \right)$ depends on $\varphi (x)$ and is independent of $m$, we can select the same set of functions $\widetilde{H}(t)$ for all $m$.
 Using the inductive assumption, we can get
 $$
@@ -1651,14 +1654,20 @@ The proof of Theorem \ref{prop:main} is completed.
 
 
 
-\section{Appendice}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\section{}
+This section is devoted to proving the following lemma, which is used to get the values and derivatives of the control functions $h_i(t)$ at $t_p(0;0)$, $t_p(0;L)$, $t_p(L;0)$ and $t_p(L;L)$, $i=1,\cdots,n;\ p=1,\cdots,k+1$.
 \begin{lem}\label{l50}
-	Consider the equation
+	Consider the linear algebraic equations below:
 	\begin{equation}\label{51}
-		\psi =A^kBH_{k+1} +\cdots +ABH_2 +BH_1.
+		\psi =A^kBH_{k+1} +\cdots +ABH_2 +BH_1,
 	\end{equation}
-	$\psi , H_p \in \mathbb{R} ^n ,p = 1,\cdots,k+1$,
+  \begin{align}
+		H^{-}_{2m-1} &= H^{-}_{2m}\label{55} ,\ 2m-1 \leq k,\\
+		H^{+}_{2m+1} &= H^{+}_{2m}\label{56} ,\ 2m \leq k,
+	\end{align}
+where $H_p =\left( H^{-}_p ,H^{+}_p \right) ^T$, $H^{-}_p \in \mathbb{R} ^r$, $H^{+}_p \in \mathbb{R} ^s$. 
+$\psi \in \mathbb{R} ^n$. $H_p \in \mathbb{R} ^n$, $p = 1,\cdots,k+1$ are the unknowns to be solved. 
 	$$
 	A=\left(\begin{array}{ll} 
 		& A_1 \\
@@ -1666,7 +1675,12 @@ The proof of Theorem \ref{prop:main} is completed.
 	\end{array}\right),
 	$$
 	$$
-	B=\left( \begin{matrix}
+	B=
+  \left( \begin{matrix}
+		B_{1}&			\\
+		&		B_{2}	\\
+	\end{matrix} \right)=
+  \left( \begin{matrix}
 		I_{r_1}&		&		&		\\
 		&		O_{r_2}&		&		\\
 		&		&		I_{s_1}&		\\
@@ -1676,80 +1690,127 @@ The proof of Theorem \ref{prop:main} is completed.
 	where $r_1 +r_2 =r,\ s_1+s_2=s,\ r+s=n $, $A_1=\left( a_{ij} \right) ,\ i=1,\cdots ,r,\ j=r+1,\cdots ,n$, $A_2=\left( a_{ij} \right) ,\ i=r+1,\cdots ,n,\ j=1,\cdots ,r$. 
   If $\psi$ satisfies the following condition
 	\begin{equation}\label{52}
-		\psi _i=\sum_{j=1}^r{a_{ij}\psi _j ,\,\,i=r+s_1+1,\cdots ,r+s.}
+		\psi _i=\sum_{j=1}^r{a_{ij}\psi _j ,\,\,i=r+s_1+1,\cdots ,r+s,}
 	\end{equation}
 	and the Kalman rank condition holds as follows,
 	\begin{equation}\label{53}
 		\operatorname{Rank}\left[B, A^k B, \ldots, A^{k-1} B\right]=n,
 	\end{equation}
-	then there exists a set of solutions $H_p (x),\ p = 1, \cdots , k+1$ of equation \eqref{51} satisfying
-	\begin{align}
-		H^{-}_{2m-1} &= H^{-}_{2m}\label{55} ,\\
-		H^{+}_{2m+1} &= H^{+}_{2m}\label{56} ,
-	\end{align}
+	then there exists a set of solutions $H_p,\ p = 1, \cdots , k+1$ of equation \eqref{51}.
 \end{lem}
-where $H_p =\left( H^{-}_p ,H^{+}_p \right) ^T$, $H^{-}_p \in \mathbb{R} ^r$, $H^{+}_p \in \mathbb{R} ^s$.
 \begin{proof}
 Without loss of generality, we can assume that $k$ is odd. 
-The condition \ref{52} can be written as
+Denote
+\begin{equation}
+    \bar{H}_i =\psi _i- \sum_{j=1}^r{a_{ij}\psi _j,\,\,i=r+1,\cdots ,r+s}.
+\end{equation}
+Then we have
 \begin{equation}\label{513}
 	\psi^{+}=A_2\psi ^{-}+\bar{H} .
 \end{equation}
-$\bar{H}$  is the difference term, i.e.
-\begin{equation}
-    \bar{H}_i =\psi _i- \sum_{j=1}^r{a_{ij}\psi _j,\,\,i=r+1,\cdots ,r+s_1}.
-\end{equation}
-By the definition of the matrix $B$, 
-the $i$-th $(i=r_1+1,\cdots,r,s_1+1,\cdots,r+s)$ components of $H_p,\ p = 1, \cdots , k+1$ can be taken to be zero. 
-The following is an attempt to write conditions \eqref{55}-\eqref{56} as matrix equations. Denote
-$$
-H=\left( H^{-}_{k+1},H^{+}_{k+1},\cdots ,H^{-}_{1},H^{+}_{1} \right) ^T .
-$$
-Then the equation \eqref{51} ,\eqref{55}-\eqref{56} can be written as a matrix equation as follows:
-$$
-\binom{\psi}{0} = \left( \begin{matrix}
-   & A_1A_2\cdots A_2&		A_1\cdots A_1&	&	\cdots&		&A_1 & I _r&		\\
-    A_2A_1\cdots A_1&	&	&A_2\cdots A_2&		\cdots&		A_2&	&	&I_s\\
-    I_r& &-I_r &  & & & & & \\
-    & & & I_s & & & & &\\
+From the condition \eqref{52}, we know that the last $s_2$ components of $\bar{H}$ are zero.
+%By the definition of the matrix $B$, the $i$-th $(i=r_1+1,\cdots,r,s_1+1,\cdots,r+s)$ components of $H_p,\ p = 1, \cdots , k+1$ can be taken to be zero. 
+The following is an attempt to write conditions \eqref{51}-\eqref{56} as a new linear algebraic equation.
+Then the equation \eqref{51} -\eqref{56} can be written as follows:
+
+\scalebox{0.7}{
+$
+\left( \begin{array}{l}
+	\psi ^-\\
+	\psi ^+\\
+	0\\
+	0\\
+	\vdots\\
+	0\\
+	0\\
+\end{array} \right)  = 
+\left( \begin{matrix}
+   O& A_1\cdots A_2A_1B_2&		A_1\cdots A_2B_1&O	&	\cdots&	O	&A_1B_2 & I _rB_1&	O	\\
+    A_2\cdots A_1A_2B_1&O	&O	&A_2\cdots A_1B_2&		\cdots&		A_2B_1&O	&	O&I_sB_2\\
+    I_r&O &-I_r &O  &\cdots  & O& O& O& O\\
+   O &O & O& I_s &\cdots &O & O& O&O\\
     & & &  & \cdots& & & &\\
-    & & &  & & & -I_s& &\\
-    & & &  & &I_r & & -I_r& 
-\end{matrix} \right) H.
-$$
-After appropriate matrix row transformations, the first row of the equation can be written as
-$$
-\psi = \left( \begin{matrix}
-  O&  A_1A_2\cdots A_2&		A_1\cdots A_1&O	&	\cdots&	O&	A_1&	I_r&	\\
-   & &  A_2A_1\cdots A_1&	O&	\cdots&	O	&	A_2A_1 &	A_2 &	I_s
-\end{matrix} \right) H.
-$$
-Let $H^{+}_{k+1}=0$. Combined with \eqref{513}, equation \eqref{51} can be rewritten as
+    & & &  & \cdots& O& -I_s&O &O\\
+    & & &  & \cdots&I_r & O& -I_r& O
+\end{matrix} \right) 
+\left( \begin{array}{l}
+	H_{k+1}^{-}\\
+	H_{k+1}^{+}\\
+	H_{k}^{-}\\
+	H_{k}^{+}\\
+	\vdots\\
+	H_{2}^{-}\\
+	H_{2}^{+}\\
+	H_{1}^{-}\\
+	H_{1}^{+}\\
+\end{array} \right) .
+$}
+
+Multiply the third row of the above equation by $-A_2 \cdots A_1A_2B_1$ and add it to the first row, multiply the forth row of the above equation by $-A_2 \cdots A_1B_2$ and add it to the second row and continue the process. Then the first two rows of the equation can be written as
+\begin{equation}\label{new 51}
+\binom{\psi ^-}{\psi ^+} = \left( \begin{matrix}
+  O&  A_1A_2\cdots A_1B_2&		A_1\cdots A_2B_1&O	&	\cdots&	O&	A_1B_2&	I_rB_1&	O\\
+   O&O &  A_2A_1\cdots A_2B_1&	O&	\cdots&	O	&	A_2A_1B_2 &	A_2B_1 &	I_sB_2
+\end{matrix} \right) 
+\left( \begin{array}{l}
+	H_{k+1}^{-}\\
+	H_{k+1}^{+}\\
+	H_{k}^{-}\\
+	H_{k}^{+}\\
+	\cdots\\
+	H_{2}^{-}\\
+	H_{2}^{+}\\
+	H_{1}^{-}\\
+	H_{1}^{+}\\
+\end{array} \right) .
+\end{equation}
+Let $H^{+}_{k+1}=0$. Combined with \eqref{513}, multiply the first row of the equation \eqref{new 51} by $-A_2$ and add it to the second row. Then we have
 \begin{equation}\label{514}
 	\binom{\psi ^{-}}{\bar{H} } =\left( \begin{matrix}
-		&O  &		A_1\cdots A_1&O	&	\cdots&	O&	A_1&	I_r&	\\
-		 & &  &	&	\cdots&	&	 & &	I_s
-	  \end{matrix} \right) H.
+		O&O  &		A_1\cdots A_2B_1&O	&	\cdots&	O&	A_1B_2&	I_rB_1&	O\\
+		 O& O&  O&O	&	\cdots&	O&	O & O&	I_sB_2
+	  \end{matrix} \right) 
+    \left( \begin{array}{l}
+	H_{k+1}^{-}\\
+	H_{k+1}^{+}\\
+	H_{k}^{-}\\
+	H_{k}^{+}\\
+	\cdots\\
+	H_{2}^{-}\\
+	H_{2}^{+}\\
+	H_{1}^{-}\\
+	H_{1}^{+}\\
+\end{array} \right) .
 \end{equation}
-Notice that \eqref{53}  yields that the rank of the equation generalization matrix is equal to the rank of the original coefficient matrix, and thus \eqref{514} has a solution.
+Notice that \eqref{53} can be written as
+	\begin{equation}\label{new 53}
+		\operatorname{Rank}\left( \begin{matrix}
+	A_1\cdots A_2B_1&O	&	\cdots&	O	&A_1B_2 & I _rB_1&	O	\\
+	O	&A_2\cdots A_1B_2&		\cdots&		A_2B_1&O	&	O&I_sB_2
+\end{matrix} \right) =n,
+	\end{equation}
+which implies that the first $r+s_1$ rows of the coefficient matrix of equation \eqref{new 51} are full rank. 
+Therefore, Combined with the condition that the last $s_2$ components of $\bar{H}$ are zero, we know that the rank of the equation augmented matrix is equal to the rank of the original coefficient matrix, and thus \eqref{514} has a solution.
 \end{proof}
 \begin{cor}\label{l51}
-	Under the conditions of the above lemma, if $\psi$ satisfies
-	\begin{equation}\label{515}
-		\psi _i=\sum_{j=r+1}^{r+s}{a_{ij}\psi _j ,\,\,i=r_1+1,\cdots ,r,}
-	\end{equation}
-	then there exists a set of solutions $H_p (x),\ p = 1, \cdots , k+1,$ of equation \eqref{51} satisfying
-	\begin{align}
+Consider the linear algebraic equation \eqref{51} and 
+  	\begin{align}
 		H^{+}_{2m-1} &= H^{+}_{2m}\label{516} ,\\
 		H^{-}_{2m+1} &= H^{-}_{2m}\label{517} .
 	\end{align}
+Under the conditions \eqref{53}, if $\psi$ satisfies
+	\begin{equation}\label{515}
+		\psi _i=\sum_{j=r+1}^{r+s}{a_{ij}\psi _j ,\,\,i=r_1+1,\cdots ,r,}
+	\end{equation}
+	then there exists a set of solutions $H_p,\ p = 1, \cdots , k+1,$ of equation \eqref{51}.
 \end{cor}
 \begin{proof}
-	Define $\tilde{\psi} $ as $\tilde{\psi}^{-}=\psi ^{+}$, $\tilde{\psi}^{+}=\psi ^{-}$, $\tilde{A}$ as $\tilde{A}^{1}=A ^{2}$, $\tilde{A}^{2}=A ^{1}$, and $\tilde{H}_p$ as $\tilde{H}_p^{-}=H_p ^{+}$, $\tilde{H}_p^{+}=H_p ^{-}$, which are the same as the above lemma. 
+	Define $\tilde{\psi} $ as $\tilde{\psi}^{-}=\psi ^{+}$, $\tilde{\psi}^{+}=\psi ^{-}$, $\tilde{A}$ as $\tilde{A}^{1}=A ^{2}$, $\tilde{A}^{2}=A ^{1}$, and $\tilde{H}_p$ as $\tilde{H}_p^{-}=H_p ^{+}$, $\tilde{H}_p^{+}=H_p ^{-}$, 
+  and then the proof is the same as the above lemma. 
 \end{proof}
-\begin{cor}\label{l52}
-	In the proof of Lemma \ref{l50} one obtains $H_1^{+}=\bar{H} $, and in the conditions of Corollary \ref{l51} one obtains $H_1^{-}=\bar{H} $.
-\end{cor}
+\begin{remark}\label{l52}
+	In the proof of Lemma \ref{l50} one obtains $H_1^{+}=\bar{H} $, and in the proof of Corollary \ref{l51} one obtains $H_1^{-}=\bar{H} $.
+\end{remark}
 
 
 
